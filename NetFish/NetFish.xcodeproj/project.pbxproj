@@ -82,6 +82,7 @@
 		D388FE091CC21BC10057F6DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D388FE0F1CC21CB90057F6DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +190,7 @@
 				D388FDBB1CC20F530057F6DB /* main.m */,
 				D388FDCE1CC20F530057F6DB /* Info.plist */,
 				D388FDC61CC20F530057F6DB /* NetFish.xcdatamodeld */,
+				D388FE0F1CC21CB90057F6DB /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -593,6 +595,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NetFish",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NetFish/PrefixHeader.pch;
 				INFOPLIST_FILE = NetFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
@@ -609,6 +613,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NetFish",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = NetFish/PrefixHeader.pch;
 				INFOPLIST_FILE = NetFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
