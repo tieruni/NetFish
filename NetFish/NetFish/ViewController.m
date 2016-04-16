@@ -24,4 +24,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)SignInAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
+
+- (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
+
+- (IBAction)SignUpAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
+
+- (IBAction)forgetPWAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
 @end
