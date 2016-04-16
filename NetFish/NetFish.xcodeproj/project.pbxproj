@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94586E9A0C26DB84CCD4D194 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB42BFFA8F84097DBBBC0C1 /* libPods.a */; };
 		D388FDBC1CC20F530057F6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBB1CC20F530057F6DB /* main.m */; };
 		D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBE1CC20F530057F6DB /* AppDelegate.m */; };
 		D388FDC21CC20F530057F6DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDC11CC20F530057F6DB /* ViewController.m */; };
@@ -16,6 +17,17 @@
 		D388FDCD1CC20F530057F6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D388FDCB1CC20F530057F6DB /* LaunchScreen.storyboard */; };
 		D388FDD81CC20F530057F6DB /* NetFishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDD71CC20F530057F6DB /* NetFishTests.m */; };
 		D388FDE31CC20F530057F6DB /* NetFishUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDE21CC20F530057F6DB /* NetFishUITests.m */; };
+		D388FDFB1CC21AE20057F6DB /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDF81CC21AE20057F6DB /* Utilities.m */; };
+		D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDFA1CC21AE20057F6DB /* StorageMgr.m */; };
+		D388FDFF1CC21B430057F6DB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FDFD1CC21B430057F6DB /* Bolts.framework */; };
+		D388FE001CC21B430057F6DB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FDFE1CC21B430057F6DB /* Parse.framework */; };
+		D388FE021CC21B5F0057F6DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE011CC21B5F0057F6DB /* StoreKit.framework */; };
+		D388FE041CC21B700057F6DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE031CC21B700057F6DB /* CoreLocation.framework */; };
+		D388FE061CC21B920057F6DB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE051CC21B920057F6DB /* Accounts.framework */; };
+		D388FE081CC21BB50057F6DB /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE071CC21BB50057F6DB /* Social.framework */; };
+		D388FE0A1CC21BC10057F6DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE091CC21BC10057F6DB /* SystemConfiguration.framework */; };
+		D388FE0C1CC21BCC0057F6DB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */; };
+		D388FE0E1CC21BD60057F6DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DB42BFFA8F84097DBBBC0C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93AF09200784D595DF323AE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D388FDB71CC20F530057F6DB /* NetFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D388FDBB1CC20F530057F6DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D388FDBD1CC20F530057F6DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +68,20 @@
 		D388FDDE1CC20F530057F6DB /* NetFishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetFishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D388FDE21CC20F530057F6DB /* NetFishUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetFishUITests.m; sourceTree = "<group>"; };
 		D388FDE41CC20F530057F6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D388FDF61CC21AD60057F6DB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D388FDF71CC21AE20057F6DB /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		D388FDF81CC21AE20057F6DB /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		D388FDF91CC21AE20057F6DB /* StorageMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageMgr.h; sourceTree = "<group>"; };
+		D388FDFA1CC21AE20057F6DB /* StorageMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageMgr.m; sourceTree = "<group>"; };
+		D388FDFD1CC21B430057F6DB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = NetFish/Bolts.framework; sourceTree = "<group>"; };
+		D388FDFE1CC21B430057F6DB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = NetFish/Parse.framework; sourceTree = "<group>"; };
+		D388FE011CC21B5F0057F6DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D388FE031CC21B700057F6DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D388FE051CC21B920057F6DB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D388FE071CC21BB50057F6DB /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D388FE091CC21BC10057F6DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +89,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D388FE0E1CC21BD60057F6DB /* AudioToolbox.framework in Frameworks */,
+				D388FE0C1CC21BCC0057F6DB /* libsqlite3.tbd in Frameworks */,
+				D388FE0A1CC21BC10057F6DB /* SystemConfiguration.framework in Frameworks */,
+				D388FE081CC21BB50057F6DB /* Social.framework in Frameworks */,
+				D388FE061CC21B920057F6DB /* Accounts.framework in Frameworks */,
+				D388FE041CC21B700057F6DB /* CoreLocation.framework in Frameworks */,
+				D388FE021CC21B5F0057F6DB /* StoreKit.framework in Frameworks */,
+				D388FDFF1CC21B430057F6DB /* Bolts.framework in Frameworks */,
+				D388FE001CC21B430057F6DB /* Parse.framework in Frameworks */,
+				94586E9A0C26DB84CCD4D194 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +119,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2635514132D10024761531D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */,
+				93AF09200784D595DF323AE7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44DA40849ADEE4815C93CF43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */,
+				D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */,
+				D388FE091CC21BC10057F6DB /* SystemConfiguration.framework */,
+				D388FE071CC21BB50057F6DB /* Social.framework */,
+				D388FE051CC21B920057F6DB /* Accounts.framework */,
+				D388FE031CC21B700057F6DB /* CoreLocation.framework */,
+				D388FE011CC21B5F0057F6DB /* StoreKit.framework */,
+				D388FDFD1CC21B430057F6DB /* Bolts.framework */,
+				D388FDFE1CC21B430057F6DB /* Parse.framework */,
+				3DB42BFFA8F84097DBBBC0C1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D388FDAE1CC20F530057F6DB = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +152,8 @@
 				D388FDD61CC20F530057F6DB /* NetFishTests */,
 				D388FDE11CC20F530057F6DB /* NetFishUITests */,
 				D388FDB81CC20F530057F6DB /* Products */,
+				2635514132D10024761531D6 /* Pods */,
+				44DA40849ADEE4815C93CF43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +170,12 @@
 		D388FDB91CC20F530057F6DB /* NetFish */ = {
 			isa = PBXGroup;
 			children = (
-				D388FDBD1CC20F530057F6DB /* AppDelegate.h */,
-				D388FDBE1CC20F530057F6DB /* AppDelegate.m */,
-				D388FDC01CC20F530057F6DB /* ViewController.h */,
-				D388FDC11CC20F530057F6DB /* ViewController.m */,
-				D388FDC31CC20F530057F6DB /* Main.storyboard */,
-				D388FDC91CC20F530057F6DB /* Assets.xcassets */,
-				D388FDCB1CC20F530057F6DB /* LaunchScreen.storyboard */,
-				D388FDCE1CC20F530057F6DB /* Info.plist */,
-				D388FDC61CC20F530057F6DB /* NetFish.xcdatamodeld */,
+				D388FDF21CC219FD0057F6DB /* Model */,
+				D388FDF11CC219EF0057F6DB /* View */,
+				D388FDF01CC219BD0057F6DB /* Controller */,
+				D388FDF51CC21A2D0057F6DB /* Constant */,
+				D388FDF41CC21A1F0057F6DB /* 3rd */,
+				D388FDF31CC21A0D0057F6DB /* Utility */,
 				D388FDBA1CC20F530057F6DB /* Supporting Files */,
 			);
 			path = NetFish;
@@ -120,7 +184,11 @@
 		D388FDBA1CC20F530057F6DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D388FDBD1CC20F530057F6DB /* AppDelegate.h */,
+				D388FDBE1CC20F530057F6DB /* AppDelegate.m */,
 				D388FDBB1CC20F530057F6DB /* main.m */,
+				D388FDCE1CC20F530057F6DB /* Info.plist */,
+				D388FDC61CC20F530057F6DB /* NetFish.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,6 +211,58 @@
 			path = NetFishUITests;
 			sourceTree = "<group>";
 		};
+		D388FDF01CC219BD0057F6DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D388FDC01CC20F530057F6DB /* ViewController.h */,
+				D388FDC11CC20F530057F6DB /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D388FDF11CC219EF0057F6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D388FDC31CC20F530057F6DB /* Main.storyboard */,
+				D388FDC91CC20F530057F6DB /* Assets.xcassets */,
+				D388FDCB1CC20F530057F6DB /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D388FDF21CC219FD0057F6DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D388FDF31CC21A0D0057F6DB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D388FDF71CC21AE20057F6DB /* Utilities.h */,
+				D388FDF81CC21AE20057F6DB /* Utilities.m */,
+				D388FDF91CC21AE20057F6DB /* StorageMgr.h */,
+				D388FDFA1CC21AE20057F6DB /* StorageMgr.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		D388FDF41CC21A1F0057F6DB /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 3rd;
+			sourceTree = "<group>";
+		};
+		D388FDF51CC21A2D0057F6DB /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				D388FDF61CC21AD60057F6DB /* Constants.h */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D388FDE71CC20F530057F6DB /* Build configuration list for PBXNativeTarget "NetFish" */;
 			buildPhases = (
+				9B99AE18E78191A9DD9255E5 /* Check Pods Manifest.lock */,
 				D388FDB31CC20F530057F6DB /* Sources */,
 				D388FDB41CC20F530057F6DB /* Frameworks */,
 				D388FDB51CC20F530057F6DB /* Resources */,
+				846001BE03ABCFA52D220DDC /* Embed Pods Frameworks */,
+				43061F2B30304309BA11B5D6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +391,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43061F2B30304309BA11B5D6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		846001BE03ABCFA52D220DDC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B99AE18E78191A9DD9255E5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D388FDB31CC20F530057F6DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,6 +448,8 @@
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
 				D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */,
 				D388FDBC1CC20F530057F6DB /* main.m in Sources */,
+				D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */,
+				D388FDFB1CC21AE20057F6DB /* Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,8 +586,13 @@
 		};
 		D388FDE81CC20F530057F6DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetFish",
+				);
 				INFOPLIST_FILE = NetFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
@@ -424,8 +602,13 @@
 		};
 		D388FDE91CC20F530057F6DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93AF09200784D595DF323AE7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NetFish",
+				);
 				INFOPLIST_FILE = NetFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
@@ -500,6 +683,7 @@
 				D388FDE91CC20F530057F6DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D388FDEA1CC20F530057F6DB /* Build configuration list for PBXNativeTarget "NetFishTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +692,7 @@
 				D388FDEC1CC20F530057F6DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D388FDED1CC20F530057F6DB /* Build configuration list for PBXNativeTarget "NetFishUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +701,7 @@
 				D388FDEF1CC20F530057F6DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
