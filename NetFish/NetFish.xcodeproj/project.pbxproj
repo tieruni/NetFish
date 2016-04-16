@@ -189,7 +189,6 @@
 				D388FDBE1CC20F530057F6DB /* AppDelegate.m */,
 				D388FDBB1CC20F530057F6DB /* main.m */,
 				D388FDCE1CC20F530057F6DB /* Info.plist */,
-				D388FDC61CC20F530057F6DB /* NetFish.xcdatamodeld */,
 				D388FE0F1CC21CB90057F6DB /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
@@ -235,6 +234,7 @@
 		D388FDF21CC219FD0057F6DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D388FDC61CC20F530057F6DB /* NetFish.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
