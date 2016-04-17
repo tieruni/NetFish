@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94586E9A0C26DB84CCD4D194 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB42BFFA8F84097DBBBC0C1 /* libPods.a */; };
+		A993E6DF1CC3222900A95A2F /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = A993E6DE1CC3222900A95A2F /* UIButton+touch.m */; };
 		B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F485A71CC23B5D009B0F2B /* SignInViewController.m */; };
 		D388FDBC1CC20F530057F6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBB1CC20F530057F6DB /* main.m */; };
 		D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBE1CC20F530057F6DB /* AppDelegate.m */; };
@@ -51,6 +52,8 @@
 /* Begin PBXFileReference section */
 		3DB42BFFA8F84097DBBBC0C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AF09200784D595DF323AE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A993E6DD1CC3222900A95A2F /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
+		A993E6DE1CC3222900A95A2F /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
 		B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B3F485A61CC23B5D009B0F2B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		B3F485A71CC23B5D009B0F2B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 		D388FDF41CC21A1F0057F6DB /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				A993E6DD1CC3222900A95A2F /* UIButton+touch.h */,
+				A993E6DE1CC3222900A95A2F /* UIButton+touch.m */,
 			);
 			name = 3rd;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
+				A993E6DF1CC3222900A95A2F /* UIButton+touch.m in Sources */,
 				D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */,
 				D388FDBC1CC20F530057F6DB /* main.m in Sources */,
 				D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */,
