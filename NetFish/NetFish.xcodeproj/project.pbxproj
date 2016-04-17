@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		94586E9A0C26DB84CCD4D194 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB42BFFA8F84097DBBBC0C1 /* libPods.a */; };
+		B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F485A71CC23B5D009B0F2B /* SignInViewController.m */; };
 		D388FDBC1CC20F530057F6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBB1CC20F530057F6DB /* main.m */; };
 		D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBE1CC20F530057F6DB /* AppDelegate.m */; };
 		D388FDC21CC20F530057F6DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDC11CC20F530057F6DB /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		3DB42BFFA8F84097DBBBC0C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AF09200784D595DF323AE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B3F485A61CC23B5D009B0F2B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		B3F485A71CC23B5D009B0F2B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		D388FDB71CC20F530057F6DB /* NetFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D388FDBB1CC20F530057F6DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D388FDBD1CC20F530057F6DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 			children = (
 				D388FDC01CC20F530057F6DB /* ViewController.h */,
 				D388FDC11CC20F530057F6DB /* ViewController.m */,
+				B3F485A61CC23B5D009B0F2B /* SignInViewController.h */,
+				B3F485A71CC23B5D009B0F2B /* SignInViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
 				D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */,
