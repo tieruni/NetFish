@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -268,7 +267,6 @@
         <!--View Controller-->
         <scene sceneID="exo-Xt-zeb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0wd-2t-Yet" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bEO-CS-LSv" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PoU-A5-W3x"/>
@@ -281,13 +279,13 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wd-2t-Yet" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1841" y="1172"/>
         </scene>
         <!--网娱-->
         <scene sceneID="9rq-4I-1iw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b9w-f2-gty" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="d4z-We-bcX" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YR2-JU-SnQ"/>
@@ -297,43 +295,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQS-Ll-2AP">
-                                <rect key="frame" x="198" y="72" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpj-8f-JRT">
-                                <rect key="frame" x="274" y="72" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNt-nx-z8g">
-                                <rect key="frame" x="155" y="72" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qte-WK-YH8">
-                                <rect key="frame" x="26" y="64" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbw-Fo-XUQ">
-                                <rect key="frame" x="109" y="72" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xV-Oj-SPF">
-                                <rect key="frame" x="55" y="72" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmv-7x-ebp">
+                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hZY-4u-ion"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="VQS-Ll-2AP" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="4lH-dy-KrD"/>
-                            <constraint firstItem="Xbw-Fo-XUQ" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="6Ey-2t-tdC"/>
-                            <constraint firstItem="9xV-Oj-SPF" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" constant="5" id="B2Q-za-xgz"/>
-                            <constraint firstItem="Xbw-Fo-XUQ" firstAttribute="leading" secondItem="9xV-Oj-SPF" secondAttribute="trailing" constant="5" id="FhE-w4-Goo"/>
-                            <constraint firstItem="Qte-WK-YH8" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="P5c-28-IBd"/>
-                            <constraint firstItem="9xV-Oj-SPF" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="SY4-mJ-cXu"/>
-                            <constraint firstItem="VQS-Ll-2AP" firstAttribute="leading" secondItem="Xbw-Fo-XUQ" secondAttribute="trailing" constant="5" id="T0U-BQ-0Af"/>
-                            <constraint firstItem="vNt-nx-z8g" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="Vcu-6s-WYB"/>
-                            <constraint firstItem="Qte-WK-YH8" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leadingMargin" constant="10" id="b20-bo-76Z"/>
-                            <constraint firstItem="vNt-nx-z8g" firstAttribute="leading" secondItem="Xbw-Fo-XUQ" secondAttribute="trailing" constant="5" id="dpn-MS-fKp"/>
+                            <constraint firstItem="Bmv-7x-ebp" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" id="1in-r0-yac"/>
+                            <constraint firstAttribute="trailing" secondItem="Bmv-7x-ebp" secondAttribute="trailing" id="7Sk-Ly-qk5"/>
+                            <constraint firstItem="Bmv-7x-ebp" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="eRS-al-X5p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="网娱" id="M4A-ER-1di">
@@ -341,6 +314,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9w-f2-gty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1011" y="1172"/>
         </scene>
