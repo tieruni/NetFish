@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "KSGuideManager.h"
 #import "WJAdvertCircle.h"
+#import "SlideHeadView.h"
+#import "FirstVC.h"
 @interface HomeViewController ()<WJAdvertClickDelegate>
 
 @end
@@ -26,7 +28,39 @@
     [paths addObject:[[NSBundle mainBundle] pathForResource:@"12" ofType:@"jpg"]];
     [paths addObject:[[NSBundle mainBundle] pathForResource:@"13" ofType:@"jpg"]];
     [[KSGuideManager shared] showGuideViewWithImages:paths];
-
+    
+    //---------->>>>>>>>>>>>
+    //完成以下步骤即可
+    //初始化SlideHeadView，并加进view
+    SlideHeadView *slideVC = [[SlideHeadView alloc]init];
+    [self.view addSubview:slideVC];
+    
+    //    初始化子控制器，使用-(void)addChildViewController:(UIViewController *)childVC title:(NSString *)vcTitle方法
+    FirstVC *VC1 = [[FirstVC alloc]init];
+    FirstVC *VC2 = [[FirstVC alloc]init];
+    FirstVC *VC3 = [[FirstVC alloc]init];
+    FirstVC *VC4 = [[FirstVC alloc]init];
+    FirstVC *VC5 = [[FirstVC alloc]init];
+    FirstVC *VC6 = [[FirstVC alloc]init];
+    FirstVC *VC7 = [[FirstVC alloc]init];
+    
+    
+    NSArray *titleArr = @[@"热门推荐",@"娱乐",@"军事",@"科技",@"星座",@"生活",@"段子"];
+    slideVC.titlesArr = titleArr;
+    
+    //
+    [slideVC addChildViewController:VC1 title:titleArr[0]];
+    [slideVC addChildViewController:VC2 title:titleArr[1]];
+    [slideVC addChildViewController:VC3 title:titleArr[2]];
+    [slideVC addChildViewController:VC4 title:titleArr[3]];
+    [slideVC addChildViewController:VC5 title:titleArr[4]];
+    [slideVC addChildViewController:VC6 title:titleArr[5]];
+    [slideVC addChildViewController:VC7 title:titleArr[6]];
+    
+    
+    //最后再调用setSlideHeadView  完成
+    [slideVC setSlideHeadView];
+    //----------------------------------
     
 
 }
