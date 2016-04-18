@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "HomeCellTableViewCell.h"
 @interface HomeViewController ()
 
 @end
@@ -36,7 +36,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 1;
+}
 
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   HomeCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
 - (IBAction)menuAction:(UIBarButtonItem *)sender {
 }
 @end

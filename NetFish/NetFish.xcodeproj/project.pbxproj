@@ -15,6 +15,7 @@
 		B370430D1CC39BC6005E63A2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B370430C1CC39BC6005E63A2 /* DetailViewController.m */; };
 		B38BD77E1CC47A5F00A11AF8 /* CommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */; };
 		B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */; };
+		B38BD7841CC483D500A11AF8 /* HomeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B38BD7831CC483D500A11AF8 /* HomeCellTableViewCell.m */; };
 		B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F485A71CC23B5D009B0F2B /* SignInViewController.m */; };
 		D388FDBC1CC20F530057F6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBB1CC20F530057F6DB /* main.m */; };
 		D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBE1CC20F530057F6DB /* AppDelegate.m */; };
@@ -73,6 +74,8 @@
 		B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewController.m; sourceTree = "<group>"; };
 		B38BD77F1CC47ABC00A11AF8 /* CellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTableViewCell.h; sourceTree = "<group>"; };
 		B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTableViewCell.m; sourceTree = "<group>"; };
+		B38BD7821CC483D500A11AF8 /* HomeCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellTableViewCell.h; sourceTree = "<group>"; };
+		B38BD7831CC483D500A11AF8 /* HomeCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellTableViewCell.m; sourceTree = "<group>"; };
 		B3F485A61CC23B5D009B0F2B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		B3F485A71CC23B5D009B0F2B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		D388FDB71CC20F530057F6DB /* NetFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +260,8 @@
 				B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */,
 				B38BD77F1CC47ABC00A11AF8 /* CellTableViewCell.h */,
 				B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */,
+				B38BD7821CC483D500A11AF8 /* HomeCellTableViewCell.h */,
+				B38BD7831CC483D500A11AF8 /* HomeCellTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				B370430A1CC3791B005E63A2 /* CollectionTableViewController.m in Sources */,
 				B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */,
 				D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */,
+				B38BD7841CC483D500A11AF8 /* HomeCellTableViewCell.m in Sources */,
 				D388FDBC1CC20F530057F6DB /* main.m in Sources */,
 				B38BD77E1CC47A5F00A11AF8 /* CommentTableViewController.m in Sources */,
 				D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */,
