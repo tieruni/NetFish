@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E20901CC4FE5800D0F394 /* DisperseBtn.m */; };
 		94586E9A0C26DB84CCD4D194 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB42BFFA8F84097DBBBC0C1 /* libPods.a */; };
 		A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A97CE7A31CC491D5006482E5 /* KSGuideManager.m */; };
 		A97CE7AA1CC4922D006482E5 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A61CC4922D006482E5 /* 11.jpg */; };
 		A97CE7AB1CC4922D006482E5 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A71CC4922D006482E5 /* 10.jpg */; };
 		A97CE7AC1CC4922D006482E5 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A81CC4922D006482E5 /* 12.jpg */; };
 		A97CE7AD1CC4922D006482E5 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A91CC4922D006482E5 /* 13.jpg */; };
+		A97CE7BE1CC500D7006482E5 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */; };
 		B37042FE1CC31ED0005E63A2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37042FD1CC31ED0005E63A2 /* HomeViewController.m */; };
 		B37043011CC35A17005E63A2 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043001CC35A17005E63A2 /* LeftViewController.m */; };
 		B37043071CC37801005E63A2 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043061CC37801005E63A2 /* MineViewController.m */; };
@@ -67,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		3DB42BFFA8F84097DBBBC0C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		730E208F1CC4FE5800D0F394 /* DisperseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisperseBtn.h; sourceTree = "<group>"; };
+		730E20901CC4FE5800D0F394 /* DisperseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisperseBtn.m; sourceTree = "<group>"; };
 		93AF09200784D595DF323AE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A97CE7A21CC491D5006482E5 /* KSGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGuideManager.h; sourceTree = "<group>"; };
 		A97CE7A31CC491D5006482E5 /* KSGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGuideManager.m; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		A97CE7A71CC4922D006482E5 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		A97CE7A81CC4922D006482E5 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
 		A97CE7A91CC4922D006482E5 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		A97CE7BC1CC500D7006482E5 /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
+		A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
 		B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B37042FC1CC31ED0005E63A2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B37042FD1CC31ED0005E63A2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -341,6 +347,10 @@
 				D3725BB11CC4F94900EB3347 /* WJAdvertCircle.m */,
 				A97CE7A21CC491D5006482E5 /* KSGuideManager.h */,
 				A97CE7A31CC491D5006482E5 /* KSGuideManager.m */,
+				A97CE7BC1CC500D7006482E5 /* UIButton+touch.h */,
+				A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */,
+				730E208F1CC4FE5800D0F394 /* DisperseBtn.h */,
+				730E20901CC4FE5800D0F394 /* DisperseBtn.m */,
 			);
 			name = 3rd;
 			sourceTree = "<group>";
@@ -545,6 +555,7 @@
 				A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,
 				D3725BB21CC4F94900EB3347 /* WJAdvertCircle.m in Sources */,
+				730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */,
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
 				D3725BB91CC5038600EB3347 /* SlideHeadView.m in Sources */,
 				B370430A1CC3791B005E63A2 /* CollectionTableViewController.m in Sources */,
@@ -552,6 +563,7 @@
 				B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */,
 				D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */,
 				D388FDBC1CC20F530057F6DB /* main.m in Sources */,
+				A97CE7BE1CC500D7006482E5 /* UIButton+touch.m in Sources */,
 				B38BD77E1CC47A5F00A11AF8 /* CommentTableViewController.m in Sources */,
 				D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */,
 				B37043071CC37801005E63A2 /* MineViewController.m in Sources */,
