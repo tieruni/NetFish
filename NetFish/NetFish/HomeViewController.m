@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "HomeCellTableViewCell.h"
+#import "KSGuideManager.h"
 @interface HomeViewController ()
 
 @end
@@ -17,7 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+  //引导页
+    NSMutableArray *paths = [NSMutableArray new];
+    [paths addObject:[[NSBundle mainBundle] pathForResource:@"10" ofType:@"jpg"]];
+    [paths addObject:[[NSBundle mainBundle] pathForResource:@"11" ofType:@"jpg"]];
+    [paths addObject:[[NSBundle mainBundle] pathForResource:@"12" ofType:@"jpg"]];
+    [paths addObject:[[NSBundle mainBundle] pathForResource:@"13" ofType:@"jpg"]];
+    [[KSGuideManager shared] showGuideViewWithImages:paths];
+
     
 
 }
