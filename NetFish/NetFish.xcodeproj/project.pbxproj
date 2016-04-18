@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E20901CC4FE5800D0F394 /* DisperseBtn.m */; };
 		94586E9A0C26DB84CCD4D194 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB42BFFA8F84097DBBBC0C1 /* libPods.a */; };
 		A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A97CE7A31CC491D5006482E5 /* KSGuideManager.m */; };
 		A97CE7AA1CC4922D006482E5 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A61CC4922D006482E5 /* 11.jpg */; };
@@ -63,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		3DB42BFFA8F84097DBBBC0C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		730E208F1CC4FE5800D0F394 /* DisperseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisperseBtn.h; sourceTree = "<group>"; };
+		730E20901CC4FE5800D0F394 /* DisperseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisperseBtn.m; sourceTree = "<group>"; };
 		93AF09200784D595DF323AE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A97CE7A21CC491D5006482E5 /* KSGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGuideManager.h; sourceTree = "<group>"; };
 		A97CE7A31CC491D5006482E5 /* KSGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGuideManager.m; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				D3725BB11CC4F94900EB3347 /* WJAdvertCircle.m */,
 				A97CE7A21CC491D5006482E5 /* KSGuideManager.h */,
 				A97CE7A31CC491D5006482E5 /* KSGuideManager.m */,
+				730E208F1CC4FE5800D0F394 /* DisperseBtn.h */,
+				730E20901CC4FE5800D0F394 /* DisperseBtn.m */,
 			);
 			name = 3rd;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,
 				D3725BB21CC4F94900EB3347 /* WJAdvertCircle.m in Sources */,
+				730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */,
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
 				B370430A1CC3791B005E63A2 /* CollectionTableViewController.m in Sources */,
 				B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */,
