@@ -76,30 +76,30 @@
 -(void)popUpHome {
     
      //根据故事版的名称和故事版中页面的名称获得这个页面
-    UINavigationController *homeVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
-    //初始化移门的门框,并且同时设置移门中间那扇门
-    _slidingVC = [ECSlidingViewController slidingWithTopViewController:homeVC];
-    //设置开门关门的耗时
-    _slidingVC.defaultTransitionDuration = 0.25f;
-    //设置控制移民开关的手势(这里同时对触摸和拖拽响应)
-    _slidingVC.topViewAnchoredGesture =ECSlidingViewControllerAnchoredGestureTapping |ECSlidingViewControllerAnchoredGesturePanning;
-    //设置手势的识别范围
-    [homeVC.view addGestureRecognizer:_slidingVC.panGesture];
-    
-    //根据故事版中页面的名字获得左滑页面的实例
-    LeftViewController *leftVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"left"];
-    
-    //设置移民靠左的那扇门
-    _slidingVC.underLeftViewController = leftVC;
-    //设置移门的开闭程度(设置左侧页面当被显示时，宽度能够显示屏幕宽度减去屏幕宽度1/4的宽度值)
-    _slidingVC.anchorRightPeekAmount = UI_SCREEN_W / 4;
-    //创建一个当菜单按钮被按时要执行的侧滑方法的通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(muenuSwitchAction) name:@"MenuSwitch" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableGestureAction) name:@"EnableGesture" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableGestureAction) name:@"DisableGesture" object:nil];
+   UINavigationController *homeVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
+//    //初始化移门的门框,并且同时设置移门中间那扇门
+//    _slidingVC = [ECSlidingViewController slidingWithTopViewController:homeVC];
+//    //设置开门关门的耗时
+//    _slidingVC.defaultTransitionDuration = 0.25f;
+//    //设置控制移民开关的手势(这里同时对触摸和拖拽响应)
+//    _slidingVC.topViewAnchoredGesture =ECSlidingViewControllerAnchoredGestureTapping |ECSlidingViewControllerAnchoredGesturePanning;
+//    //设置手势的识别范围
+//    [homeVC.view addGestureRecognizer:_slidingVC.panGesture];
+//    
+//    //根据故事版中页面的名字获得左滑页面的实例
+//    LeftViewController *leftVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"left"];
+//    
+//    //设置移民靠左的那扇门
+//    _slidingVC.underLeftViewController = leftVC;
+//    //设置移门的开闭程度(设置左侧页面当被显示时，宽度能够显示屏幕宽度减去屏幕宽度1/4的宽度值)
+//    _slidingVC.anchorRightPeekAmount = UI_SCREEN_W / 4;
+//    //创建一个当菜单按钮被按时要执行的侧滑方法的通知
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(muenuSwitchAction) name:@"MenuSwitch" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enableGestureAction) name:@"EnableGesture" object:nil];
+   // [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(disableGestureAction) name:@"DisableGesture" object:nil];
     
     //modal方式跳转到上述页面
-    [self presentViewController:_slidingVC animated:YES completion:nil];
+    [self presentViewController:homeVC animated:YES completion:nil];
     
     
 }

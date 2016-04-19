@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ECSlidingViewController.h"
+#import "LeftViewController.h"
 @interface AppDelegate ()
-
+@property (strong,nonatomic)ECSlidingViewController *slidingVC;
 @end
 
 @implementation AppDelegate
@@ -19,6 +20,27 @@
     // Override point for customization after application launch.
     [Parse setApplicationId:@"kJdcucb7Ad4SneexqxMURpj431I4W8JC6p0zixHj" clientKey:@"SU9z3D9DPH89kOSnAiXeoK9gDbu75PvK8QJLn6sE"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    UINavigationController *homeVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
+    //初始化移门的门框,并且同时设置移门中间那扇门
+    _slidingVC = [ECSlidingViewController slidingWithTopViewController:homeVC];
+    //设置开门关门的耗时
+    _slidingVC.defaultTransitionDuration = 0.25f;
+    //设置控制移民开关的手势(这里同时对触摸和拖拽响应)
+    _slidingVC.topViewAnchoredGesture =ECSlidingViewControllerAnchoredGestureTapping |ECSlidingViewControllerAnchoredGesturePanning;
+    //设置手势的识别范围
+    [homeVC.view addGestureRecognizer:_slidingVC.panGesture];
+    
+    //根据故事版中页面的名字获得左滑页面的实例
+    LeftViewController *leftVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"left"];
+    
+    //设置移民靠左的那扇门
+    _slidingVC.underLeftViewController = leftVC;
+    //设置移门的开闭程度(设置左侧页面当被显示时，宽度能够显示屏幕宽度减去屏幕宽度1/4的宽度值)
+    _slidingVC.anchorRightPeekAmount = UI_SCREEN_W / 4;
+//    //创建一个当菜单按钮被按时要执行的侧滑方法的通知
+//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(muenuSwitchAction) name:@"MenuSwitch" object:nil];
+    //modal方式跳转到上述页面
+    [self.window setRootViewController:_slidingVC];
     
     return YES;
 }
@@ -26,6 +48,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
