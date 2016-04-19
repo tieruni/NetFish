@@ -259,7 +259,7 @@
         <!--网娱-->
         <scene sceneID="9rq-4I-1iw">
             <objects>
-                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d4z-We-bcX" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="d4z-We-bcX" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YR2-JU-SnQ"/>
                         <viewControllerLayoutGuide type="bottom" id="uqZ-yS-jti"/>
@@ -671,7 +671,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lQT-xD-XpO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BzY-zL-m6E" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BzY-zL-m6E" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4lD-H5-vpZ">

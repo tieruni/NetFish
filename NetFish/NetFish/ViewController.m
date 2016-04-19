@@ -76,7 +76,7 @@
 -(void)popUpHome {
     
      //根据故事版的名称和故事版中页面的名称获得这个页面
-    HomeViewController *homeVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
+    UINavigationController *homeVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
     //初始化移门的门框,并且同时设置移门中间那扇门
     _slidingVC = [ECSlidingViewController slidingWithTopViewController:homeVC];
     //设置开门关门的耗时
