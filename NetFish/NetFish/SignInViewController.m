@@ -44,7 +44,7 @@
     
 }
 - (IBAction)SignInUpAction:(UIButton *)sender forEvent:(UIEvent *)event {
-    //获得用户输入的信息
+//    //获得用户输入的信息
     NSString *username = _usernameTF.text;
     NSString *email = _emailTF.text;
     NSString *password = _passwordTF.text;
@@ -100,7 +100,7 @@
             _passwordTF.text = @"";
             _confidPW.text = @"";
             //回到登录页面
-            [self.navigationController popViewControllerAnimated:YES];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }else{
             switch (error.code) {
                 case 202:
@@ -122,5 +122,14 @@
         }
     }];
 
+}
+//当键盘按了右下角后会收起键盘
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+//按任何地方收键盘
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 @end

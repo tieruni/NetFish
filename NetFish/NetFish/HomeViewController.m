@@ -113,6 +113,19 @@
     });
     
 }
+//每次页面出现后
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"EnableGesture" object:nil];
+    
+    
+}
+//每次页面消失后
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"DisableGesture" object:nil];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -142,5 +155,7 @@
 //    return cell;
 //}
 - (IBAction)menuAction:(UIBarButtonItem *)sender {
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"MenuSwitch" object:nil];
 }
+
 @end
