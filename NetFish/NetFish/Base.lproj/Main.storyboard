@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -328,7 +327,7 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="exitAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="6HE-l6-AGG"/>
+                                    <action selector="exitAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="m1p-yG-PR1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdy-0l-mLt">
@@ -338,8 +337,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="collectionAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="tXQ-Uk-feL"/>
-                                    <segue destination="Fa1-So-Pfb" kind="show" id="raa-v8-964"/>
+                                    <action selector="collectonAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="jgb-cF-1bp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81O-zd-58a">
@@ -361,7 +359,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="imageAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="lVL-9b-k1N"/>
+                                    <action selector="imageAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="fvq-tW-MOk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFI-PP-kPf">
@@ -390,14 +388,13 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="imageButton" destination="9r2-Mh-eBv" id="slx-Xv-Pnc"/>
-                        <outlet property="loginLbl" destination="FFI-PP-kPf" id="kLC-KT-aUM"/>
-                        <outlet property="username" destination="81O-zd-58a" id="r5D-Kz-LNm"/>
+                        <outlet property="loginLbl" destination="FFI-PP-kPf" id="Dky-la-9A8"/>
+                        <outlet property="username" destination="81O-zd-58a" id="mbT-Ye-f16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRh-tS-udP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="1094"/>
+            <point key="canvasLocation" x="1596" y="1022"/>
         </scene>
         <!--评论-->
         <scene sceneID="LEj-2E-8az">
@@ -515,7 +512,7 @@
         <!--Mine View Controller-->
         <scene sceneID="Qep-TU-vVG">
             <objects>
-                <viewController id="pOq-0z-jPW" customClass="MineViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Mine" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pOq-0z-jPW" customClass="MineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z2T-SL-rJD"/>
                         <viewControllerLayoutGuide type="bottom" id="oMY-za-7ya"/>
@@ -525,61 +522,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kei-V3-lM0">
-                                <rect key="frame" x="50" y="168" width="220" height="30"/>
+                                <rect key="frame" x="50" y="190" width="220" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="性别" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-ST-3vh">
-                                <rect key="frame" x="50" y="213" width="220" height="30"/>
+                                <rect key="frame" x="50" y="235" width="220" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="所在城市" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-u7-m92">
-                                <rect key="frame" x="50" y="258" width="220" height="30"/>
+                                <rect key="frame" x="50" y="280" width="220" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册邮箱：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-FO-Js6">
-                                <rect key="frame" x="20" y="318" width="85" height="21"/>
+                                <rect key="frame" x="20" y="340" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjN-dj-eEk">
-                                <rect key="frame" x="110" y="318" width="42" height="21"/>
+                                <rect key="frame" x="110" y="340" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHV-dq-dMp">
-                                <rect key="frame" x="40" y="389" width="240" height="40"/>
+                                <rect key="frame" x="40" y="411" width="240" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MoY-Np-n4e"/>
                                 </constraints>
                                 <state key="normal" title="确认" backgroundImage="Image3"/>
+                                <connections>
+                                    <action selector="confirmAction:forEvent:" destination="pOq-0z-jPW" eventType="touchUpInside" id="aOF-UD-vWC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-yO-ZDP">
                                 <rect key="frame" x="10" y="20" width="16" height="16"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" backgroundImage="Image2"/>
+                                <connections>
+                                    <action selector="exitAction:forEvent:" destination="pOq-0z-jPW" eventType="touchUpInside" id="UeT-Th-8P8"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image5" translatesAutoresizingMaskIntoConstraints="NO" id="oJd-ny-f4l">
-                                <rect key="frame" x="40" y="15" width="240" height="128"/>
+                                <rect key="frame" x="85" y="15" width="150" height="150"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="F4A-0F-pWY"/>
-                                    <constraint firstAttribute="width" secondItem="oJd-ny-f4l" secondAttribute="height" multiplier="15:8" id="hRV-0m-NrI"/>
+                                    <constraint firstAttribute="height" constant="150" id="WSw-uQ-Mle"/>
+                                    <constraint firstAttribute="width" constant="150" id="zjh-BX-Iki"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="40"/>
+                                        <integer key="value" value="75"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="F4A-0F-pWY"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="JFC-Ly-Dod" appends="YES" id="Jac-iR-4S8"/>
+                                    <outletCollection property="gestureRecognizers" destination="LgG-4c-2ZO" appends="YES" id="h03-dI-Zxa"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -602,10 +610,13 @@
                             <constraint firstItem="nHV-dq-dMp" firstAttribute="leading" secondItem="Ka8-Iw-KwJ" secondAttribute="leading" constant="40" id="csB-i4-Wpv"/>
                             <constraint firstItem="nHV-dq-dMp" firstAttribute="top" secondItem="sbO-FO-Js6" secondAttribute="bottom" constant="50" id="daM-cS-I89"/>
                             <constraint firstItem="Jlf-ST-3vh" firstAttribute="leading" secondItem="Ka8-Iw-KwJ" secondAttribute="leading" constant="50" id="dyh-ZY-BaT"/>
+                            <constraint firstItem="Kei-V3-lM0" firstAttribute="top" secondItem="oJd-ny-f4l" secondAttribute="bottom" constant="25" id="eEw-Ax-fQJ"/>
                             <constraint firstItem="oJd-ny-f4l" firstAttribute="top" secondItem="Ka8-Iw-KwJ" secondAttribute="top" constant="15" id="h2h-tb-GWd"/>
                             <constraint firstItem="oJd-ny-f4l" firstAttribute="leading" secondItem="Ka8-Iw-KwJ" secondAttribute="leading" constant="40" id="hA9-FL-SBe"/>
                             <constraint firstItem="oJd-ny-f4l" firstAttribute="centerX" secondItem="Kei-V3-lM0" secondAttribute="centerX" id="hjZ-52-jEO"/>
                             <constraint firstAttribute="trailing" secondItem="Kei-V3-lM0" secondAttribute="trailing" constant="50" id="htp-JG-Ez7"/>
+                            <constraint firstItem="Kei-V3-lM0" firstAttribute="centerX" secondItem="oJd-ny-f4l" secondAttribute="centerX" id="iNO-TQ-eqY"/>
+                            <constraint firstItem="oJd-ny-f4l" firstAttribute="top" secondItem="Ka8-Iw-KwJ" secondAttribute="top" constant="15" id="ulh-YN-Tw2"/>
                             <constraint firstItem="zAq-u7-m92" firstAttribute="top" secondItem="Jlf-ST-3vh" secondAttribute="bottom" constant="15" id="vRU-ue-IFY"/>
                             <constraint firstAttribute="trailing" secondItem="nHV-dq-dMp" secondAttribute="trailing" constant="40" id="z2v-VY-QnO"/>
                             <constraint firstItem="tjN-dj-eEk" firstAttribute="centerY" secondItem="sbO-FO-Js6" secondAttribute="centerY" id="zgM-aQ-WW0"/>
@@ -613,15 +624,30 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="DPf-nE-FSB"/>
+                                <exclude reference="h2h-tb-GWd"/>
+                                <exclude reference="hA9-FL-SBe"/>
+                                <exclude reference="hjZ-52-jEO"/>
+                                <exclude reference="PhC-N1-FmW"/>
                                 <exclude reference="IE6-TF-lcW"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ZhV-Mp-v78"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="cityTF" destination="zAq-u7-m92" id="4sp-bQ-c5b"/>
+                        <outlet property="emailLbl" destination="tjN-dj-eEk" id="GzD-dg-pRN"/>
+                        <outlet property="imageview" destination="oJd-ny-f4l" id="eYl-i6-eMY"/>
+                        <outlet property="sexTF" destination="Jlf-ST-3vh" id="DW8-ur-AyW"/>
+                        <outlet property="usernameTF" destination="Kei-V3-lM0" id="AJw-2L-kqT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Pl-8B-gfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="JFC-Ly-Dod"/>
+                <tapGestureRecognizer id="LgG-4c-2ZO">
+                    <connections>
+                        <action selector="pickimage:" destination="pOq-0z-jPW" id="KsJ-wo-7nW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2131" y="921"/>
         </scene>

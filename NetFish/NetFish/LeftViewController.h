@@ -9,13 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface LeftViewController : UIViewController
+- (IBAction)imageAction:(UIButton *)sender forEvent:(UIEvent *)event;
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UILabel *loginLbl;
-- (IBAction)imageAction:(UIButton *)sender forEvent:(UIEvent *)event;
-@property (weak, nonatomic) IBOutlet UIButton *imageButton;
-- (IBAction)collectionAction:(UIButton *)sender forEvent:(UIEvent *)event;
-@property (weak, nonatomic) IBOutlet UIButton *mineAction;
 - (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)collectonAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
 
 
 
