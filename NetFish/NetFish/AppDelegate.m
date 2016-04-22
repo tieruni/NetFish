@@ -14,7 +14,16 @@
 @end
 
 @implementation AppDelegate
-
+-(void)muenuSwitchAction {
+    NSLog(@"菜单");
+    if (_slidingVC.currentTopViewPosition == ECSlidingViewControllerTopViewPositionAnchoredRight) {
+        //上述条件表示中间那扇门正移在右侧，说明门是打开的 因此我们需要将它关闭，也就是将中间的门移回中间
+        [_slidingVC resetTopViewAnimated:YES];
+    }else{
+        //  反之
+        [_slidingVC anchorTopViewToRightAnimated:YES];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -38,7 +47,7 @@
     //设置移门的开闭程度(设置左侧页面当被显示时，宽度能够显示屏幕宽度减去屏幕宽度1/4的宽度值)
     _slidingVC.anchorRightPeekAmount = UI_SCREEN_W / 4;
 //    //创建一个当菜单按钮被按时要执行的侧滑方法的通知
-//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(muenuSwitchAction) name:@"MenuSwitch" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(muenuSwitchAction) name:@"MenuSwitch" object:nil];
     //modal方式跳转到上述页面
     [self.window setRootViewController:_slidingVC];
     
