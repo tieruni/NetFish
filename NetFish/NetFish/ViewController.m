@@ -10,7 +10,12 @@
 #import "HomeViewController.h"
 #import <ECSlidingViewController/ECSlidingViewController.h>
 #import "LeftViewController.h"
+#import "XMNAnimTextFiled.h"
 @interface ViewController ()
+
+@property (nonatomic, strong) CAShapeLayer *layer;
+@property (nonatomic, strong)   XMNAnimTextFiled *usernameTF1;
+@property (nonatomic, strong)   XMNAnimTextFiled *passwordTF1;
 @property (strong,nonatomic)ECSlidingViewController *slidingVC;
 @end
 
@@ -18,6 +23,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _usernameTF1 = [[XMNAnimTextFiled alloc] initWithFrame:CGRectMake(20, 100, self.view.frame.size.width - 40, 70)];
+    [_usernameTF1 setPlaceHolderText:@"请输入用户名"];
+    [self.view addSubview:_usernameTF1];
+    
+    
+    _passwordTF1 = [[XMNAnimTextFiled alloc] initWithFrame:CGRectMake(20, 200, self.view.frame.size.width - 40, 70)];
+    [_passwordTF1 setTipsIcon:[UIImage imageNamed:@"invisible_icon"]];
+    [_passwordTF1 setPlaceHolderIcon:[UIImage imageNamed:@"1"]];
+    [_passwordTF1 setPlaceHolderText:@"请输入密码"];
+    [_passwordTF1 setInputType:XMNAnimTextFieldInputTypePassword];
+    [self.view addSubview:_passwordTF1];
     // Do any additional setup after loading the view, typically from a nib.
     //初始化一个bool格式的单例化全局变量来表示是否成功执行了注册操作，默认为否
     //加@转换为number对象
@@ -29,7 +45,7 @@
     //判断是否记忆了用户名
     if (![[Utilities getUserDefaults:@"Username"]isKindOfClass:[NSNull class]]) {
         //如果有记忆就把记忆显示在用户名文本输入框中
-        _usernameTF.text = [Utilities getUserDefaults:@"Username"];
+        _usernameTF1.text = [Utilities getUserDefaults:@"Username"];
     }
 }
 
@@ -118,7 +134,7 @@
             //记忆用户名
             [Utilities setUserDefaults:@"Username" content:username];
             //将密码文本输入框中的内容清掉
-            _passwordTF.text = @"";
+            _passwordTF1.text = @"";
             //跳转到首页
             [self popUpHome];
         }else{
@@ -144,8 +160,8 @@
 }
 
 - (IBAction)SignInAction:(UIButton *)sender forEvent:(UIEvent *)event {
-    NSString *username = _usernameTF.text;
-    NSString *password = _passwordTF.text;
+    NSString *username = _usernameTF1.text;
+    NSString *password = _passwordTF1.text;
     //判断用户是否输入信息
     if (username.length == 0 || password.length == 0 ) {
         [Utilities popUpAlertViewWithMsg:@"请填写所有信息" andTitle:nil onView:self];

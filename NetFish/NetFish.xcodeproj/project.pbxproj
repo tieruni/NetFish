@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E20901CC4FE5800D0F394 /* DisperseBtn.m */; };
 		94586E9A0C26DB84CCD4D194 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB42BFFA8F84097DBBBC0C1 /* libPods.a */; };
+		A95BD4EA1CC9F6EE004CFA00 /* invisible_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A95BD4E61CC9F6EE004CFA00 /* invisible_icon@2x.png */; };
+		A95BD4EB1CC9F6EE004CFA00 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A95BD4E71CC9F6EE004CFA00 /* 1@2x.png */; };
+		A95BD4EC1CC9F6EE004CFA00 /* XMNAnimTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = A95BD4E81CC9F6EE004CFA00 /* XMNAnimTextFiled.m */; };
 		A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A97CE7A31CC491D5006482E5 /* KSGuideManager.m */; };
 		A97CE7AA1CC4922D006482E5 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A61CC4922D006482E5 /* 11.jpg */; };
 		A97CE7AB1CC4922D006482E5 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A71CC4922D006482E5 /* 10.jpg */; };
@@ -72,6 +75,10 @@
 		730E208F1CC4FE5800D0F394 /* DisperseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisperseBtn.h; sourceTree = "<group>"; };
 		730E20901CC4FE5800D0F394 /* DisperseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisperseBtn.m; sourceTree = "<group>"; };
 		93AF09200784D595DF323AE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A95BD4E61CC9F6EE004CFA00 /* invisible_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invisible_icon@2x.png"; sourceTree = "<group>"; };
+		A95BD4E71CC9F6EE004CFA00 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
+		A95BD4E81CC9F6EE004CFA00 /* XMNAnimTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNAnimTextFiled.m; sourceTree = "<group>"; };
+		A95BD4E91CC9F6EE004CFA00 /* XMNAnimTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNAnimTextFiled.h; sourceTree = "<group>"; };
 		A97CE7A21CC491D5006482E5 /* KSGuideManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGuideManager.h; sourceTree = "<group>"; };
 		A97CE7A31CC491D5006482E5 /* KSGuideManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGuideManager.m; sourceTree = "<group>"; };
 		A97CE7A61CC4922D006482E5 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
@@ -338,6 +345,10 @@
 		D388FDF41CC21A1F0057F6DB /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				A95BD4E61CC9F6EE004CFA00 /* invisible_icon@2x.png */,
+				A95BD4E71CC9F6EE004CFA00 /* 1@2x.png */,
+				A95BD4E81CC9F6EE004CFA00 /* XMNAnimTextFiled.m */,
+				A95BD4E91CC9F6EE004CFA00 /* XMNAnimTextFiled.h */,
 				D3725BB31CC5038600EB3347 /* b1.png */,
 				D3725BB41CC5038600EB3347 /* SlideHeadView.h */,
 				D3725BB51CC5038600EB3347 /* SlideHeadView.m */,
@@ -471,10 +482,12 @@
 			files = (
 				A97CE7AB1CC4922D006482E5 /* 10.jpg in Resources */,
 				D388FDCD1CC20F530057F6DB /* LaunchScreen.storyboard in Resources */,
+				A95BD4EB1CC9F6EE004CFA00 /* 1@2x.png in Resources */,
 				A97CE7AC1CC4922D006482E5 /* 12.jpg in Resources */,
 				D388FDCA1CC20F530057F6DB /* Assets.xcassets in Resources */,
 				D3725BB81CC5038600EB3347 /* b1.png in Resources */,
 				D388FDC51CC20F530057F6DB /* Main.storyboard in Resources */,
+				A95BD4EA1CC9F6EE004CFA00 /* invisible_icon@2x.png in Resources */,
 				A97CE7AA1CC4922D006482E5 /* 11.jpg in Resources */,
 				A97CE7AD1CC4922D006482E5 /* 13.jpg in Resources */,
 			);
@@ -567,6 +580,7 @@
 				B38BD77E1CC47A5F00A11AF8 /* CommentTableViewController.m in Sources */,
 				D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */,
 				B37043071CC37801005E63A2 /* MineViewController.m in Sources */,
+				A95BD4EC1CC9F6EE004CFA00 /* XMNAnimTextFiled.m in Sources */,
 				D388FDFB1CC21AE20057F6DB /* Utilities.m in Sources */,
 				B37042FE1CC31ED0005E63A2 /* HomeViewController.m in Sources */,
 				B370430D1CC39BC6005E63A2 /* DetailViewController.m in Sources */,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BzY-zL-m6E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BzY-zL-m6E">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -60,59 +60,23 @@
                                     <action selector="exitAction:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydU-C4-Bdh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" textAlignment="natural" minimumFontSize="17" background="Image3" translatesAutoresizingMaskIntoConstraints="NO" id="beY-y2-Bts">
-                                <rect key="frame" x="30" y="100" width="260" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="rbI-Xu-MNW"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="natural" minimumFontSize="17" background="Image3" translatesAutoresizingMaskIntoConstraints="NO" id="lTX-E9-3xV">
-                                <rect key="frame" x="30" y="160" width="260" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Gz8-a5-zWf"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UvY-aD-l4V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FTa-AR-vBu"/>
-                            <constraint firstItem="lTX-E9-3xV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Ijc-qy-TdZ"/>
-                            <constraint firstItem="beY-y2-Bts" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="L7w-w5-g5f"/>
                             <constraint firstItem="AWr-l7-xUu" firstAttribute="top" secondItem="icR-Y0-eSc" secondAttribute="bottom" constant="25" id="QR8-sj-IkX"/>
-                            <constraint firstItem="beY-y2-Bts" firstAttribute="top" secondItem="9ZD-tD-Ilg" secondAttribute="bottom" constant="20" id="SYF-fr-R5g"/>
                             <constraint firstAttribute="trailing" secondItem="icR-Y0-eSc" secondAttribute="trailing" constant="70" id="Sfj-Re-mth"/>
-                            <constraint firstItem="beY-y2-Bts" firstAttribute="top" secondItem="Zsc-En-eUb" secondAttribute="bottom" constant="40" id="Ty3-hX-lV4"/>
-                            <constraint firstAttribute="trailing" secondItem="lTX-E9-3xV" secondAttribute="trailing" constant="30" id="XEM-TC-zwI"/>
                             <constraint firstAttribute="trailing" secondItem="AWr-l7-xUu" secondAttribute="trailing" constant="30" id="Xer-br-frP"/>
-                            <constraint firstAttribute="trailing" secondItem="beY-y2-Bts" secondAttribute="trailing" constant="30" id="ZTQ-b0-VvT"/>
                             <constraint firstItem="9ZD-tD-Ilg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Zge-D2-hCc"/>
-                            <constraint firstAttribute="trailing" secondItem="beY-y2-Bts" secondAttribute="trailing" constant="30" id="aXs-PV-pgd"/>
                             <constraint firstItem="9ZD-tD-Ilg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="azj-f0-kU6"/>
                             <constraint firstItem="UvY-aD-l4V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dXK-DL-bhk"/>
                             <constraint firstItem="icR-Y0-eSc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="70" id="gv7-0S-Q8i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UvY-aD-l4V" secondAttribute="bottom" id="hh5-vh-nSy"/>
-                            <constraint firstAttribute="trailing" secondItem="lTX-E9-3xV" secondAttribute="trailing" constant="30" id="iA1-wu-TcA"/>
-                            <constraint firstItem="lTX-E9-3xV" firstAttribute="top" secondItem="beY-y2-Bts" secondAttribute="bottom" constant="10" id="j3l-TW-mIX"/>
                             <constraint firstItem="Zsc-En-eUb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="j3m-gK-vMM"/>
                             <constraint firstAttribute="trailing" secondItem="UvY-aD-l4V" secondAttribute="trailing" id="jge-dR-VwC"/>
-                            <constraint firstItem="icR-Y0-eSc" firstAttribute="top" secondItem="lTX-E9-3xV" secondAttribute="bottom" constant="30" id="owr-Nb-JhR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AWr-l7-xUu" secondAttribute="bottom" constant="147" id="wrN-jb-5nD"/>
                             <constraint firstAttribute="trailing" secondItem="Zsc-En-eUb" secondAttribute="trailing" constant="20" id="zq3-Ji-ap8"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="SYF-fr-R5g"/>
-                                <exclude reference="aXs-PV-pgd"/>
-                                <exclude reference="XEM-TC-zwI"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="登录" id="10W-5P-i5M">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ntO-bZ-BOk">
@@ -128,10 +92,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="passwordTF" destination="lTX-E9-3xV" id="b9Q-Gm-B5f"/>
-                        <outlet property="usernameTF" destination="beY-y2-Bts" id="5pi-gI-bPo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
