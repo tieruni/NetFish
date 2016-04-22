@@ -9,7 +9,7 @@
         <!--登录-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sign" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -355,26 +355,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lub-ZK-k9J">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image5" translatesAutoresizingMaskIntoConstraints="NO" id="GEm-55-riK">
-                                <rect key="frame" x="5" y="30" width="70" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="I3o-Vp-Zor"/>
-                                    <constraint firstAttribute="width" constant="70" id="sWx-yi-sBc"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVJ-XD-X5O">
-                                <rect key="frame" x="15" y="105" width="48" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="登录\注册">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wt-AB-ddp">
                                 <rect key="frame" x="10" y="420" width="150" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -387,6 +367,9 @@
                                 <state key="normal" title="退出" backgroundImage="Image3">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="exitAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="6HE-l6-AGG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdy-0l-mLt">
                                 <rect key="frame" x="15" y="141" width="64" height="32"/>
@@ -395,6 +378,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="collectionAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="tXQ-Uk-feL"/>
                                     <segue destination="Fa1-So-Pfb" kind="show" id="raa-v8-964"/>
                                 </connections>
                             </button>
@@ -414,34 +398,55 @@
                                     <segue destination="pOq-0z-jPW" kind="show" id="ncF-Qo-yPa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-Mh-eBv">
+                                <rect key="frame" x="15" y="35" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Av6-dH-oVc"/>
+                                    <constraint firstAttribute="height" constant="50" id="Sqj-Fu-ZiT"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Image5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="imageAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="lVL-9b-k1N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFI-PP-kPf">
+                                <rect key="frame" x="27" y="90" width="26" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="9r2-Mh-eBv" firstAttribute="top" secondItem="lDG-Ny-DiY" secondAttribute="bottom" constant="15" id="2M8-la-YCA"/>
                             <constraint firstItem="Pgq-ja-3w9" firstAttribute="leading" secondItem="FdJ-C8-itu" secondAttribute="leading" constant="15" id="2ao-XN-pXO"/>
                             <constraint firstItem="81O-zd-58a" firstAttribute="top" secondItem="lDG-Ny-DiY" secondAttribute="bottom" constant="25" id="E6D-uy-6CZ"/>
-                            <constraint firstItem="sdy-0l-mLt" firstAttribute="top" secondItem="tVJ-XD-X5O" secondAttribute="bottom" constant="10" id="G65-l3-bdY"/>
-                            <constraint firstItem="81O-zd-58a" firstAttribute="leading" secondItem="GEm-55-riK" secondAttribute="trailing" constant="5" id="J8z-S8-8bc"/>
-                            <constraint firstItem="81O-zd-58a" firstAttribute="bottom" secondItem="GEm-55-riK" secondAttribute="bottom" id="LHe-0I-XUd"/>
                             <constraint firstItem="Pgq-ja-3w9" firstAttribute="top" secondItem="sdy-0l-mLt" secondAttribute="bottom" constant="5" id="LxT-w5-dKt"/>
                             <constraint firstItem="sdy-0l-mLt" firstAttribute="leading" secondItem="FdJ-C8-itu" secondAttribute="leading" constant="15" id="MPK-3C-9mt"/>
-                            <constraint firstItem="GEm-55-riK" firstAttribute="top" secondItem="lDG-Ny-DiY" secondAttribute="bottom" constant="10" id="PPd-Bl-S3O"/>
                             <constraint firstItem="lub-ZK-k9J" firstAttribute="top" secondItem="FdJ-C8-itu" secondAttribute="top" id="PyG-Ld-P7g"/>
-                            <constraint firstItem="81O-zd-58a" firstAttribute="leading" secondItem="GEm-55-riK" secondAttribute="trailing" constant="5" id="Ub3-dJ-d6i"/>
-                            <constraint firstItem="GEm-55-riK" firstAttribute="leading" secondItem="FdJ-C8-itu" secondAttribute="leading" constant="5" id="Vfb-Wi-1Rl"/>
-                            <constraint firstItem="tVJ-XD-X5O" firstAttribute="top" secondItem="GEm-55-riK" secondAttribute="bottom" constant="5" id="VxX-MO-hrA"/>
+                            <constraint firstItem="FFI-PP-kPf" firstAttribute="centerX" secondItem="9r2-Mh-eBv" secondAttribute="centerX" id="Vdx-xk-sXp"/>
                             <constraint firstItem="YEq-pz-Bmu" firstAttribute="top" secondItem="lub-ZK-k9J" secondAttribute="bottom" id="Xcl-KR-a1o"/>
                             <constraint firstItem="YEq-pz-Bmu" firstAttribute="top" secondItem="0wt-AB-ddp" secondAttribute="bottom" constant="20" id="aLU-Tn-jVq"/>
                             <constraint firstAttribute="trailing" secondItem="lub-ZK-k9J" secondAttribute="trailing" id="gqR-0Q-YGk"/>
+                            <constraint firstItem="9r2-Mh-eBv" firstAttribute="leading" secondItem="FdJ-C8-itu" secondAttribute="leading" constant="15" id="nMc-L7-kMs"/>
+                            <constraint firstItem="sdy-0l-mLt" firstAttribute="top" secondItem="9r2-Mh-eBv" secondAttribute="bottom" constant="56" id="nOD-bU-296"/>
                             <constraint firstItem="0wt-AB-ddp" firstAttribute="leading" secondItem="FdJ-C8-itu" secondAttribute="leading" constant="10" id="oW5-xX-FMt"/>
-                            <constraint firstItem="tVJ-XD-X5O" firstAttribute="leading" secondItem="FdJ-C8-itu" secondAttribute="leading" constant="15" id="sOq-7d-rVZ"/>
+                            <constraint firstItem="FFI-PP-kPf" firstAttribute="top" secondItem="9r2-Mh-eBv" secondAttribute="bottom" constant="5" id="qt3-SZ-YDD"/>
+                            <constraint firstItem="81O-zd-58a" firstAttribute="leading" secondItem="9r2-Mh-eBv" secondAttribute="trailing" constant="15" id="uNK-kN-SL2"/>
                             <constraint firstItem="lub-ZK-k9J" firstAttribute="leading" secondItem="FdJ-C8-itu" secondAttribute="leading" id="wVt-w2-vGJ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="LHe-0I-XUd"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageButton" destination="9r2-Mh-eBv" id="slx-Xv-Pnc"/>
+                        <outlet property="loginLbl" destination="FFI-PP-kPf" id="kLC-KT-aUM"/>
+                        <outlet property="mineAction" destination="Pgq-ja-3w9" id="bo0-Gj-V23"/>
+                        <outlet property="username" destination="81O-zd-58a" id="r5D-Kz-LNm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRh-tS-udP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
