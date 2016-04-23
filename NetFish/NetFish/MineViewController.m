@@ -9,7 +9,7 @@
 #import "MineViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <MessageUI/MessageUI.h>
-
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface MineViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (strong,nonatomic) UIImagePickerController *imagePC;
 
@@ -21,11 +21,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _imageview.userInteractionEnabled = YES;
-    
-    
+    [self uiConfiguration];
+    [self reloadInputViews];
     
 }
+-(void)uiConfiguration{
 
+    PFUser *currentuser = [PFUser currentUser];
+    PFFile *photo = currentuser[@"avatar"];
+    NSString *photoURLStr = photo.url;
+    NSURL *photoURL = [NSURL URLWithString:photoURLStr];
+    //异步加载和缓存
+    [_imageview sd_setImageWithURL:photoURL placeholderImage:[UIImage imageNamed:@"Image5"]];
+    
+    NSString *nick =currentuser[@"nickname"];
+    _usernameTF.text = nick;
+    NSString *email = currentuser[@"email"];
+    _emailLbl.text = email;
+    NSString *city = currentuser[@"city"];
+    _cityTF.text = city;
+    NSString *gender = currentuser[@"gender"];
+    _sexTF.text = gender;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -59,6 +76,7 @@
 
 - (IBAction)pickimage:(UITapGestureRecognizer *)sender {
     NSLog(@"asdadsasd");
+    
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *takePhoto = [UIAlertAction actionWithTitle:@"照相" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
@@ -112,76 +130,61 @@
 - (IBAction)confirmAction:(UIButton *)sender forEvent:(UIEvent *)event {
     UIImage *image = _imageview.image;
     NSString *name = _usernameTF.text;
-    NSString *sex = _sexTF.text;
+    NSString *gender = _sexTF.text;
     NSString *city = _cityTF.text;
-    //NSString *email = _emailLbl.text;
-    PFObject *user = [PFObject objectWithClassName:@"User"];
+    
     PFUser *currentUser = [PFUser currentUser];
-    currentUser[@"nickname"] = name;
-    currentUser[@"gender"] = sex;
-    currentUser[@"city"] = city;
     //将一个UIImage对象转换成png格式的数据流
     NSData *photoData = UIImagePNGRepresentation(image);
     PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
-    user[@"avatar"] = photoFile;
-//    if (name.length ==0) {
-//        [Utilities popUpAlertViewWithMsg:@"请输入昵称" andTitle:nil onView:self];
-//        if (name != currentUser[@"nickname"] &&city !=currentUser[@"city"] && sex !=currentUser[@"gender"]) {
-//            
-//            UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
-//            [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-//                
-//                [aiv stopAnimating];
-//                if (succeeded) {
-//                    
-//                    //只有当2个数据库操作都完成以后才应该让菊花停转
-//                    [aiv stopAnimating];
-//                    [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
-//                    
-//                }else{
-//                    
-//                    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
-//                }
-//            }];
-//        }else{
-//            
-//            [Utilities popUpAlertViewWithMsg:@"您当前没有做任何修改" andTitle:nil onView:self];
-//        }
-//    
-//    }
-    UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
-    [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error){
-        [aiv stopAnimating];
-        if (name.length !=0) {
-            
-            if (name != currentUser[@"nickname"]) {
-                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
-                
-            }else if (sex !=currentUser[@"gender"]){
-                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
-                
-            }else if (city != currentUser[@"city"]){
-                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
-                
-            }else{
-                [Utilities popUpAlertViewWithMsg:@"您没有作出任何修改" andTitle:nil onView:self];
-            }
-            
-        }else{
-            [Utilities popUpAlertViewWithMsg:@"请输入昵称" andTitle:nil onView:self];
-            
-        }
-            
-        
-        
-        
-        
-    }];
     
+    if (name.length == 0) {
+        [Utilities popUpAlertViewWithMsg:@"请填写相关信息" andTitle:nil onView:self];
+        return;
+    }else{
+        if (name != currentUser[@"nickname"] || gender != currentUser[@"gender"] || city != currentUser[@"city"]) {
+            currentUser[@"nickname"] = name;
+            currentUser[@"gender"] = gender;
+            currentUser[@"city"] = city;
+            currentUser[@"avatar"] = photoFile;
+//            UIActivityIndicatorView *aiv = [];
+            UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+            [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                [aiv stopAnimating];
+                if (succeeded) {
+                    [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }
+            }];
+        }else{
+            
+            [Utilities popUpAlertViewWithMsg:@"您当前没有做任何修改" andTitle:nil onView:self];
+        }
+    }
+    
+
+    
+
+    
+    
+
+
+}
+//让Text View控件实现：当键盘return按钮被按下后收起键盘
+//当文本输入视图中文字发生变化时调用（返回YES表示同意这个变化，返回NO币哦啊时不同意）
+-(BOOL)textView:(UITableView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(nonnull NSString *)text{
+    //捕捉到return按钮被按下这一事件（return键按钮被按下实际上在文本输入视图中执行换行：／n）
+    if ([text isEqualToString:@"/n"]) {
+        //重设键盘初始响应器
+        [textView resignFirstResponder];
+    }
+    return YES;
+}
+//键盘以外收键盘
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
     
 }
-
-
 
 
 
