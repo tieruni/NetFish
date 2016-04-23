@@ -344,8 +344,8 @@
                                     <action selector="collectonAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="jgb-cF-1bp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81O-zd-58a">
-                                <rect key="frame" x="130" y="45" width="45" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81O-zd-58a">
+                                <rect key="frame" x="130" y="45" width="30" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -425,9 +425,9 @@
                                             <state key="normal" title="点赞"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRE-9q-itX">
-                                            <rect key="frame" x="46" y="5" width="36" height="36"/>
+                                            <rect key="frame" x="46" y="5" width="30" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <state key="normal" title="用户名"/>
+                                            <state key="normal" title="昵称"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qx4-eJ-Xlr">
                                             <rect key="frame" x="283" y="33" width="24" height="11"/>
@@ -525,7 +525,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kei-V3-lM0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kei-V3-lM0">
                                 <rect key="frame" x="50" y="195" width="220" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -646,7 +646,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="cityTF" destination="zAq-u7-m92" id="4sp-bQ-c5b"/>
-                        <outlet property="emailLbl" destination="tjN-dj-eEk" id="spg-P5-poz"/>
+                        <outlet property="emailLbl" destination="tjN-dj-eEk" id="oNf-Am-lOj"/>
                         <outlet property="imageview" destination="oJd-ny-f4l" id="eYl-i6-eMY"/>
                         <outlet property="sexTF" destination="Jlf-ST-3vh" id="DW8-ur-AyW"/>
                         <outlet property="usernameTF" destination="Kei-V3-lM0" id="AJw-2L-kqT"/>

@@ -22,6 +22,8 @@
     // Do any additional setup after loading the view.
     _imageview.userInteractionEnabled = YES;
     
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,7 +115,38 @@
     NSString *sex = _sexTF.text;
     NSString *city = _cityTF.text;
     //NSString *email = _emailLbl.text;
-    
+    PFObject *user = [PFObject objectWithClassName:@"User"];
+    PFUser *currentUser = [PFUser currentUser];
+    currentUser[@"nickname"] = name;
+    currentUser[@"gender"] = sex;
+    currentUser[@"city"] = city;
+    //将一个UIImage对象转换成png格式的数据流
+    NSData *photoData = UIImagePNGRepresentation(image);
+    PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
+    user[@"avatar"] = photoFile;
+   if (name != currentUser[@"nickname"] &&city !=currentUser[@"city"] && sex !=currentUser[@"gender"]) {
+        UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+        [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            
+            [aiv stopAnimating];
+            if (succeeded) {
+                
+                //只有当2个数据库操作都完成以后才应该让菊花停转
+                [aiv stopAnimating];
+                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
+                
+            }else{
+                
+                
+                [Utilities popUpAlertViewWithMsg:@"系统繁忙，请稍后再试" andTitle:nil onView:self];
+            }
+        }];
+    }else{
+        if (name.length ==0) {
+            [Utilities popUpAlertViewWithMsg:@"请输入昵称" andTitle:nil onView:self];
+        }
+        [Utilities popUpAlertViewWithMsg:@"您当前没有做任何修改" andTitle:nil onView:self];
+    }
     
     
 }
