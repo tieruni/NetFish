@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *sexTF;
 @property (weak, nonatomic) IBOutlet UITextField *cityTF;
 @property (weak, nonatomic) IBOutlet UILabel *emailLbl;
-@property (weak, nonatomic) IBOutlet UILabel *emailLbl;
+//@property (weak, nonatomic) IBOutlet UILabel *emailLbl;
 - (IBAction)confirmAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
 - (IBAction)pickimage:(UITapGestureRecognizer *)sender;
