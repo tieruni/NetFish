@@ -190,7 +190,6 @@ static NSString *identifier = @"Cell";
     [self.view removeFromSuperview];
     [self setWindow:nil];
     [self setView:nil];
-    _pageControl.hidden = YES;
 }
 
 @end
