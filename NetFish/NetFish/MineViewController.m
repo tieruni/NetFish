@@ -22,8 +22,11 @@
     // Do any additional setup after loading the view.
     _imageview.userInteractionEnabled = YES;
     
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> 9ac62b5c83a9bef44d1384f0b0824373908dd247
 }
 
 - (void)didReceiveMemoryWarning {
@@ -115,6 +118,7 @@
     NSString *sex = _sexTF.text;
     NSString *city = _cityTF.text;
     //NSString *email = _emailLbl.text;
+<<<<<<< HEAD
     PFObject *user = [PFObject objectWithClassName:@"User"];
     PFUser *currentUser = [PFUser currentUser];
     currentUser[@"nickname"] = name;
@@ -147,6 +151,9 @@
         }
         [Utilities popUpAlertViewWithMsg:@"您当前没有做任何修改" andTitle:nil onView:self];
     }
+=======
+    
+>>>>>>> 9ac62b5c83a9bef44d1384f0b0824373908dd247
     
     
 }

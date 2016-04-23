@@ -6,3 +6,7 @@ platform :ios, '8.0'
 pod 'AFNetworking', '~> 3.0'
 platform :ios, '7.0'
 pod 'ECSlidingViewController', '~> 2.0.3'
+<<<<<<< HEAD
+=======
+pod 'pop', '~> 1.0'
+>>>>>>> 9ac62b5c83a9bef44d1384f0b0824373908dd247
