@@ -14,6 +14,7 @@
 - (IBAction)SignInAction:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)forgetPWAction:(UIButton *)sender forEvent:(UIEvent *)event;
+@property (weak, nonatomic) IBOutlet UIButton *singIn;
 
 
 
