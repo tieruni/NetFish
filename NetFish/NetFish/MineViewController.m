@@ -151,22 +151,27 @@
 //    }
     UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
     [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error){
-        if (succeeded) {
-            [aiv stopAnimating];
-            //[Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
-            if(name !=currentUser[@"nickname"]||city!=currentUser[@"city"]|| sex !=currentUser[@"gender"]){
+        [aiv stopAnimating];
+        if (name.length !=0) {
+            
+            if (name != currentUser[@"nickname"]) {
                 [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
                 
+            }else if (sex !=currentUser[@"gender"]){
+                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
                 
+            }else if (city != currentUser[@"city"]){
+                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
                 
             }else{
-                [Utilities popUpAlertViewWithMsg:@"您还未做修改" andTitle:nil onView:self];
+                [Utilities popUpAlertViewWithMsg:@"您没有作出任何修改" andTitle:nil onView:self];
             }
             
         }else{
-           [Utilities popUpAlertViewWithMsg:@"系统繁忙，请稍后再试" andTitle:nil onView:self];
+            [Utilities popUpAlertViewWithMsg:@"请输入昵称" andTitle:nil onView:self];
             
         }
+            
         
         
         
