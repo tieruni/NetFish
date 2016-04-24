@@ -25,6 +25,7 @@
 		B370430D1CC39BC6005E63A2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B370430C1CC39BC6005E63A2 /* DetailViewController.m */; };
 		B38BD77E1CC47A5F00A11AF8 /* CommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */; };
 		B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */; };
+		B3BAE6CA1CCC55ED00E9EBB2 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */; };
 		B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F485A71CC23B5D009B0F2B /* SignInViewController.m */; };
 		D3725BB21CC4F94900EB3347 /* WJAdvertCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D3725BB11CC4F94900EB3347 /* WJAdvertCircle.m */; };
 		D3725BB81CC5038600EB3347 /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = D3725BB31CC5038600EB3347 /* b1.png */; };
@@ -102,6 +103,8 @@
 		B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewController.m; sourceTree = "<group>"; };
 		B38BD77F1CC47ABC00A11AF8 /* CellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTableViewCell.h; sourceTree = "<group>"; };
 		B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTableViewCell.m; sourceTree = "<group>"; };
+		B3BAE6C81CCC55ED00E9EBB2 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		B3F485A61CC23B5D009B0F2B /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		B3F485A71CC23B5D009B0F2B /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		D3725BB01CC4F94900EB3347 /* WJAdvertCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJAdvertCircle.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */,
 				B38BD77F1CC47ABC00A11AF8 /* CellTableViewCell.h */,
 				B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */,
+				B3BAE6C81CCC55ED00E9EBB2 /* HelpViewController.h */,
+				B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -583,6 +588,7 @@
 				A95BD4EC1CC9F6EE004CFA00 /* XMNAnimTextFiled.m in Sources */,
 				D388FDFB1CC21AE20057F6DB /* Utilities.m in Sources */,
 				B37042FE1CC31ED0005E63A2 /* HomeViewController.m in Sources */,
+				B3BAE6CA1CCC55ED00E9EBB2 /* HelpViewController.m in Sources */,
 				B370430D1CC39BC6005E63A2 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UILabel *loginLbl;
 - (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event;
-- (IBAction)collectonAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
 
 
 

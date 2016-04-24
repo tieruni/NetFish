@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CollectionTableViewController : UITableViewController
+- (IBAction)backAction:(UIBarButtonItem *)sender;
 
 @end
