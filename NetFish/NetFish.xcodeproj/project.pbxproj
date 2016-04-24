@@ -21,6 +21,11 @@
 		A97CE7AC1CC4922D006482E5 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A81CC4922D006482E5 /* 12.jpg */; };
 		A97CE7AD1CC4922D006482E5 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A91CC4922D006482E5 /* 13.jpg */; };
 		A97CE7BE1CC500D7006482E5 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */; };
+		A9A72A021CCC5C7E00D2DAE7 /* UserFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FA1CCC5C7E00D2DAE7 /* UserFeedBackViewController.m */; };
+		A9A72A031CCC5C7E00D2DAE7 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FC1CCC5C7E00D2DAE7 /* PlaceholderTextView.m */; };
+		A9A72A041CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FE1CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m */; };
+		A9A72A051CCC5C7E00D2DAE7 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A72A001CCC5C7E00D2DAE7 /* AboutUsViewController.m */; };
+		A9A72A061CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png in Resources */ = {isa = PBXBuildFile; fileRef = A9A72A011CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png */; };
 		B37042FE1CC31ED0005E63A2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37042FD1CC31ED0005E63A2 /* HomeViewController.m */; };
 		B37043011CC35A17005E63A2 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043001CC35A17005E63A2 /* LeftViewController.m */; };
 		B37043071CC37801005E63A2 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043061CC37801005E63A2 /* MineViewController.m */; };
@@ -97,6 +102,15 @@
 		A97CE7A91CC4922D006482E5 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		A97CE7BC1CC500D7006482E5 /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
 		A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
+		A9A729F91CCC5C7E00D2DAE7 /* UserFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedBackViewController.h; sourceTree = "<group>"; };
+		A9A729FA1CCC5C7E00D2DAE7 /* UserFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedBackViewController.m; sourceTree = "<group>"; };
+		A9A729FB1CCC5C7E00D2DAE7 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		A9A729FC1CCC5C7E00D2DAE7 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		A9A729FD1CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		A9A729FE1CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		A9A729FF1CCC5C7E00D2DAE7 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		A9A72A001CCC5C7E00D2DAE7 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		A9A72A011CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2.4意见反馈_03(1).png"; sourceTree = "<group>"; };
 		B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B37042FC1CC31ED0005E63A2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B37042FD1CC31ED0005E63A2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -251,6 +265,22 @@
 			name = "引导图";
 			sourceTree = "<group>";
 		};
+		A9A729F81CCC5C5800D2DAE7 /* yijianfankui */ = {
+			isa = PBXGroup;
+			children = (
+				A9A729F91CCC5C7E00D2DAE7 /* UserFeedBackViewController.h */,
+				A9A729FA1CCC5C7E00D2DAE7 /* UserFeedBackViewController.m */,
+				A9A729FB1CCC5C7E00D2DAE7 /* PlaceholderTextView.h */,
+				A9A729FC1CCC5C7E00D2DAE7 /* PlaceholderTextView.m */,
+				A9A729FD1CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.h */,
+				A9A729FE1CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m */,
+				A9A729FF1CCC5C7E00D2DAE7 /* AboutUsViewController.h */,
+				A9A72A001CCC5C7E00D2DAE7 /* AboutUsViewController.m */,
+				A9A72A011CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png */,
+			);
+			name = yijianfankui;
+			sourceTree = "<group>";
+		};
 		D388FDAE1CC20F530057F6DB = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +409,7 @@
 		D388FDF41CC21A1F0057F6DB /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				A9A729F81CCC5C5800D2DAE7 /* yijianfankui */,
 				737F35ED1CCC593C00E7EFEB /* tableview donghua */,
 				737F35E61CCC58E800E7EFEB /* xialashuaxin  */,
 				A95BD4E61CC9F6EE004CFA00 /* invisible_icon@2x.png */,
@@ -518,6 +549,7 @@
 			files = (
 				A97CE7AB1CC4922D006482E5 /* 10.jpg in Resources */,
 				D388FDCD1CC20F530057F6DB /* LaunchScreen.storyboard in Resources */,
+				A9A72A061CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png in Resources */,
 				A95BD4EB1CC9F6EE004CFA00 /* 1@2x.png in Resources */,
 				A97CE7AC1CC4922D006482E5 /* 12.jpg in Resources */,
 				D388FDCA1CC20F530057F6DB /* Assets.xcassets in Resources */,
@@ -603,7 +635,9 @@
 				B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */,
 				A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,
+				A9A72A041CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m in Sources */,
 				D3725BB21CC4F94900EB3347 /* WJAdvertCircle.m in Sources */,
+				A9A72A021CCC5C7E00D2DAE7 /* UserFeedBackViewController.m in Sources */,
 				730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */,
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
 				D3725BB91CC5038600EB3347 /* SlideHeadView.m in Sources */,
@@ -612,9 +646,11 @@
 				D3725BBD1CC5045500EB3347 /* FirstVC.m in Sources */,
 				B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */,
 				D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */,
+				A9A72A031CCC5C7E00D2DAE7 /* PlaceholderTextView.m in Sources */,
 				D388FDBC1CC20F530057F6DB /* main.m in Sources */,
 				A97CE7BE1CC500D7006482E5 /* UIButton+touch.m in Sources */,
 				B38BD77E1CC47A5F00A11AF8 /* CommentTableViewController.m in Sources */,
+				A9A72A051CCC5C7E00D2DAE7 /* AboutUsViewController.m in Sources */,
 				D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */,
 				B37043071CC37801005E63A2 /* MineViewController.m in Sources */,
 				A95BD4EC1CC9F6EE004CFA00 /* XMNAnimTextFiled.m in Sources */,

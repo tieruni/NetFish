@@ -7,7 +7,8 @@
 //
 
 #import "HelpViewController.h"
-
+#import "UserFeedBackViewController.h"
+#import "AboutUsViewController.h"
 @interface HelpViewController ()
 
 @end
@@ -35,11 +36,14 @@
 */
 
 - (IBAction)backAction:(UIBarButtonItem *)sender {
+     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)mesAction:(UIButton *)sender forEvent:(UIEvent *)event {
+     [self.navigationController pushViewController:[[UserFeedBackViewController alloc]init] animated:YES];
 }
 
 - (IBAction)aboutAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    [self.navigationController pushViewController:[[AboutUsViewController alloc]init] animated:YES];
 }
 @end
