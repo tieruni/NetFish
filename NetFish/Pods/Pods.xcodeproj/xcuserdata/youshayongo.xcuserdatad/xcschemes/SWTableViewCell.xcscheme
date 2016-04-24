@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E555D7A013FB9E5ED5067CC7'
-               BlueprintName = 'ECSlidingViewController'
+               BlueprintIdentifier = '321F4D83D8F84FDDC192B670'
+               BlueprintName = 'SWTableViewCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libECSlidingViewController.a'>
+               BuildableName = 'libSWTableViewCell.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
