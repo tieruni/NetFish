@@ -7,9 +7,13 @@
 //
 
 #import "CollectionTableViewController.h"
-
-@interface CollectionTableViewController ()
-
+#import "UITableView+Wave.h"
+#import "UIScrollView+WHC_PullRefresh.h"
+@interface CollectionTableViewController ()<WHC_PullRefreshDelegate>{
+    NSInteger  _count;
+}
+@property (strong, nonatomic) IBOutlet UITableView *whcTV;
+@property (nonatomic , assign)WHCPullRefreshStyle refreshStyle;
 @end
 
 @implementation CollectionTableViewController
@@ -22,6 +26,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _whcTV.tableFooterView = [[UIView alloc]init];
+    
+    [_whcTV setWHCRefreshStyle:_refreshStyle delegate:self];
+    
+    [self.tableView reloadDataAnimateWithWave:RightToLeftWaveAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,16 +38,48 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - WHC_PullRefreshDelegate
+
+- (void)WHCUpPullRequest{
+    NSLog(@"开始加载更多");
+    
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_whcTV reloadData];
+        [_whcTV WHCDidCompletedWithRefreshIsDownPull:NO];
+    });
+}
+
+- (void)WHCDownPullRequest{
+    NSLog(@"上拉刷新");
+    double delayInSeconds = 3.0;
+    
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_whcTV reloadData];
+        [_whcTV WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"****                                     %ld", (long)indexPath.row];
+    return cell;
 }
 
 /*
@@ -96,5 +137,7 @@
 */
 
 - (IBAction)backAction:(UIBarButtonItem *)sender {
+     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 @end

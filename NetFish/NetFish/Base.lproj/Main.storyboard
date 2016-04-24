@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BzY-zL-m6E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BzY-zL-m6E">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -260,7 +260,7 @@
             </objects>
             <point key="canvasLocation" x="792" y="1168"/>
         </scene>
-        <!--Collection Table View Controller-->
+        <!--我的收藏-->
         <scene sceneID="Gb3-xX-ufG">
             <objects>
                 <tableViewController id="Fa1-So-Pfb" customClass="CollectionTableViewController" sceneMemberID="viewController">
@@ -299,7 +299,7 @@
                             <outlet property="delegate" destination="Fa1-So-Pfb" id="xkh-eW-Zoq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hOu-4e-wLY">
+                    <navigationItem key="navigationItem" title="我的收藏" id="hOu-4e-wLY">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="qMh-vp-p33">
                             <connections>
                                 <action selector="backAction:" destination="Fa1-So-Pfb" id="Xvv-kt-Vvi"/>
@@ -307,6 +307,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="whcTV" destination="NVn-lM-cDU" id="rYW-uC-82m"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4Q-hJ-cEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
