@@ -45,7 +45,7 @@
     FirstVC *VC7 = [[FirstVC alloc]init];
     
     
-    NSArray *titleArr = @[@"热门推荐",@"娱乐",@"军事",@"科技",@"星座",@"生活",@"段子"];
+    NSArray *titleArr = @[@"热门推荐",@"娱乐",@"军事",@"科技",@"星座",@"生活",@"搞笑"];
     slideVC.titlesArr = titleArr;
     
     //
