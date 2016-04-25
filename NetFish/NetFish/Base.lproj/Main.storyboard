@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BzY-zL-m6E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BzY-zL-m6E">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -248,18 +249,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hA6-o1-bM3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-g4-niV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ieb-qq-H2A"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-d2-dv2">
+                                <rect key="frame" x="8" y="274" width="150" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="XQu-1i-KCc"/>
+                                    <constraint firstAttribute="width" constant="150" id="vJB-pp-MCq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="娱乐" backgroundImage="Image11">
+                                    <color key="titleColor" red="0.97662531490000004" green="1" blue="0.63863237129999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonAction1:forEvent:" destination="d4z-We-bcX" eventType="touchUpInside" id="yMy-cF-tog"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCM-3t-3SD">
+                                <rect key="frame" x="162" y="274" width="150" height="100"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="搞笑" backgroundImage="Image22">
+                                    <color key="titleColor" red="0.97662531490000004" green="1" blue="0.63863237129999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonAction2:forEvent:" destination="d4z-We-bcX" eventType="touchUpInside" id="tXj-0g-WPk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uqZ-yS-jti" firstAttribute="top" secondItem="hA6-o1-bM3" secondAttribute="bottom" id="ElO-C1-2Zt"/>
-                            <constraint firstItem="hA6-o1-bM3" firstAttribute="top" secondItem="oyk-vv-Adz" secondAttribute="top" id="aXW-0w-4KJ"/>
-                            <constraint firstAttribute="trailing" secondItem="hA6-o1-bM3" secondAttribute="trailing" id="lGw-hN-bjb"/>
-                            <constraint firstItem="hA6-o1-bM3" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" id="xO4-Gf-Niu"/>
+                            <constraint firstItem="fOs-d2-dv2" firstAttribute="top" secondItem="Vb2-g4-niV" secondAttribute="bottom" constant="10" id="4Z9-mo-1fI"/>
+                            <constraint firstItem="YCM-3t-3SD" firstAttribute="top" secondItem="Vb2-g4-niV" secondAttribute="bottom" constant="10" id="67b-iP-b7M"/>
+                            <constraint firstItem="fOs-d2-dv2" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leadingMargin" constant="-8" id="GkE-ia-ang"/>
+                            <constraint firstItem="fOs-d2-dv2" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" constant="8" id="Na0-cY-b7i"/>
+                            <constraint firstItem="YCM-3t-3SD" firstAttribute="leading" secondItem="fOs-d2-dv2" secondAttribute="trailing" constant="4" id="OcC-ML-ov7"/>
+                            <constraint firstAttribute="trailing" secondItem="Vb2-g4-niV" secondAttribute="trailing" id="QQE-XR-XFy"/>
+                            <constraint firstItem="Vb2-g4-niV" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="WD0-UQ-UGN"/>
+                            <constraint firstAttribute="trailing" secondItem="YCM-3t-3SD" secondAttribute="trailing" constant="8" id="bGj-21-qoE"/>
+                            <constraint firstItem="YCM-3t-3SD" firstAttribute="width" secondItem="fOs-d2-dv2" secondAttribute="width" id="dGv-pb-ha6"/>
+                            <constraint firstItem="Vb2-g4-niV" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" id="tes-7S-aZI"/>
+                            <constraint firstItem="YCM-3t-3SD" firstAttribute="height" secondItem="fOs-d2-dv2" secondAttribute="height" id="ykK-5x-rgE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GkE-ia-ang"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="网娱" id="M4A-ER-1di">
                         <barButtonItem key="leftBarButtonItem" image="Image4" id="aut-J1-lC6">
@@ -269,6 +309,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="HomeView" destination="Vb2-g4-niV" id="p26-hw-sc2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9w-f2-gty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -448,13 +491,13 @@
                             <mask key="constraints">
                                 <exclude reference="2M8-la-YCA"/>
                                 <exclude reference="nMc-L7-kMs"/>
-                                <exclude reference="nOD-bU-296"/>
                                 <exclude reference="E6D-uy-6CZ"/>
                                 <exclude reference="L2o-Wo-zqc"/>
                                 <exclude reference="Lo9-g7-0RH"/>
                                 <exclude reference="uNK-kN-SL2"/>
                                 <exclude reference="Vdx-xk-sXp"/>
                                 <exclude reference="qt3-SZ-YDD"/>
+                                <exclude reference="nOD-bU-296"/>
                             </mask>
                         </variation>
                     </view>
@@ -936,7 +979,9 @@
     </scenes>
     <resources>
         <image name="Image" width="480" height="852"/>
+        <image name="Image11" width="329" height="103"/>
         <image name="Image2" width="16" height="16"/>
+        <image name="Image22" width="568" height="320"/>
         <image name="Image3" width="266" height="92"/>
         <image name="Image4" width="27" height="22"/>
         <image name="Image5" width="36" height="36"/>

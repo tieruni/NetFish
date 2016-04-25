@@ -60,6 +60,7 @@
 		D388FE0A1CC21BC10057F6DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE091CC21BC10057F6DB /* SystemConfiguration.framework */; };
 		D388FE0C1CC21BCC0057F6DB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */; };
 		D388FE0E1CC21BD60057F6DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */; };
+		D3E59F7B1CCE2E8100407791 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E59F7A1CCE2E8100407791 /* HomeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,8 @@
 		D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D388FE0F1CC21CB90057F6DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D3E59F791CCE2E8100407791 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		D3E59F7A1CCE2E8100407791 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +376,8 @@
 				B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */,
 				B3BAE6C81CCC55ED00E9EBB2 /* HelpViewController.h */,
 				B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */,
+				D3E59F791CCE2E8100407791 /* HomeTableViewCell.h */,
+				D3E59F7A1CCE2E8100407791 /* HomeTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				A9A72A021CCC5C7E00D2DAE7 /* UserFeedBackViewController.m in Sources */,
 				730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */,
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
+				D3E59F7B1CCE2E8100407791 /* HomeTableViewCell.m in Sources */,
 				D3725BB91CC5038600EB3347 /* SlideHeadView.m in Sources */,
 				737F35EB1CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.m in Sources */,
 				B370430A1CC3791B005E63A2 /* CollectionTableViewController.m in Sources */,
