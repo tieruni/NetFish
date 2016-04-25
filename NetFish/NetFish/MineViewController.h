@@ -22,6 +22,7 @@
 - (IBAction)confirmAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
 - (IBAction)pickimage:(UITapGestureRecognizer *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
 
 
 

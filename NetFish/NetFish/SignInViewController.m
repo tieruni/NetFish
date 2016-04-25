@@ -49,8 +49,9 @@
     NSString *email = _emailTF.text;
     NSString *password = _passwordTF.text;
     NSString *confirmPwd = _confidPW.text;
+    NSString *nickname = _nicknameTF.text;
     //判断用户是否输入信息
-    if (username.length == 0 || email.length == 0 || password.length == 0 || confirmPwd.length == 0) {
+    if (username.length == 0 || email.length == 0 || password.length == 0 || confirmPwd.length == 0||nickname.length ==0) {
         [Utilities popUpAlertViewWithMsg:@"请填写所有信息" andTitle:nil onView:self];
         return;
     }
@@ -70,6 +71,7 @@
     user.username = username;
     user.email = email;
     user.password = password;
+    user[@"nickname"] = nickname;
     //user[@"info"] = info;
     
     //让导航条失去交互能力
@@ -99,6 +101,7 @@
             _emailTF.text = @"";
             _passwordTF.text = @"";
             _confidPW.text = @"";
+            _nicknameTF.text = @"";
             //回到登录页面
             [self dismissViewControllerAnimated:YES completion:nil];
         }else{
@@ -115,6 +118,8 @@
                 case 125:
                     [Utilities popUpAlertViewWithMsg:@"该电子邮箱地址不存在" andTitle:nil onView:self];
                     break;
+                case 101:
+                    [Utilities popUpAlertViewWithMsg:@"该昵称已被使用" andTitle:nil onView:self];
                 default:
                     [Utilities popUpAlertViewWithMsg:@"服务器正在维护，请稍候再试" andTitle:nil onView:self];
                     break;

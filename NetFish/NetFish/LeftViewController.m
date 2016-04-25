@@ -73,8 +73,32 @@
         
         
     }];
+    POPSpringAnimation *springForwardAnimation = [POPSpringAnimation animation];
+    springForwardAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
+    springForwardAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.2, 1.2)];
+    //设置弹簧的振幅（弹簧来回振动的位移量的大小）
+    springForwardAnimation.springBounciness =10;
+    //设置弹簧的弹性系数（弹簧来回振动的速度的快慢）
+    springForwardAnimation.springSpeed =10;
+    
+    [_eixtBtn pop_addAnimation:springForwardAnimation forKey:@"springForwardAnimation"];
+    
+    //设置动画完成以后的回调
+    springForwardAnimation.completionBlock = ^(POPAnimation *anim,BOOL finished){
+        POPBasicAnimation *basicBackwardAnimation = [POPBasicAnimation animation];
+        basicBackwardAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
+        basicBackwardAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.0,1.0)];
+        
+        [_eixtBtn pop_addAnimation:basicBackwardAnimation forKey:@"basicBackwardAnimation"];
+    };
+    
 }
 
 - (IBAction)collectonAction:(UIButton *)sender forEvent:(UIEvent *)event {
 }
+
+
+
+
+
 @end

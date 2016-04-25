@@ -15,8 +15,10 @@
 #undef  RGBCOLOR
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
-@interface UserFeedBackViewController ()<UITextViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIImagePickerControllerDelegate>
-//,UINavigationControllerDelegate
+@interface UserFeedBackViewController ()<UITextViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
+    BOOL Btn;
+}
+
 
 @property (nonatomic, strong) PlaceholderTextView * textView;
 
@@ -54,6 +56,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Btn = NO;
     
     self.view.backgroundColor = [UIColor colorWithRed:229.0/255 green:229.0/255 blue:229.0/255 alpha:1.0f];
     self.aView = [[UIView alloc]init];
@@ -178,7 +181,7 @@
     _textField = [[UITextField alloc]initWithFrame:CGRectMake(20, 314, [UIScreen mainScreen].bounds.size.width - 40, 40)];
     _textField.backgroundColor = [UIColor whiteColor];
     _textField.font = [UIFont systemFontOfSize:14.f];
-    _textField.placeholder = @"你的联系方式(手机号，QQ号或电子邮箱)";
+    _textField.placeholder = @"请留下电子邮箱，方便我们联系您";
     _textField.keyboardType = UIKeyboardTypeTwitter;
     [self.view addSubview:_textField];
 
@@ -254,6 +257,14 @@
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"意见反馈" message:@"亲你的意见我们已经收到，我们会尽快处理" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *album = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                _textField.text =@"";
+                _textView.text = @"";
+                //[_collectionV remove];
+                //[_photoArrayM removeAllObjects];
+                Btn = YES;
+                [_collectionV reloadData];
+                
+    
                 
             }];
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
@@ -300,10 +311,16 @@
 
 //返回每一个cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    if (!Btn) {
+        PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        cell.photoV.image = self.photoArrayM[indexPath.item];
+        return cell;
+    }else{
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        return cell;
+    }
     
-    cell.photoV.image = self.photoArrayM[indexPath.item];
-    return cell;
+   // NSLog(@"123");
 }
 
 #pragma mark textField的字数限制

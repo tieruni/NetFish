@@ -136,7 +136,7 @@
             //将密码文本输入框中的内容清掉
             _passwordTF1.text = @"";
             //跳转到首页
-            [self popUpHome];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }else{
             switch (error.code) {
                 case 101:

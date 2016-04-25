@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
 @property (weak, nonatomic) IBOutlet UITextField *confidPW;
 - (IBAction)SignInUpAction:(UIButton *)sender forEvent:(UIEvent *)event;
+@property (weak, nonatomic) IBOutlet UITextField *nicknameTF;
 
 @end

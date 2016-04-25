@@ -10,7 +10,10 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <MessageUI/MessageUI.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-@interface MineViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface MineViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate> {
+    BOOL picked;
+}
+
 @property (strong,nonatomic) UIImagePickerController *imagePC;
 
 @end
@@ -21,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _imageview.userInteractionEnabled = YES;
+    picked = NO;
     [self uiConfiguration];
     [self reloadInputViews];
     
@@ -101,8 +105,11 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     //根据这个键去拿到我们选中的已经编辑过的图片
     UIImage *image= info[UIImagePickerControllerEditedImage];
-    //将拿到的图片设置为图片视图的图片
-    _imageview.image = image;
+    if (image) {
+        picked = YES;
+        //将拿到的图片设置为图片视图的图片
+        _imageview.image = image;
+    }
     //用model方式返回上一页
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -133,34 +140,50 @@
     NSString *gender = _sexTF.text;
     NSString *city = _cityTF.text;
     
-    PFUser *currentUser = [PFUser currentUser];
-    //将一个UIImage对象转换成png格式的数据流
-    NSData *photoData = UIImagePNGRepresentation(image);
-    PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
-    
     if (name.length == 0) {
-        [Utilities popUpAlertViewWithMsg:@"请填写相关信息" andTitle:nil onView:self];
-        return;
-    }else{
-        if (name != currentUser[@"nickname"] || gender != currentUser[@"gender"] || city != currentUser[@"city"]) {
-            currentUser[@"nickname"] = name;
-            currentUser[@"gender"] = gender;
-            currentUser[@"city"] = city;
+        [Utilities popUpAlertViewWithMsg:@"请输入昵称" andTitle:nil onView:self];
+    } else {
+        PFUser *currentUser = [PFUser currentUser];
+        currentUser[@"nickname"] = name;
+        currentUser[@"gender"] = gender;
+        currentUser[@"city"] = city;
+        if (picked) {
+            //将一个UIImage对象转换成png格式的数据流
+            NSData *photoData = UIImagePNGRepresentation(image);
+            PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
             currentUser[@"avatar"] = photoFile;
-//            UIActivityIndicatorView *aiv = [];
-            UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
-            [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                [aiv stopAnimating];
-                if (succeeded) {
-                    [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
-                    [self dismissViewControllerAnimated:YES completion:nil];
-                }
-            }];
-        }else{
-            
-            [Utilities popUpAlertViewWithMsg:@"您当前没有做任何修改" andTitle:nil onView:self];
         }
+        
+        
+        UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+        [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            [aiv stopAnimating];
+            if (succeeded) {
+                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }else{
+                [Utilities popUpAlertViewWithMsg:@"网络繁忙，请稍后再试" andTitle:nil onView:self];
+            }
+        }];
     }
+    POPSpringAnimation *springForwardAnimation = [POPSpringAnimation animation];
+    springForwardAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
+    springForwardAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.2, 1.2)];
+    //设置弹簧的振幅（弹簧来回振动的位移量的大小）
+    springForwardAnimation.springBounciness =10;
+    //设置弹簧的弹性系数（弹簧来回振动的速度的快慢）
+    springForwardAnimation.springSpeed =10;
+    
+    [_confirmBtn pop_addAnimation:springForwardAnimation forKey:@"springForwardAnimation"];
+    
+    //设置动画完成以后的回调
+    springForwardAnimation.completionBlock = ^(POPAnimation *anim,BOOL finished){
+        POPBasicAnimation *basicBackwardAnimation = [POPBasicAnimation animation];
+        basicBackwardAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
+        basicBackwardAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.0,1.0)];
+        
+        [_confirmBtn pop_addAnimation:basicBackwardAnimation forKey:@"basicBackwardAnimation"];
+    };
     
 
     
