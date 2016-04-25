@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *loginLbl;
 - (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event;
 @property (weak, nonatomic) IBOutlet UIButton *eixtBtn;
+@property (weak, nonatomic) IBOutlet UIButton *imageBtn;
 
 
 

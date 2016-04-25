@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>SWTableViewCell.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -67,7 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>94555702CA94F04A45E7ADCF009DA489</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9933C1E5D086EC7763E15AF3A420BC62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1411B4A87CC8A65CD7C320119C4D32B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A87B452407369E5B946109E259E0542A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6AB9AAFEF46C2E299608E33BF72CAB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,20 +7,63 @@
 //
 
 #import "LeftViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
 
 @interface LeftViewController ()
-
+@property (strong,nonatomic) UIImageView *imv;
 
 @end
 
 @implementation LeftViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self requsetData];
     
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+}
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    [self requsetData];
+//}
+
+-(void)requsetData{
+   
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        NSLog(@"00000");
+        _loginLbl.hidden = YES;
+        _username.text = currentUser[@"nickname"];
+        PFFile *photofile = currentUser[@"avatar"];
+        if(photofile){
+            NSString *photoURLStr = photofile.url;
+            NSURL *photoURL = [NSURL URLWithString:photoURLStr];
+            NSLog(@"%@",photoURL);
+            //[_imv sd_setImageWithURL:photoURL placeholderImage:[UIImage imageNamed:@"Image5"]];
+            [_imageBtn sd_setBackgroundImageWithURL:photoURL forState:UIControlStateNormal];
+            
+        }else{
+            [_imageBtn setBackgroundImage:[UIImage imageNamed:@"Image5"] forState:UIControlStateNormal];        }
+       
+    
+    }else{
+        [_imageBtn setBackgroundImage:[UIImage imageNamed:@"Image5"] forState:UIControlStateNormal];
+        _loginLbl.hidden = NO;
+        _username.text = @"";
+    }
+    
+   
+    
+}
+- (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
