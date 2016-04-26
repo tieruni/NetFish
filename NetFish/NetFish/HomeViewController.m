@@ -10,7 +10,7 @@
 #import "KSGuideManager.h"
 #import "WJAdvertCircle.h"
 #import "HomeTableViewCell.h"
-
+#import "FunnyTableViewController.h"
 @interface HomeViewController ()<WJAdvertClickDelegate>
 
 @end
@@ -46,7 +46,7 @@
     sss.pageControl.pageIndicatorTintColor = [UIColor blueColor];
     
     // 添加视图
-    [_HomeView addSubview:sss];
+    [_HomeImageView addSubview:sss];
 
 }
 // 点击返回的url
@@ -125,12 +125,9 @@
     [[NSNotificationCenter defaultCenter]postNotificationName:@"MenuSwitch" object:nil];
 }
 
-- (IBAction)Button:(UIButton *)sender forEvent:(UIEvent *)event {
-}
 
-- (IBAction)Button2:(UIButton *)sender forEvent:(UIEvent *)event {
-}
 - (IBAction)ButtonAction1:(UIButton *)sender forEvent:(UIEvent *)event {
+    [self.navigationController pushViewController:[[FunnyTableViewController alloc]init] animated:YES];
 }
 
 - (IBAction)ButtonAction2:(UIButton *)sender forEvent:(UIEvent *)event {

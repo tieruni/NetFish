@@ -40,10 +40,11 @@
 		D3725BB91CC5038600EB3347 /* SlideHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3725BB51CC5038600EB3347 /* SlideHeadView.m */; };
 		D3725BBA1CC5038600EB3347 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D3725BB71CC5038600EB3347 /* UIView+Extension.m */; };
 		D3725BBD1CC5045500EB3347 /* FirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3725BBC1CC5045500EB3347 /* FirstVC.m */; };
+		D37B3E0E1CCF4335002626C5 /* FunnyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */; };
+		D37B3E111CCF4764002626C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37B3E0F1CCF4764002626C5 /* Main.storyboard */; };
 		D388FDBC1CC20F530057F6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBB1CC20F530057F6DB /* main.m */; };
 		D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBE1CC20F530057F6DB /* AppDelegate.m */; };
 		D388FDC21CC20F530057F6DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDC11CC20F530057F6DB /* ViewController.m */; };
-		D388FDC51CC20F530057F6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D388FDC31CC20F530057F6DB /* Main.storyboard */; };
 		D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D388FDC61CC20F530057F6DB /* NetFish.xcdatamodeld */; };
 		D388FDCA1CC20F530057F6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D388FDC91CC20F530057F6DB /* Assets.xcassets */; };
 		D388FDCD1CC20F530057F6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D388FDCB1CC20F530057F6DB /* LaunchScreen.storyboard */; };
@@ -140,13 +141,15 @@
 		D3725BB71CC5038600EB3347 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D3725BBB1CC5045500EB3347 /* FirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstVC.h; sourceTree = "<group>"; };
 		D3725BBC1CC5045500EB3347 /* FirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstVC.m; sourceTree = "<group>"; };
+		D37B3E0C1CCF4335002626C5 /* FunnyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyTableViewController.h; sourceTree = "<group>"; };
+		D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyTableViewController.m; sourceTree = "<group>"; };
+		D37B3E101CCF4764002626C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D388FDB71CC20F530057F6DB /* NetFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D388FDBB1CC20F530057F6DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D388FDBD1CC20F530057F6DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D388FDBE1CC20F530057F6DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D388FDC01CC20F530057F6DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D388FDC11CC20F530057F6DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D388FDC41CC20F530057F6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D388FDC71CC20F530057F6DB /* NetFish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetFish.xcdatamodel; sourceTree = "<group>"; };
 		D388FDC91CC20F530057F6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D388FDCC1CC20F530057F6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -378,6 +381,8 @@
 				B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */,
 				D3E59F791CCE2E8100407791 /* HomeTableViewCell.h */,
 				D3E59F7A1CCE2E8100407791 /* HomeTableViewCell.m */,
+				D37B3E0C1CCF4335002626C5 /* FunnyTableViewController.h */,
+				D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -385,7 +390,7 @@
 		D388FDF11CC219EF0057F6DB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D388FDC31CC20F530057F6DB /* Main.storyboard */,
+				D37B3E0F1CCF4764002626C5 /* Main.storyboard */,
 				D388FDC91CC20F530057F6DB /* Assets.xcassets */,
 				D388FDCB1CC20F530057F6DB /* LaunchScreen.storyboard */,
 			);
@@ -557,9 +562,9 @@
 				A9A72A061CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png in Resources */,
 				A95BD4EB1CC9F6EE004CFA00 /* 1@2x.png in Resources */,
 				A97CE7AC1CC4922D006482E5 /* 12.jpg in Resources */,
+				D37B3E111CCF4764002626C5 /* Main.storyboard in Resources */,
 				D388FDCA1CC20F530057F6DB /* Assets.xcassets in Resources */,
 				D3725BB81CC5038600EB3347 /* b1.png in Resources */,
-				D388FDC51CC20F530057F6DB /* Main.storyboard in Resources */,
 				A95BD4EA1CC9F6EE004CFA00 /* invisible_icon@2x.png in Resources */,
 				A97CE7AA1CC4922D006482E5 /* 11.jpg in Resources */,
 				A97CE7AD1CC4922D006482E5 /* 13.jpg in Resources */,
@@ -647,6 +652,7 @@
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
 				D3E59F7B1CCE2E8100407791 /* HomeTableViewCell.m in Sources */,
 				D3725BB91CC5038600EB3347 /* SlideHeadView.m in Sources */,
+				D37B3E0E1CCF4335002626C5 /* FunnyTableViewController.m in Sources */,
 				737F35EB1CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.m in Sources */,
 				B370430A1CC3791B005E63A2 /* CollectionTableViewController.m in Sources */,
 				D3725BBD1CC5045500EB3347 /* FirstVC.m in Sources */,
@@ -701,10 +707,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D388FDC31CC20F530057F6DB /* Main.storyboard */ = {
+		D37B3E0F1CCF4764002626C5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D388FDC41CC20F530057F6DB /* Base */,
+				D37B3E101CCF4764002626C5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -812,6 +818,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NetFish/PrefixHeader.pch;
 				INFOPLIST_FILE = NetFish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -830,6 +837,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NetFish/PrefixHeader.pch;
 				INFOPLIST_FILE = NetFish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
