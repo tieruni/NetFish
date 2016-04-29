@@ -329,6 +329,8 @@
 				A97CE7A51CC49221006482E5 /* 引导图 */,
 				D388FDBD1CC20F530057F6DB /* AppDelegate.h */,
 				D388FDBE1CC20F530057F6DB /* AppDelegate.m */,
+				D3E59F791CCE2E8100407791 /* HomeTableViewCell.h */,
+				D3E59F7A1CCE2E8100407791 /* HomeTableViewCell.m */,
 				D3725BBB1CC5045500EB3347 /* FirstVC.h */,
 				D3725BBC1CC5045500EB3347 /* FirstVC.m */,
 				D388FDBB1CC20F530057F6DB /* main.m */,
@@ -379,8 +381,6 @@
 				B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */,
 				B3BAE6C81CCC55ED00E9EBB2 /* HelpViewController.h */,
 				B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */,
-				D3E59F791CCE2E8100407791 /* HomeTableViewCell.h */,
-				D3E59F7A1CCE2E8100407791 /* HomeTableViewCell.m */,
 				D37B3E0C1CCF4335002626C5 /* FunnyTableViewController.h */,
 				D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */,
 			);

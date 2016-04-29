@@ -7,6 +7,8 @@
 //
 
 #import "HomeTableViewCell.h"
+#import "FirstVC.h"
+@class UITableView;
 
 @implementation HomeTableViewCell
 
@@ -15,14 +17,10 @@
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
-
-- (IBAction)ButtonAction1:(UIButton *)sender forEvent:(UIEvent *)event {
-}
-
-- (IBAction)ButtonAction2:(UIButton *)sender forEvent:(UIEvent *)event {
-}
+//-----------
 @end

@@ -248,126 +248,7 @@
                     <view key="view" contentMode="scaleToFill" id="oyk-vv-Adz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4G1-Fr-Ytp">
-                                <rect key="frame" x="0.0" y="64" width="414" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="slj-RI-oCW"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtJ-Z5-CSc">
-                                <rect key="frame" x="5" y="651" width="404" height="80"/>
-                                <color key="backgroundColor" red="1" green="0.1741970179" blue="0.079857926120000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="404" id="7dI-3m-DZX"/>
-                                    <constraint firstAttribute="height" constant="80" id="XNS-CV-avm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
-                                <state key="normal" title="热门推荐" backgroundImage="Image77">
-                                    <color key="titleColor" red="1" green="0.1741970179" blue="0.079857926120000006" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2c-xY-t2i">
-                                <rect key="frame" x="5" y="446" width="114" height="100"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="YbM-sY-t5S"/>
-                                    <constraint firstAttribute="width" constant="114" id="eBa-W7-AXW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="生活" backgroundImage="Image33">
-                                    <color key="titleColor" red="0.86869992549999997" green="1" blue="0.95220372539999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r1-EU-SYh">
-                                <rect key="frame" x="124" y="444" width="134" height="100"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="134" id="cob-Yt-zB3"/>
-                                    <constraint firstAttribute="height" constant="100" id="foM-3D-1XM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
-                                <state key="normal" title="星座" backgroundImage="Image44">
-                                    <color key="titleColor" red="0.48247211472405388" green="0.99378551136363635" blue="0.93754879294801885" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIi-Bn-2s5">
-                                <rect key="frame" x="124" y="549" width="285" height="97"/>
-                                <color key="backgroundColor" red="0.97662531490000004" green="1" blue="0.63863237129999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="97" id="M5v-TO-5QC"/>
-                                    <constraint firstAttribute="width" constant="285" id="aSD-zH-CJj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="科技" backgroundImage="Image66">
-                                    <color key="titleColor" red="0.86869992549999997" green="1" blue="0.95220372539999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIy-yZ-cXb">
-                                <rect key="frame" x="5" y="551" width="114" height="95"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="4M6-o1-XPg"/>
-                                    <constraint firstAttribute="height" constant="95" id="DTC-3q-LHZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="军事" backgroundImage="Image55">
-                                    <color key="titleColor" red="0.8668514669402787" green="1" blue="0.95909022678661504" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-cC-ORg">
-                                <rect key="frame" x="5" y="309" width="253" height="130"/>
-                                <color key="backgroundColor" red="0.86869992549999997" green="1" blue="0.95220372539999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="C0E-ch-ZmX"/>
-                                    <constraint firstAttribute="width" constant="253" id="h0k-Um-a33"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="娱乐" backgroundImage="Image11">
-                                    <color key="titleColor" red="0.91750270843661119" green="1" blue="0.76649332350167998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooa-6u-L5O">
-                                <rect key="frame" x="263" y="309" width="146" height="235"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="NjW-S1-ULu"/>
-                                    <constraint firstAttribute="height" constant="235" id="xR1-T9-3Wa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="搞笑" backgroundImage="Image22">
-                                    <color key="titleColor" red="0.96696717504863183" green="0.95495338569441135" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="xtJ-Z5-CSc" secondAttribute="trailing" constant="5" id="0l9-gu-Q4Z"/>
-                            <constraint firstItem="xtJ-Z5-CSc" firstAttribute="top" secondItem="KIi-Bn-2s5" secondAttribute="bottom" constant="5" id="1US-kc-Edu"/>
-                            <constraint firstItem="Ooa-6u-L5O" firstAttribute="leading" secondItem="5r1-EU-SYh" secondAttribute="trailing" constant="5" id="2do-XZ-ybx"/>
-                            <constraint firstItem="tIy-yZ-cXb" firstAttribute="top" secondItem="Z2c-xY-t2i" secondAttribute="bottom" constant="5" id="2gD-Wk-uL9"/>
-                            <constraint firstItem="3TP-cC-ORg" firstAttribute="top" secondItem="4G1-Fr-Ytp" secondAttribute="bottom" constant="45" id="56P-MN-3hd"/>
-                            <constraint firstItem="Ooa-6u-L5O" firstAttribute="leading" secondItem="3TP-cC-ORg" secondAttribute="trailing" constant="5" id="73w-U7-54L"/>
-                            <constraint firstItem="xtJ-Z5-CSc" firstAttribute="top" secondItem="tIy-yZ-cXb" secondAttribute="bottom" constant="5" id="CNA-qc-xw8"/>
-                            <constraint firstAttribute="trailing" secondItem="KIi-Bn-2s5" secondAttribute="trailing" constant="5" id="Jgm-If-gcr"/>
-                            <constraint firstItem="xtJ-Z5-CSc" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" constant="5" id="Jwb-Yg-1ab"/>
-                            <constraint firstItem="tIy-yZ-cXb" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" constant="5" id="OtA-du-zhQ"/>
-                            <constraint firstItem="KIi-Bn-2s5" firstAttribute="top" secondItem="Ooa-6u-L5O" secondAttribute="bottom" constant="5" id="Rpr-fW-zge"/>
-                            <constraint firstAttribute="trailing" secondItem="4G1-Fr-Ytp" secondAttribute="trailing" id="ZKp-pE-Ur1"/>
-                            <constraint firstItem="uqZ-yS-jti" firstAttribute="top" secondItem="xtJ-Z5-CSc" secondAttribute="bottom" constant="5" id="aFm-Gn-Dq7"/>
-                            <constraint firstItem="Z2c-xY-t2i" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" constant="5" id="aOY-cc-Z50"/>
-                            <constraint firstItem="5r1-EU-SYh" firstAttribute="leading" secondItem="Z2c-xY-t2i" secondAttribute="trailing" constant="5" id="eOl-qD-kVm"/>
-                            <constraint firstItem="3TP-cC-ORg" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" constant="5" id="fBL-xW-ZuA"/>
-                            <constraint firstItem="4G1-Fr-Ytp" firstAttribute="leading" secondItem="oyk-vv-Adz" secondAttribute="leading" id="ibk-ig-Irm"/>
-                            <constraint firstItem="KIi-Bn-2s5" firstAttribute="leading" secondItem="tIy-yZ-cXb" secondAttribute="trailing" constant="5" id="pUk-s0-Vo7"/>
-                            <constraint firstAttribute="trailing" secondItem="Ooa-6u-L5O" secondAttribute="trailing" constant="5" id="psa-mg-MvW"/>
-                            <constraint firstItem="5r1-EU-SYh" firstAttribute="leading" secondItem="Z2c-xY-t2i" secondAttribute="trailing" constant="5" id="qqM-YQ-aWQ"/>
-                            <constraint firstItem="Ooa-6u-L5O" firstAttribute="leading" secondItem="3TP-cC-ORg" secondAttribute="trailing" constant="5" id="rcG-Ye-g8R"/>
-                            <constraint firstItem="KIi-Bn-2s5" firstAttribute="top" secondItem="5r1-EU-SYh" secondAttribute="bottom" constant="5" id="tPr-S1-qSK"/>
-                            <constraint firstItem="4G1-Fr-Ytp" firstAttribute="top" secondItem="YR2-JU-SnQ" secondAttribute="bottom" id="tgS-hU-AO7"/>
-                            <constraint firstItem="KIi-Bn-2s5" firstAttribute="leading" secondItem="tIy-yZ-cXb" secondAttribute="trailing" constant="5" id="u38-CB-NDf"/>
-                            <constraint firstItem="5r1-EU-SYh" firstAttribute="top" secondItem="3TP-cC-ORg" secondAttribute="bottom" constant="5" id="xik-Ff-YSA"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="网娱" id="M4A-ER-1di">
                         <barButtonItem key="leftBarButtonItem" image="Image4" id="aut-J1-lC6">
@@ -377,9 +258,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="HomeImageView" destination="4G1-Fr-Ytp" id="Wko-qE-YfC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9w-f2-gty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1128,17 +1006,10 @@
     </scenes>
     <resources>
         <image name="Image" width="480" height="852"/>
-        <image name="Image11" width="470" height="291"/>
         <image name="Image2" width="16" height="16"/>
-        <image name="Image22" width="250" height="289"/>
         <image name="Image3" width="266" height="92"/>
-        <image name="Image33" width="200" height="300"/>
         <image name="Image4" width="27" height="22"/>
-        <image name="Image44" width="476" height="332"/>
         <image name="Image5" width="36" height="36"/>
-        <image name="Image55" width="257" height="150"/>
-        <image name="Image66" width="235" height="146"/>
-        <image name="Image77" width="470" height="352"/>
         <image name="PROImage" width="90" height="90"/>
     </resources>
 </document>
