@@ -8,9 +8,11 @@
 
 #import "FirstVC.h"
 #import "WJAdvertCircle.h"
-
+#import "FirstTableViewCell.h"
 @interface FirstVC ()<WJAdvertClickDelegate>
 @property(strong,nonatomic)NSArray *Arr;
+
+
 @end
 
 @implementation FirstVC
@@ -24,10 +26,12 @@
     self.tableview = [UITableView new];
     self.tableview.frame = self.view.bounds;
     self.tableview.frame = CGRectMake(0, 0, self.view.frame.size.width, UI_SCREEN_H);
-    self.tableview.backgroundColor = [UIColor greenColor];
+    self.tableview.backgroundColor = [UIColor clearColor];
     self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     //-------->>>>>
-    [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+//    self.tableview.delegate = self;
+//    self.tableview.dataSource = self;
+//    [self.tableview registerClass:[FirstTableViewCell class] forCellReuseIdentifier:@"Cell"];
     
     //-------->>>>>
     [self.view addSubview:_tableview];
@@ -98,6 +102,7 @@
     });
     
 }
+//-------------------->>>>>>
 //- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 //    }
 //------
@@ -109,8 +114,8 @@
 //    }
 //    return self;
 //}
-- (void)addAllViews
-{
+//- (void)addAllViews
+//{
 //    self.aLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
 //    self.aLabel.backgroundColor = [UIColor greenColor];
 //    [self.contentView addSubview:self.aLabel];
@@ -120,24 +125,8 @@
 //    self.tableView.dataSource = self;
 //    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@testCell];
 //    //    [self.contentView addSubview:self.tableView];
-}
-//-------
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 5;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 2;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.frame =self.tableview.bounds;
-    cell.frame = CGRectMake(0, 308, UI_SCREEN_W, 100);
-    
-    return cell;
-}
+//}
+
 
 
 - (void)didReceiveMemoryWarning {
