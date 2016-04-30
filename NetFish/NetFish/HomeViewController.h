@@ -12,9 +12,8 @@
 
 - (IBAction)menuAction:(UIBarButtonItem *)sender;
 
-@property (weak, nonatomic) IBOutlet UIImageView *HomeImageView;
 
-- (IBAction)ButtonAction1:(UIButton *)sender forEvent:(UIEvent *)event;
-- (IBAction)ButtonAction2:(UIButton *)sender forEvent:(UIEvent *)event;
+
+
 
 @end
