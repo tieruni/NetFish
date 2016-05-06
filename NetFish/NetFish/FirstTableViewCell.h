@@ -10,9 +10,9 @@
 
 @interface FirstTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *newsimageView;
+@property (weak, nonatomic) IBOutlet UILabel *TitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *TxtLabel;
 
-@property(strong,nonatomic)IBOutlet UILabel *titlelable;
 
-@property (weak, nonatomic) IBOutlet UILabel *Txtlable;
 
 @end

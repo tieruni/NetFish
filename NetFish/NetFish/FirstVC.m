@@ -10,7 +10,7 @@
 #import "WJAdvertCircle.h"
 #import "FirstTableViewCell.h"
 
-@interface FirstVC ()<WJAdvertClickDelegate>{
+@interface FirstVC ()<WJAdvertClickDelegate,UITableViewDelegate,UITableViewDataSource>{
     UINib *nib;
 }
 @property(strong,nonatomic)NSArray *Arr;
@@ -31,11 +31,11 @@ static BOOL nibsRegistered;
     self.tableview = [UITableView new];
     self.tableview.frame = self.view.bounds;
     self.tableview.frame = CGRectMake(0, 0, self.view.frame.size.width, UI_SCREEN_H);
-    self.tableview.backgroundColor = [UIColor clearColor];
-    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableview.backgroundColor = [UIColor whiteColor];
+//    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     //-------->>>>>
-//    self.tableview.delegate = self;
-//    self.tableview.dataSource = self;
+    self.tableview.delegate = self;
+    self.tableview.dataSource = self;
 //    [self.tableview registerClass:[FirstTableViewCell class] forCellReuseIdentifier:@"Cell"];
     
     //-------->>>>>
@@ -137,35 +137,40 @@ static BOOL nibsRegistered;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return 2;
-//}
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return 2;
-//}
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    static NSString *identy = @"CustomCell";
-//    if (!nib) {
-//        nib = [UINib nibWithNibName:@"FNNewsSglImgCell" bundle:nil];
-//        [tableView registerNib:nib forCellReuseIdentifier:identy];
-//        NSLog(@"我是从nib过来的，%ld",indexPath.row);
-//    }
-//    FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identy];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 10;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+- (FirstTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identy = @"CustomCell";
+    if (!nib) {
+//        FirstTableViewCell *cell =[[FirstTableViewCell alloc]initWithFrame:CGRectMake(0, 200, UI_SCREEN_W, 110)];
+        nib = [UINib nibWithNibName:@"FNNewsSglImgCell" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:identy];
+        NSLog(@"我是从nib过来的，%ld",indexPath.row);
+    }
+    FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identy];
 //    NSUInteger row = [indexPath row];
+    cell.TitleLabel.text = @"我是偶数行的";
+    cell.TxtLabel.text = @"我是子标题";
+    cell.newsimageView.image = [UIImage imageNamed:@"Image77"];
 //    if (row%2 == 0) {
-//        cell.titlelable.text = @"我是偶数行的";
-//        cell.Txtlable.text = @"我是子标题";
+//        cell.TitleLabel.text = @"我是偶数行的";
+//        cell.TxtLabel.text = @"我是子标题";
 //        cell.newsimageView.image = [UIImage imageNamed:@"Image77"];
 //    }else{
-//        cell.titlelable.text = @"我是奇数行的";
-//        cell.Txtlable.text = @"我是奇数行的子标题";
+//        cell.TitleLabel.text = @"我是奇数行的";
+//        cell.TxtLabel.text = @"我是奇数行的子标题";
 //        cell.newsimageView.image = [UIImage imageNamed:@"Image66"];
 //    }
-//    return cell;
-//}
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return 2;
-//}
+    return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return [[self tableView:tableView cellForRowAtIndexPath:indexPath] frame].size.height;
+}
 /*
 #pragma mark - Navigation
 

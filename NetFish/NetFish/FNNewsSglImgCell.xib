@@ -77,12 +77,9 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="Txtlable" destination="3YS-hD-80h" id="ExM-Vn-GmI"/>
-                <outlet property="digestLabel" destination="3YS-hD-80h" id="t7o-Np-LkC"/>
-                <outlet property="imageV" destination="gg3-e8-udw" id="vFN-pV-7Bu"/>
-                <outlet property="newsimage" destination="gg3-e8-udw" id="sQU-SG-bRQ"/>
-                <outlet property="titleL" destination="2PM-W5-xVd" id="bnT-pu-qEF"/>
-                <outlet property="titlelable" destination="2PM-W5-xVd" id="lPS-ig-yXC"/>
+                <outlet property="TitleLabel" destination="2PM-W5-xVd" id="vBX-cC-lRw"/>
+                <outlet property="TxtLabel" destination="3YS-hD-80h" id="fac-bf-IKD"/>
+                <outlet property="newsimageView" destination="gg3-e8-udw" id="tt7-Dn-X1a"/>
             </connections>
             <point key="canvasLocation" x="326" y="370.5"/>
         </tableViewCell>
