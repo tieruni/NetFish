@@ -10,7 +10,8 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <MessageUI/MessageUI.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-@interface MineViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate> {
+#import "CityViewController.h"
+@interface MineViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate> {
     BOOL picked;
 }
 
@@ -20,8 +21,15 @@
 
 @implementation MineViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    _cityTF.text = [Utilities getUserDefaults:@"city"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _cityTF.delegate = self;
     // Do any additional setup after loading the view.
     _imageview.userInteractionEnabled = YES;
     picked = NO;
@@ -209,6 +217,10 @@
     
 }
 
-
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    CityViewController *CityVc = [Utilities getStoryboardInstance:@"Main" byIdentity:@"CityVc"];
+    [self presentViewController:CityVc animated:YES completion:nil];
+    
+}
 
 @end

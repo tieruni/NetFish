@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BzY-zL-m6E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -374,6 +373,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4Q-hJ-cEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2940" y="1144"/>
+        </scene>
+        <!--City View Controller-->
+        <scene sceneID="Dyb-5F-zOg">
+            <objects>
+                <viewController storyboardIdentifier="CityVc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f47-h8-AZr" customClass="CityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wlo-x1-wql"/>
+                        <viewControllerLayoutGuide type="bottom" id="j7z-9o-vOI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mSQ-oN-o3i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pL7-tb-bpC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pL7-tb-bpC" firstAttribute="top" secondItem="mSQ-oN-o3i" secondAttribute="top" id="C9O-rs-KMP"/>
+                            <constraint firstItem="pL7-tb-bpC" firstAttribute="leading" secondItem="mSQ-oN-o3i" secondAttribute="leading" id="Qkk-1V-YVs"/>
+                            <constraint firstAttribute="trailing" secondItem="pL7-tb-bpC" secondAttribute="trailing" id="VRS-eh-0XW"/>
+                            <constraint firstItem="j7z-9o-vOI" firstAttribute="top" secondItem="pL7-tb-bpC" secondAttribute="bottom" id="pf5-OB-ogP"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="pL7-tb-bpC" id="55U-vJ-x26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hT-bz-B9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669" y="593"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="xBf-kk-yfu">

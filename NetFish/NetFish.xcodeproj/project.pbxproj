@@ -31,6 +31,8 @@
 		B37043071CC37801005E63A2 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043061CC37801005E63A2 /* MineViewController.m */; };
 		B370430A1CC3791B005E63A2 /* CollectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043091CC3791B005E63A2 /* CollectionTableViewController.m */; };
 		B370430D1CC39BC6005E63A2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B370430C1CC39BC6005E63A2 /* DetailViewController.m */; };
+		B37D574C1CDC3779005C1392 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37D574B1CDC3779005C1392 /* CityViewController.m */; };
+		B37D574E1CDC3794005C1392 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = B37D574D1CDC3794005C1392 /* citydict.plist */; };
 		B38BD77E1CC47A5F00A11AF8 /* CommentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */; };
 		B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B38BD7801CC47ABC00A11AF8 /* CellTableViewCell.m */; };
 		B3BAE6CA1CCC55ED00E9EBB2 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */; };
@@ -129,6 +131,9 @@
 		B37043091CC3791B005E63A2 /* CollectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTableViewController.m; sourceTree = "<group>"; };
 		B370430B1CC39BC6005E63A2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B370430C1CC39BC6005E63A2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B37D574A1CDC3779005C1392 /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		B37D574B1CDC3779005C1392 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		B37D574D1CDC3794005C1392 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
 		B38BD77C1CC47A5F00A11AF8 /* CommentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewController.h; sourceTree = "<group>"; };
 		B38BD77D1CC47A5F00A11AF8 /* CommentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewController.m; sourceTree = "<group>"; };
 		B38BD77F1CC47ABC00A11AF8 /* CellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTableViewCell.h; sourceTree = "<group>"; };
@@ -394,6 +399,8 @@
 				B3BAE6C91CCC55ED00E9EBB2 /* HelpViewController.m */,
 				D37B3E0C1CCF4335002626C5 /* FunnyTableViewController.h */,
 				D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */,
+				B37D574A1CDC3779005C1392 /* CityViewController.h */,
+				B37D574B1CDC3779005C1392 /* CityViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -404,6 +411,7 @@
 				D37B3E0F1CCF4764002626C5 /* Main.storyboard */,
 				D388FDC91CC20F530057F6DB /* Assets.xcassets */,
 				D388FDCB1CC20F530057F6DB /* LaunchScreen.storyboard */,
+				B37D574D1CDC3794005C1392 /* citydict.plist */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -592,6 +600,7 @@
 				D388FDCA1CC20F530057F6DB /* Assets.xcassets in Resources */,
 				D3725BB81CC5038600EB3347 /* b1.png in Resources */,
 				D3CAE2A01CD35BF600E5D6B0 /* FNNewsSglImgCell.xib in Resources */,
+				B37D574E1CDC3794005C1392 /* citydict.plist in Resources */,
 				D3CAE29C1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib in Resources */,
 				A95BD4EA1CC9F6EE004CFA00 /* invisible_icon@2x.png in Resources */,
 				A97CE7AA1CC4922D006482E5 /* 11.jpg in Resources */,
@@ -698,6 +707,7 @@
 				D388FDFB1CC21AE20057F6DB /* Utilities.m in Sources */,
 				B37042FE1CC31ED0005E63A2 /* HomeViewController.m in Sources */,
 				737F35EC1CCC593600E7EFEB /* UIView+WHC_ViewProperty.m in Sources */,
+				B37D574C1CDC3779005C1392 /* CityViewController.m in Sources */,
 				B3BAE6CA1CCC55ED00E9EBB2 /* HelpViewController.m in Sources */,
 				B370430D1CC39BC6005E63A2 /* DetailViewController.m in Sources */,
 			);
