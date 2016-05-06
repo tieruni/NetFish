@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *newsimage;
+@property (weak, nonatomic) IBOutlet UIImageView *newsimageView;
 
 @property(strong,nonatomic)IBOutlet UILabel *titlelable;
 

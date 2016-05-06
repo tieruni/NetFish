@@ -9,17 +9,22 @@
 #import "FirstVC.h"
 #import "WJAdvertCircle.h"
 #import "FirstTableViewCell.h"
-@interface FirstVC ()<WJAdvertClickDelegate>
-@property(strong,nonatomic)NSArray *Arr;
 
+@interface FirstVC ()<WJAdvertClickDelegate>{
+    UINib *nib;
+}
+@property(strong,nonatomic)NSArray *Arr;
+@property (strong,nonatomic) UIView *VW;
+@property (strong,nonatomic) UITableView *tableview;
 
 @end
-
+static BOOL nibsRegistered;
 @implementation FirstVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    nibsRegistered = NO;
+    NSLog(@"初始化：%d",nibsRegistered);
     
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor clearColor];
@@ -35,6 +40,7 @@
     
     //-------->>>>>
     [self.view addSubview:_tableview];
+//    [_tableview release];
     //--------
     
     
@@ -127,13 +133,39 @@
 //    //    [self.contentView addSubview:self.tableView];
 //}
 
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    return 2;
+//}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//    return 2;
+//}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    static NSString *identy = @"CustomCell";
+//    if (!nib) {
+//        nib = [UINib nibWithNibName:@"FNNewsSglImgCell" bundle:nil];
+//        [tableView registerNib:nib forCellReuseIdentifier:identy];
+//        NSLog(@"我是从nib过来的，%ld",indexPath.row);
+//    }
+//    FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identy];
+//    NSUInteger row = [indexPath row];
+//    if (row%2 == 0) {
+//        cell.titlelable.text = @"我是偶数行的";
+//        cell.Txtlable.text = @"我是子标题";
+//        cell.newsimageView.image = [UIImage imageNamed:@"Image77"];
+//    }else{
+//        cell.titlelable.text = @"我是奇数行的";
+//        cell.Txtlable.text = @"我是奇数行的子标题";
+//        cell.newsimageView.image = [UIImage imageNamed:@"Image66"];
+//    }
+//    return cell;
+//}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 2;
+//}
 /*
 #pragma mark - Navigation
 

@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
-@property (strong,nonatomic) UIView *VW;
-@property (strong,nonatomic) UITableView *tableview;
+
 @end
