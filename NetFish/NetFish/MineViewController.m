@@ -53,7 +53,16 @@
     NSString *city = currentuser[@"city"];
     _cityTF.text = city;
     NSString *gender = currentuser[@"gender"];
-    _sexTF.text = gender;
+    NSLog(@"gender = %@",gender);
+    if ([gender  isEqual: @"男"]) {
+        _sex.selectedSegmentIndex = 0;
+        
+        
+    }else{
+        _sex.selectedSegmentIndex = 1;
+//
+    }
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -128,7 +137,7 @@
 
 /*
 #pragma mark - Navigation
-
+/Users/weilanhaiyu/Desktop/NetFish副本 2/NetFish副本
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
@@ -142,10 +151,24 @@
 - (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)sexAction:(UISegmentedControl *)sender forEvent:(UIEvent *)event {
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (_sex.selectedSegmentIndex == 0) {
+        NSLog(@"男");
+        currentUser[@"gender"] = @"男";
+
+    }else{
+        NSLog(@"女");
+        currentUser[@"gender"] = @"女";
+        
+    }
+    
+}
+
 - (IBAction)confirmAction:(UIButton *)sender forEvent:(UIEvent *)event {
     UIImage *image = _imageview.image;
     NSString *name = _usernameTF.text;
-    NSString *gender = _sexTF.text;
     NSString *city = _cityTF.text;
     
     if (name.length == 0) {
@@ -153,7 +176,12 @@
     } else {
         PFUser *currentUser = [PFUser currentUser];
         currentUser[@"nickname"] = name;
-        currentUser[@"gender"] = gender;
+        //currentUser[@"gender"] = gender;
+//        if (_sex.selectedSegmentIndex == 0) {
+//            currentUser[@"gender"] = @"0";
+//        }else {
+//            currentUser[@"gender"] = @"1";
+//        }
         currentUser[@"city"] = city;
         if (picked) {
             //将一个UIImage对象转换成png格式的数据流
