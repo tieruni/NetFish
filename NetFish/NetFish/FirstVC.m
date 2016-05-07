@@ -10,6 +10,7 @@
 #import "WJAdvertCircle.h"
 #import "FirstTableViewCell.h"
 #import <UIImageView+WebCache.h>
+#import "DetailViewController.h"
 @interface FirstVC ()<WJAdvertClickDelegate,UITableViewDelegate,UITableViewDataSource>{
     UINib *nib;
 }
@@ -53,14 +54,13 @@ static BOOL nibsRegistered;
     
     //----------
     self.VW = [UIView new];
-    
-    self.VW.frame = self.tableview.bounds;
-    
-    
+    self.VW = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 200)];
+//    self.VW.frame = self.tableview.bounds;
     _VW.backgroundColor =[UIColor greenColor];
     [_tableview addSubview:_VW];
-    self.VW.frame = CGRectMake(0, 0, UI_SCREEN_W, 200);
     
+    
+     _tableview.tableHeaderView = self.VW ;
     [self showLaunchAdvert];
 
 }
@@ -224,16 +224,30 @@ static BOOL nibsRegistered;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    //获得用户当前所选中的细胞的行数
+//    NSIndexPath *indexPath = _tableview.indexPathForSelectedRow;
+    //根据上述行数获取该行所对应的数据
+    PFObject *newDetail = _objectForShow [indexPath.row];
+    //获得将要跳转到的页面的实例
+    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"DetailNav"];
+    //将需要传递给下一页的数据放入下一页准备好接数据的容器中
+    
+    
+    DetailViewController *detailViewController =[[DetailViewController alloc]initWithNibName:@"AddViewController" bundle:nil];
+    detailViewController.Detailnew = newDetail;
+    NSLog(@"------>>>mcVC2.bookdetail = %@",detailViewController.Detailnew);
+    
+    
+    [self.navigationController presentViewController:mineVC animated:YES completion:nil];
+    return;
 }
 
 #pragma mark - Navigation
-
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
-    
-}
 
+}
+*/
 
 @end

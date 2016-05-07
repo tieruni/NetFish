@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *userTF;
-- (IBAction)userAction:(UITextField *)sender forEvent:(UIEvent *)event;
 
+- (IBAction)backAction:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *DetailTitle;
+@property (weak, nonatomic) IBOutlet UIImageView *DetailImageView;
+@property (weak, nonatomic) IBOutlet UITextView *DetailTextView;
+@property (strong,nonatomic)PFObject *Detailnew;
 @end

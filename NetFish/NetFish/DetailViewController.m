@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-
+#import <UIImageView+WebCache.h>
 @interface DetailViewController ()
 
 @end
@@ -17,13 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self showDetail];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)showDetail{
+    
+    
+    NSString *title = _Detailnew[@"title1"];
+    _DetailTitle.text = title;
+    NSString *newTxt = _Detailnew[@"news1"];
+    _DetailTextView.text = newTxt;
+    PFFile *photofile = _Detailnew[@"photo1"];
+    NSString *photoUrlStr = photofile.url;
+    NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
+    [_DetailImageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
+}
 /*
 #pragma mark - Navigation
 
@@ -34,6 +46,9 @@
 }
 */
 
-- (IBAction)userAction:(UITextField *)sender forEvent:(UIEvent *)event {
+
+
+- (IBAction)backAction:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
