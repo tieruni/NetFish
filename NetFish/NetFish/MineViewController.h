@@ -15,9 +15,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *emailLbl;
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTF;
-@property (weak, nonatomic) IBOutlet UITextField *sexTF;
-@property (weak, nonatomic) IBOutlet UITextField *cityTF;
 
+@property (weak, nonatomic) IBOutlet UITextField *cityTF;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sex;
+
+- (IBAction)sexAction:(UISegmentedControl *)sender forEvent:(UIEvent *)event;
 
 - (IBAction)confirmAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
