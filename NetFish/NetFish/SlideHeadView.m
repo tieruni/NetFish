@@ -89,7 +89,7 @@ static CGFloat const MaxScale = 1.2;/** 选中文字放大  */
     UIViewController *superVC = [self findViewController:self];
     
 //    CGFloat y  = CGRectGetMaxY(self.titleScrollView.frame);
-    CGRect rect  = CGRectMake(0,108, UI_SCREEN_W, UI_SCREEN_H);
+    CGRect rect  = CGRectMake(0,108, UI_SCREEN_W, UI_SCREEN_H -108);
     self.contentScrollView = [[UIScrollView alloc] initWithFrame:rect];
     [superVC.view addSubview:self.contentScrollView];
     

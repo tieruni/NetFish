@@ -9,11 +9,11 @@
 #import "FirstVC.h"
 #import "WJAdvertCircle.h"
 #import "FirstTableViewCell.h"
-
+#import <UIImageView+WebCache.h>
 @interface FirstVC ()<WJAdvertClickDelegate,UITableViewDelegate,UITableViewDataSource>{
     UINib *nib;
 }
-@property(strong,nonatomic)NSArray *Arr;
+@property(strong,nonatomic)NSMutableArray *objectForShow;
 @property (strong,nonatomic) UIView *VW;
 @property (strong,nonatomic) UITableView *tableview;
 
@@ -23,16 +23,23 @@ static BOOL nibsRegistered;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _objectForShow = [NSMutableArray new];
+    [self requestData];
+    
     nibsRegistered = NO;
     NSLog(@"初始化：%d",nibsRegistered);
     
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor clearColor];
-    self.tableview = [UITableView new];
-    self.tableview.frame = self.view.bounds;
-    self.tableview.frame = CGRectMake(0, 0, self.view.frame.size.width, UI_SCREEN_H);
+    self.tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
+    
+    
+    //------------>>>>>>>>>
+    CGSize contentSize = self.tableview.contentSize;
+    [self.tableview setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableview.backgroundColor = [UIColor whiteColor];
-//    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    
     //-------->>>>>
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
@@ -51,7 +58,7 @@ static BOOL nibsRegistered;
     
     
     _VW.backgroundColor =[UIColor greenColor];
-    [_tableview addSubview:_VW];;
+    [_tableview addSubview:_VW];
     self.VW.frame = CGRectMake(0, 0, UI_SCREEN_W, 200);
     
     [self showLaunchAdvert];
@@ -137,12 +144,44 @@ static BOOL nibsRegistered;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+
+-(void)requestData{
+    [_objectForShow removeAllObjects];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"hotnews"];
+    
+    //让导航条失去交互能力
+    self.navigationController.view.userInteractionEnabled = NO;
+    //在根视图上创建一朵菊花，并转动
+    UIActivityIndicatorView *avi = [Utilities getCoverOnView:self.view];
+    //查询语句
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        //让导航条恢复交互能力
+        self.navigationController.view.userInteractionEnabled = YES;
+        //停止菊花动画
+        [avi stopAnimating];
+        if (!error) {
+            
+            NSLog(@"objects = %@",objects);
+            _objectForShow = [NSMutableArray arrayWithArray:objects];
+            
+            [_tableview reloadData];
+        }else{
+            NSLog(@"Error: %@",error.userInfo);
+            [Utilities popUpAlertViewWithMsg:@"请保持网络连接畅通" andTitle:nil onView:self];
+            return ;
+        }
+    }];
+    
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+//    return 10;
+//}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return  _objectForShow.count;
 }
+
 - (FirstTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identy = @"CustomCell";
     if (!nib) {
@@ -153,9 +192,21 @@ static BOOL nibsRegistered;
     }
     FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identy];
 //    NSUInteger row = [indexPath row];
-    cell.TitleLabel.text = @"我是偶数行的";
-    cell.TxtLabel.text = @"我是子标题";
-    cell.newsimageView.image = [UIImage imageNamed:@"Image77"];
+    
+    PFObject *obj = _objectForShow[indexPath.row];
+    NSString *title = obj[@"title1"];
+    cell.TitleLabel.text = title;
+//    cell.TitleLabel.text = @"大家开发建设的风景";
+    
+    NSString *new = obj[@"news1"];
+    cell.TxtLabel.text = new;
+//    cell.TxtLabel.text = @"打开福建等省份";
+    
+    PFFile *photofile = obj[@"photo1"];
+    NSString *photoUrlStr = photofile.url;
+    NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
+    [cell.newsimageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
+//    cell.newsimageView.image = [UIImage imageNamed:@"Image77"];
 //    if (row%2 == 0) {
 //        cell.TitleLabel.text = @"我是偶数行的";
 //        cell.TxtLabel.text = @"我是子标题";
@@ -171,14 +222,18 @@ static BOOL nibsRegistered;
     
     return [[self tableView:tableView cellForRowAtIndexPath:indexPath] frame].size.height;
 }
-/*
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    
+    
 }
-*/
+
 
 @end

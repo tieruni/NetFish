@@ -10,6 +10,12 @@
 #import "KSGuideManager.h"
 #import "SlideHeadView.h"
 #import "FirstVC.h"
+#import "SecondVC.h"
+#import "ThirdVC.h"
+#import "FourVC.h"
+#import "FiveVC.h"
+#import "SixVC.h"
+#import "SevenVC.h"
 #import "FunnyTableViewController.h"
 @interface HomeViewController ()
 
@@ -40,14 +46,12 @@
     
     //    初始化子控制器，使用-(void)addChildViewController:(UIViewController *)childVC title:(NSString *)vcTitle方法
     FirstVC *VC1 = [[FirstVC alloc]init];
-    
-    
-    FirstVC *VC2 = [[FirstVC alloc]init];
-    FirstVC *VC3 = [[FirstVC alloc]init];
-    FirstVC *VC4 = [[FirstVC alloc]init];
-    FirstVC *VC5 = [[FirstVC alloc]init];
-    FirstVC *VC6 = [[FirstVC alloc]init];
-    FirstVC *VC7 = [[FirstVC alloc]init];
+    SecondVC *VC2 = [[SecondVC alloc]init];
+    ThirdVC *VC3 = [[ThirdVC alloc]init];
+    FourVC *VC4 = [[FourVC alloc]init];
+    FiveVC *VC5 = [[FiveVC alloc]init];
+    SixVC *VC6 = [[SixVC alloc]init];
+    SevenVC *VC7 = [[SevenVC alloc]init];
     
     
     NSArray *titleArr = @[@"热门推荐",@"娱乐",@"军事",@"科技",@"星座",@"生活",@"搞笑"];

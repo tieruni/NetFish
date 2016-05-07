@@ -20,15 +20,15 @@
                             <constraint firstAttribute="height" constant="22" id="Y3G-gT-gwL"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="YJm-mV-rVQ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YS-hD-80h">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YS-hD-80h">
                         <rect key="frame" x="106" y="45" width="268" height="57"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-93-gnQ">
@@ -38,7 +38,7 @@
                             <constraint firstAttribute="height" constant="0.5" id="NbO-b7-xRe"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gg3-e8-udw">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gg3-e8-udw">
                         <rect key="frame" x="8" y="8" width="90" height="94"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="0gk-b4-Myb"/>
@@ -49,10 +49,10 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="hT1-93-gnQ" firstAttribute="leading" secondItem="GT3-oc-xRE" secondAttribute="leading" id="02l-99-33M"/>
-                    <constraint firstItem="2PM-W5-xVd" firstAttribute="top" secondItem="GT3-oc-xRE" secondAttribute="top" constant="8" id="21a-Ru-AtB"/>
                     <constraint firstItem="3YS-hD-80h" firstAttribute="leading" secondItem="gg3-e8-udw" secondAttribute="trailing" constant="8" id="EpZ-Pd-xuW"/>
                     <constraint firstItem="3YS-hD-80h" firstAttribute="top" secondItem="2PM-W5-xVd" secondAttribute="bottom" constant="15" id="LDN-ab-A0l"/>
                     <constraint firstItem="3YS-hD-80h" firstAttribute="leading" secondItem="gg3-e8-udw" secondAttribute="trailing" constant="8" id="OYc-3P-NPt"/>
+                    <constraint firstItem="2PM-W5-xVd" firstAttribute="top" secondItem="gg3-e8-udw" secondAttribute="top" id="QsF-Cg-Thz"/>
                     <constraint firstItem="2PM-W5-xVd" firstAttribute="leading" secondItem="gg3-e8-udw" secondAttribute="trailing" constant="8" id="ZVO-C2-lPd"/>
                     <constraint firstAttribute="trailing" secondItem="3YS-hD-80h" secondAttribute="trailing" constant="8" id="cCO-65-YiV"/>
                     <constraint firstAttribute="bottom" secondItem="hT1-93-gnQ" secondAttribute="bottom" id="eTv-Cb-osy"/>
