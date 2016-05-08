@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self showDetail];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +28,7 @@
 }
 -(void)showDetail{
     
-    
+    NSLog(@"Detailnew = %@",_Detailnew);
     NSString *title = _Detailnew[@"title1"];
     _DetailTitle.text = title;
     NSString *newTxt = _Detailnew[@"news1"];

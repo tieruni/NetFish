@@ -31,14 +31,14 @@ static BOOL nibsRegistered;
     NSLog(@"初始化：%d",nibsRegistered);
     
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
     
     
     //------------>>>>>>>>>
     CGSize contentSize = self.tableview.contentSize;
     [self.tableview setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
-    self.tableview.backgroundColor = [UIColor whiteColor];
+    self.tableview.backgroundColor = [UIColor clearColor];
 
     
     //-------->>>>>
@@ -55,7 +55,6 @@ static BOOL nibsRegistered;
     //----------
     self.VW = [UIView new];
     self.VW = [[UIView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 200)];
-//    self.VW.frame = self.tableview.bounds;
     _VW.backgroundColor =[UIColor greenColor];
     [_tableview addSubview:_VW];
     
@@ -73,7 +72,7 @@ static BOOL nibsRegistered;
     sss.delegate = self;
     
     // 参数一：展示的图片名  参数二:点击图片对应的url  参数三:是否可循环重复滚动  参数四:是否设置定时自动滚动 (要定时自动播放 isRepeat的值也必须是YES)
-    [sss showImages:@[@"Image-3",@"Image-1",@"Image-2"] urls:@[@"www.baidu.com",@"www.sina.com.cn",@"www.163.com"] isRepeat:YES isTiming:YES];
+    [sss showImages:@[@"Image-3",@"Image-1",@"Image-2"] urls:@[@"www.baidu.com",@"www.sina.com.cn",@"www.163.com"] isRepeat:NO isTiming:NO];
     
     // pageControl的颜色设置
     sss.pageControl.currentPageIndicatorTintColor = [UIColor redColor];
@@ -115,30 +114,8 @@ static BOOL nibsRegistered;
     });
     
 }
-//-------------------->>>>>>
-//- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-//    }
-//------
-//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-//{
-//    if (self = [self.tableview initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-//        //        self.dataArray = [NSMutableArray array];
-//        [self addAllViews];
-//    }
-//    return self;
-//}
-//- (void)addAllViews
-//{
-//    self.aLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
-//    self.aLabel.backgroundColor = [UIColor greenColor];
-//    [self.contentView addSubview:self.aLabel];
-//    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, [UIScreen mainScreen].bounds.size.width, 0) style:UITableViewStylePlain];
-//    
-//    self.tableView.delegate = self;
-//    self.tableView.dataSource = self;
-//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@testCell];
-//    //    [self.contentView addSubview:self.tableView];
-//}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -182,7 +159,7 @@ static BOOL nibsRegistered;
     return  _objectForShow.count;
 }
 
-- (FirstTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identy = @"CustomCell";
     if (!nib) {
 //        FirstTableViewCell *cell =[[FirstTableViewCell alloc]initWithFrame:CGRectMake(0, 200, UI_SCREEN_W, 110)];
@@ -196,17 +173,14 @@ static BOOL nibsRegistered;
     PFObject *obj = _objectForShow[indexPath.row];
     NSString *title = obj[@"title1"];
     cell.TitleLabel.text = title;
-//    cell.TitleLabel.text = @"大家开发建设的风景";
     
     NSString *new = obj[@"news1"];
     cell.TxtLabel.text = new;
-//    cell.TxtLabel.text = @"打开福建等省份";
     
     PFFile *photofile = obj[@"photo1"];
     NSString *photoUrlStr = photofile.url;
     NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
     [cell.newsimageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
-//    cell.newsimageView.image = [UIImage imageNamed:@"Image77"];
 //    if (row%2 == 0) {
 //        cell.TitleLabel.text = @"我是偶数行的";
 //        cell.TxtLabel.text = @"我是子标题";
@@ -233,9 +207,9 @@ static BOOL nibsRegistered;
     //将需要传递给下一页的数据放入下一页准备好接数据的容器中
     
     
-    DetailViewController *detailViewController =[[DetailViewController alloc]initWithNibName:@"AddViewController" bundle:nil];
+    DetailViewController *detailViewController =[[DetailViewController alloc]initWithNibName:@"UINavigationController" bundle:nil];
     detailViewController.Detailnew = newDetail;
-    NSLog(@"------>>>mcVC2.bookdetail = %@",detailViewController.Detailnew);
+    NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
     
     
     [self.navigationController presentViewController:mineVC animated:YES completion:nil];

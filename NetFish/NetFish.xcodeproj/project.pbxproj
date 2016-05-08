@@ -63,6 +63,12 @@
 		D388FE0A1CC21BC10057F6DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE091CC21BC10057F6DB /* SystemConfiguration.framework */; };
 		D388FE0C1CC21BCC0057F6DB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */; };
 		D388FE0E1CC21BD60057F6DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */; };
+		D3B76A8B1CDF0EA700974046 /* SecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A8A1CDF0EA700974046 /* SecondTableViewCell.m */; };
+		D3B76A8E1CDF216800974046 /* ThirdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A8D1CDF216800974046 /* ThirdTableViewCell.m */; };
+		D3B76A911CDF2ABB00974046 /* FourTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A901CDF2ABB00974046 /* FourTableViewCell.m */; };
+		D3B76A941CDF2ACE00974046 /* FiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A931CDF2ACE00974046 /* FiveTableViewCell.m */; };
+		D3B76A971CDF2ADC00974046 /* SixTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A961CDF2ADC00974046 /* SixTableViewCell.m */; };
+		D3B76A9A1CDF2AEA00974046 /* SevenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A991CDF2AEA00974046 /* SevenTableViewCell.m */; };
 		D3CAE2971CD3517500E5D6B0 /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CAE2961CD3517500E5D6B0 /* FirstTableViewCell.m */; };
 		D3CAE29A1CD35BB200E5D6B0 /* FNReadListSglImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE2991CD35BB200E5D6B0 /* FNReadListSglImgCell.xib */; };
 		D3CAE29C1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE29B1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib */; };
@@ -191,6 +197,18 @@
 		D388FE0B1CC21BCC0057F6DB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D388FE0D1CC21BD60057F6DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D388FE0F1CC21CB90057F6DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D3B76A891CDF0EA700974046 /* SecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTableViewCell.h; sourceTree = "<group>"; };
+		D3B76A8A1CDF0EA700974046 /* SecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTableViewCell.m; sourceTree = "<group>"; };
+		D3B76A8C1CDF216800974046 /* ThirdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTableViewCell.h; sourceTree = "<group>"; };
+		D3B76A8D1CDF216800974046 /* ThirdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTableViewCell.m; sourceTree = "<group>"; };
+		D3B76A8F1CDF2ABB00974046 /* FourTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourTableViewCell.h; sourceTree = "<group>"; };
+		D3B76A901CDF2ABB00974046 /* FourTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourTableViewCell.m; sourceTree = "<group>"; };
+		D3B76A921CDF2ACE00974046 /* FiveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveTableViewCell.h; sourceTree = "<group>"; };
+		D3B76A931CDF2ACE00974046 /* FiveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveTableViewCell.m; sourceTree = "<group>"; };
+		D3B76A951CDF2ADC00974046 /* SixTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixTableViewCell.h; sourceTree = "<group>"; };
+		D3B76A961CDF2ADC00974046 /* SixTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SixTableViewCell.m; sourceTree = "<group>"; };
+		D3B76A981CDF2AEA00974046 /* SevenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenTableViewCell.h; sourceTree = "<group>"; };
+		D3B76A991CDF2AEA00974046 /* SevenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenTableViewCell.m; sourceTree = "<group>"; };
 		D3CAE2951CD3517500E5D6B0 /* FirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
 		D3CAE2961CD3517500E5D6B0 /* FirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
 		D3CAE2991CD35BB200E5D6B0 /* FNReadListSglImgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNReadListSglImgCell.xib; sourceTree = "<group>"; };
@@ -363,22 +381,34 @@
 				A97CE7A51CC49221006482E5 /* 引导图 */,
 				D388FDBD1CC20F530057F6DB /* AppDelegate.h */,
 				D388FDBE1CC20F530057F6DB /* AppDelegate.m */,
-				D3CAE2951CD3517500E5D6B0 /* FirstTableViewCell.h */,
-				D3CAE2961CD3517500E5D6B0 /* FirstTableViewCell.m */,
 				D3725BBB1CC5045500EB3347 /* FirstVC.h */,
 				D3725BBC1CC5045500EB3347 /* FirstVC.m */,
+				D3CAE2951CD3517500E5D6B0 /* FirstTableViewCell.h */,
+				D3CAE2961CD3517500E5D6B0 /* FirstTableViewCell.m */,
 				D3F988191CDDC7FA00DE00D7 /* SecondVC.h */,
 				D3F9881A1CDDC7FA00DE00D7 /* SecondVC.m */,
+				D3B76A891CDF0EA700974046 /* SecondTableViewCell.h */,
+				D3B76A8A1CDF0EA700974046 /* SecondTableViewCell.m */,
 				D3F9881C1CDDC81300DE00D7 /* ThirdVC.h */,
 				D3F9881D1CDDC81300DE00D7 /* ThirdVC.m */,
+				D3B76A8C1CDF216800974046 /* ThirdTableViewCell.h */,
+				D3B76A8D1CDF216800974046 /* ThirdTableViewCell.m */,
 				D3F9881F1CDDC82D00DE00D7 /* FourVC.h */,
 				D3F988201CDDC82D00DE00D7 /* FourVC.m */,
+				D3B76A8F1CDF2ABB00974046 /* FourTableViewCell.h */,
+				D3B76A901CDF2ABB00974046 /* FourTableViewCell.m */,
 				D3F988221CDDC83900DE00D7 /* FiveVC.h */,
 				D3F988231CDDC83900DE00D7 /* FiveVC.m */,
+				D3B76A921CDF2ACE00974046 /* FiveTableViewCell.h */,
+				D3B76A931CDF2ACE00974046 /* FiveTableViewCell.m */,
 				D3F988251CDDC85700DE00D7 /* SixVC.h */,
 				D3F988261CDDC85700DE00D7 /* SixVC.m */,
+				D3B76A951CDF2ADC00974046 /* SixTableViewCell.h */,
+				D3B76A961CDF2ADC00974046 /* SixTableViewCell.m */,
 				D3F988281CDDC87200DE00D7 /* SevenVC.h */,
 				D3F988291CDDC87200DE00D7 /* SevenVC.m */,
+				D3B76A981CDF2AEA00974046 /* SevenTableViewCell.h */,
+				D3B76A991CDF2AEA00974046 /* SevenTableViewCell.m */,
 				D388FDBB1CC20F530057F6DB /* main.m */,
 				D388FDCE1CC20F530057F6DB /* Info.plist */,
 				D388FE0F1CC21CB90057F6DB /* PrefixHeader.pch */,
@@ -714,6 +744,7 @@
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,
 				A9A72A041CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m in Sources */,
 				D3725BB21CC4F94900EB3347 /* WJAdvertCircle.m in Sources */,
+				D3B76A8E1CDF216800974046 /* ThirdTableViewCell.m in Sources */,
 				D3F9881E1CDDC81300DE00D7 /* ThirdVC.m in Sources */,
 				D3F988241CDDC83900DE00D7 /* FiveVC.m in Sources */,
 				A9A72A021CCC5C7E00D2DAE7 /* UserFeedBackViewController.m in Sources */,
@@ -725,6 +756,9 @@
 				737F35EB1CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.m in Sources */,
 				B370430A1CC3791B005E63A2 /* CollectionTableViewController.m in Sources */,
 				D3725BBD1CC5045500EB3347 /* FirstVC.m in Sources */,
+				D3B76A911CDF2ABB00974046 /* FourTableViewCell.m in Sources */,
+				D3B76A971CDF2ADC00974046 /* SixTableViewCell.m in Sources */,
+				D3B76A941CDF2ACE00974046 /* FiveTableViewCell.m in Sources */,
 				B38BD7811CC47ABC00A11AF8 /* CellTableViewCell.m in Sources */,
 				D3F9881B1CDDC7FA00DE00D7 /* SecondVC.m in Sources */,
 				D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */,
@@ -738,8 +772,10 @@
 				D388FDFC1CC21AE20057F6DB /* StorageMgr.m in Sources */,
 				B37043071CC37801005E63A2 /* MineViewController.m in Sources */,
 				A95BD4EC1CC9F6EE004CFA00 /* XMNAnimTextFiled.m in Sources */,
+				D3B76A8B1CDF0EA700974046 /* SecondTableViewCell.m in Sources */,
 				737F35F01CCC595A00E7EFEB /* UITableView+Wave.m in Sources */,
 				D3CAE2971CD3517500E5D6B0 /* FirstTableViewCell.m in Sources */,
+				D3B76A9A1CDF2AEA00974046 /* SevenTableViewCell.m in Sources */,
 				D388FDFB1CC21AE20057F6DB /* Utilities.m in Sources */,
 				B37042FE1CC31ED0005E63A2 /* HomeViewController.m in Sources */,
 				737F35EC1CCC593600E7EFEB /* UIView+WHC_ViewProperty.m in Sources */,
