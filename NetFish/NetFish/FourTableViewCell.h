@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FourTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *FourVCTechnologyImageView;
+@property (weak, nonatomic) IBOutlet UILabel *FourVCTechnologyTitle;
+@property (weak, nonatomic) IBOutlet UILabel *FourVCTechnologyTxtLab;
 
 @end
