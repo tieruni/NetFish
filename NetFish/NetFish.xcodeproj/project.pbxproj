@@ -21,6 +21,7 @@
 		A97CE7AC1CC4922D006482E5 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A81CC4922D006482E5 /* 12.jpg */; };
 		A97CE7AD1CC4922D006482E5 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A91CC4922D006482E5 /* 13.jpg */; };
 		A97CE7BE1CC500D7006482E5 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */; };
+		A99A7B971CE032DA00FC9783 /* publishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99A7B961CE032DA00FC9783 /* publishViewController.m */; };
 		A9A72A021CCC5C7E00D2DAE7 /* UserFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FA1CCC5C7E00D2DAE7 /* UserFeedBackViewController.m */; };
 		A9A72A031CCC5C7E00D2DAE7 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FC1CCC5C7E00D2DAE7 /* PlaceholderTextView.m */; };
 		A9A72A041CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FE1CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m */; };
@@ -127,6 +128,8 @@
 		A97CE7A91CC4922D006482E5 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		A97CE7BC1CC500D7006482E5 /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
 		A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
+		A99A7B951CE032DA00FC9783 /* publishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = publishViewController.h; sourceTree = "<group>"; };
+		A99A7B961CE032DA00FC9783 /* publishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = publishViewController.m; sourceTree = "<group>"; };
 		A9A729F91CCC5C7E00D2DAE7 /* UserFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedBackViewController.h; sourceTree = "<group>"; };
 		A9A729FA1CCC5C7E00D2DAE7 /* UserFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedBackViewController.m; sourceTree = "<group>"; };
 		A9A729FB1CCC5C7E00D2DAE7 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
@@ -469,6 +472,8 @@
 				D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */,
 				B37D574A1CDC3779005C1392 /* CityViewController.h */,
 				B37D574B1CDC3779005C1392 /* CityViewController.m */,
+				A99A7B951CE032DA00FC9783 /* publishViewController.h */,
+				A99A7B961CE032DA00FC9783 /* publishViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -755,6 +760,7 @@
 			files = (
 				D3725BBA1CC5038600EB3347 /* UIView+Extension.m in Sources */,
 				B37043011CC35A17005E63A2 /* LeftViewController.m in Sources */,
+				A99A7B971CE032DA00FC9783 /* publishViewController.m in Sources */,
 				B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */,
 				A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,
