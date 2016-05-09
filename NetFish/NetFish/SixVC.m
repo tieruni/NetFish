@@ -27,8 +27,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
     self.tableviewLife = [UITableView new];
-    self.tableviewLife.frame = self.view.bounds;
-    self.tableviewLife.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64);
+//    self.tableviewLife.frame = self.view.bounds;
+    self.tableviewLife = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
     CGSize contentSize = self.tableviewLife.contentSize;
     [self.tableviewLife setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewLife.backgroundColor = [UIColor greenColor];
@@ -40,7 +40,7 @@
     self.IMW6 = [UIImageView new];
     self.IMW6 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 200)];
     _IMW6.backgroundColor =[UIColor redColor];
-    _IMW6.image = [UIImage imageNamed:@"Image66"];
+    _IMW6.image = [UIImage imageNamed:@"Image33"];
     [_tableviewLife addSubview:_IMW6];
     //将图片视图塞进headerview
     _tableviewLife.tableHeaderView = self.IMW6 ;

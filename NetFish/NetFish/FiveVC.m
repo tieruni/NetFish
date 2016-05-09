@@ -27,8 +27,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
     self.tableviewConstellation = [UITableView new];
-    self.tableviewConstellation.frame = self.view.bounds;
-    self.tableviewConstellation.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 60);
+//    self.tableviewConstellation.frame = self.view.bounds;
+    self.tableviewConstellation = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 60)];
     CGSize contentSize = self.tableviewConstellation.contentSize;
     [self.tableviewConstellation setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewConstellation.backgroundColor = [UIColor grayColor];

@@ -28,8 +28,8 @@
     //给SecondVC添加tableview
     self.view.backgroundColor = [UIColor redColor];
     self.tableviewMily = [UITableView new];
-    self.tableviewMily.frame = self.view.bounds;
-    self.tableviewMily.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64);
+//    self.tableviewMily.frame = self.view.bounds;
+    self.tableviewMily = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
     CGSize contentSize = self.tableviewMily.contentSize;
     [self.tableviewMily setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewMily.backgroundColor = [UIColor whiteColor];

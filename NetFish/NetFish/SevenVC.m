@@ -26,8 +26,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
     self.tableviewJokes = [UITableView new];
-    self.tableviewJokes.frame = self.view.bounds;
-    self.tableviewJokes.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 60);
+//    self.tableviewJokes.frame = self.view.bounds;
+    self.tableviewJokes = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 60)];
     CGSize contentSize = self.tableviewJokes.contentSize;
     [self.tableviewJokes setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewJokes.backgroundColor = [UIColor grayColor];
