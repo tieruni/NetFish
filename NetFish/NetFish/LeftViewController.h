@@ -15,6 +15,10 @@
 - (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event;
 @property (weak, nonatomic) IBOutlet UIButton *eixtBtn;
 @property (weak, nonatomic) IBOutlet UIButton *imageBtn;
+@property (weak, nonatomic) IBOutlet UIButton *collectionBtn;
+- (IBAction)collecAction:(UIButton *)sender forEvent:(UIEvent *)event;
+@property (weak, nonatomic) IBOutlet UIButton *opinionBtn;
+- (IBAction)opinionAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
 
 

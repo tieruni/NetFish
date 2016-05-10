@@ -88,6 +88,7 @@
     NSLog(@"currentUser = %@", currentUser);
     if (currentUser) {
         UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Mine"];
+        [mineVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:mineVC animated:YES completion:nil];
         
         
@@ -137,11 +138,20 @@
     
 }
 
-- (IBAction)collectonAction:(UIButton *)sender forEvent:(UIEvent *)event {
+
+
+
+
+
+
+- (IBAction)collecAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Detail"];
+    [mineVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:mineVC animated:YES completion:nil];
 }
-
-
-
-
-
+- (IBAction)opinionAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"help"];
+    [mineVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:mineVC animated:YES completion:nil];
+}
 @end

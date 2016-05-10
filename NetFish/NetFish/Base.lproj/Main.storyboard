@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -388,7 +388,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RLc-mx-HWs" kind="show" id="w6d-at-B5B"/>
+                                    <action selector="collecAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="k3U-A1-5Cw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-Mh-eBv">
@@ -428,7 +428,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QBu-TT-52b" kind="show" id="cqu-IK-cLw"/>
+                                    <action selector="opinionAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="XaT-UL-YcE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81O-zd-58a">
@@ -481,9 +481,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="collectionBtn" destination="sdy-0l-mLt" id="ppX-pN-wk5"/>
                         <outlet property="eixtBtn" destination="0wt-AB-ddp" id="pXN-Wv-e1t"/>
                         <outlet property="imageBtn" destination="9r2-Mh-eBv" id="Ss0-9x-nz8"/>
                         <outlet property="loginLbl" destination="FFI-PP-kPf" id="Dky-la-9A8"/>
+                        <outlet property="opinionBtn" destination="SCw-t3-I6R" id="CVA-TY-mbf"/>
                         <outlet property="username" destination="81O-zd-58a" id="mbT-Ye-f16"/>
                     </connections>
                 </viewController>
@@ -666,7 +668,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw7-79-GHu">
                                         <rect key="frame" x="5" y="0.0" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-bt-H9k">
@@ -897,7 +899,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2619" y="598"/>
+            <point key="canvasLocation" x="2477" y="575"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lQT-xD-XpO">
@@ -1000,7 +1002,7 @@
         <!--Navigation Controller-->
         <scene sceneID="tlW-7n-5dG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RLc-mx-HWs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Detail" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RLc-mx-HWs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YcR-Ea-73E"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
