@@ -7,7 +7,6 @@
 //
 
 #import "FourVC.h"
-#import <UIImageView+WebCache.h>
 #import "DetailViewController.h"
 #import "FourTableViewCell.h"
 

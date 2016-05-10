@@ -9,11 +9,15 @@
 #import "FirstVC.h"
 #import "WJAdvertCircle.h"
 #import "FirstTableViewCell.h"
-#import <UIImageView+WebCache.h>
 #import "DetailViewController.h"
-@interface FirstVC ()<WJAdvertClickDelegate,UITableViewDelegate,UITableViewDataSource>{
+#import "UIScrollView+WHC_PullRefresh.h"
+#import "UIView+WHC_ViewProperty.h"
+#define kCellCount            (3)       //cell默认个数
+@interface FirstVC ()<WJAdvertClickDelegate,UITableViewDelegate,UITableViewDataSource,WHC_PullRefreshDelegate>{
     UINib *nib;
+    NSInteger  _count;
 }
+@property (nonatomic , assign)WHCPullRefreshStyle refreshStyle;
 @property(strong,nonatomic)NSMutableArray *objectForShow;
 @property (strong,nonatomic) UIView *VW;
 @property (strong,nonatomic) UITableView *tableview;
@@ -26,7 +30,8 @@ static BOOL nibsRegistered;
     [super viewDidLoad];
     _objectForShow = [NSMutableArray new];
     [self requestData];
-    
+    [self initData];
+    [_tableview setWHCRefreshStyle:_refreshStyle delegate:self];
     nibsRegistered = NO;
     NSLog(@"初始化：%d",nibsRegistered);
     
@@ -62,6 +67,19 @@ static BOOL nibsRegistered;
      _tableview.tableHeaderView = self.VW ;
     [self showLaunchAdvert];
 
+}
+- (void)initData{
+    _count = kCellCount;
+}
+- (void)WHCDownPullRequest{
+    NSLog(@"上拉刷新");
+    double delayInSeconds = 3.0;
+    _count+= 3;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableview reloadData];
+        [_tableview WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
 }
 - (void)showLaunchAdvert{
     // 创建adview
@@ -122,6 +140,7 @@ static BOOL nibsRegistered;
     // Dispose of any resources that can be recreated.
 }
 
+
 -(void)requestData{
     [_objectForShow removeAllObjects];
     
@@ -156,7 +175,7 @@ static BOOL nibsRegistered;
 //    return 10;
 //}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  _objectForShow.count;
+    return  _objectForShow.count - 2 * _count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

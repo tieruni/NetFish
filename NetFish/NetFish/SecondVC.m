@@ -8,7 +8,6 @@
 
 #import "SecondVC.h"
 #import "SecondTableViewCell.h"
-#import <UIImageView+WebCache.h>
 #import "DetailViewController.h"
 @interface SecondVC ()<UITableViewDataSource,UITableViewDelegate>{
     UINib *nib;
