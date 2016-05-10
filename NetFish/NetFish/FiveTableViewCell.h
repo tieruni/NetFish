@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FiveTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *FiveVCConstellationTitle;
-@property (weak, nonatomic) IBOutlet UIImageView *FiveVCConstellationImageView;
-@property (weak, nonatomic) IBOutlet UILabel *FiveVCConstellationTxtLab;
 
 @end

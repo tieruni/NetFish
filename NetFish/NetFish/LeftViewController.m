@@ -88,7 +88,9 @@
     NSLog(@"currentUser = %@", currentUser);
     if (currentUser) {
         UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Mine"];
+        [mineVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:mineVC animated:YES completion:nil];
+        
         
         
         
@@ -96,10 +98,15 @@
         
         NSLog(@"当前用户没登录");
         UINavigationController *SignVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Sign"];
+        //[SignVC setModalTransitionStyle:UIModalTransitionStylePartialCurl];
         [self presentViewController:SignVC animated:YES completion:nil];
         
         
     }
+    
+    
+    
+    
 }
 - (IBAction)exitAction:(UIButton *)sender forEvent:(UIEvent *)event {
     [PFUser logOutInBackgroundWithBlock:^(NSError * error) {
@@ -107,11 +114,13 @@
             //
             UINavigationController *SignVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Sign"];
             [self presentViewController:SignVC animated:YES completion:nil];
+            //[SignVC setModalTransitionStyle:UIModalTransitionStylePartialCurl];
             
         }else{
             [Utilities popUpAlertViewWithMsg:@"请保持网络连接通畅" andTitle:nil onView:self];
         }
         //
+        
         
         
         
@@ -133,15 +142,24 @@
         basicBackwardAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.0,1.0)];
         
         [_eixtBtn pop_addAnimation:basicBackwardAnimation forKey:@"basicBackwardAnimation"];
+        
     };
     
 }
 
-- (IBAction)collectonAction:(UIButton *)sender forEvent:(UIEvent *)event {
+
+
+
+
+
+- (IBAction)collectionAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Detail"];
+    [mineVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:mineVC animated:YES completion:nil];
 }
-
-
-
-
-
+- (IBAction)opinionAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"help"];
+    [mineVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:mineVC animated:YES completion:nil];
+}
 @end

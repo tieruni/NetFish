@@ -21,7 +21,6 @@
 		A97CE7AC1CC4922D006482E5 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A81CC4922D006482E5 /* 12.jpg */; };
 		A97CE7AD1CC4922D006482E5 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A97CE7A91CC4922D006482E5 /* 13.jpg */; };
 		A97CE7BE1CC500D7006482E5 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */; };
-		A99A7B971CE032DA00FC9783 /* publishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99A7B961CE032DA00FC9783 /* publishViewController.m */; };
 		A9A72A021CCC5C7E00D2DAE7 /* UserFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FA1CCC5C7E00D2DAE7 /* UserFeedBackViewController.m */; };
 		A9A72A031CCC5C7E00D2DAE7 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FC1CCC5C7E00D2DAE7 /* PlaceholderTextView.m */; };
 		A9A72A041CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A729FE1CCC5C7E00D2DAE7 /* PhotoCollectionViewCell.m */; };
@@ -70,10 +69,6 @@
 		D3B76A941CDF2ACE00974046 /* FiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A931CDF2ACE00974046 /* FiveTableViewCell.m */; };
 		D3B76A971CDF2ADC00974046 /* SixTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A961CDF2ADC00974046 /* SixTableViewCell.m */; };
 		D3B76A9A1CDF2AEA00974046 /* SevenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B76A991CDF2AEA00974046 /* SevenTableViewCell.m */; };
-		D3B76AA41CDF374D00974046 /* FourVCXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B76AA31CDF374D00974046 /* FourVCXib.xib */; };
-		D3B76AA61CDF3BED00974046 /* FiveVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B76AA51CDF3BED00974046 /* FiveVCCell.xib */; };
-		D3B76AA81CDF421C00974046 /* SixVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B76AA71CDF421C00974046 /* SixVCCell.xib */; };
-		D3B76AAA1CDF44CD00974046 /* SevenVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B76AA91CDF44CD00974046 /* SevenVCCell.xib */; };
 		D3CAE2971CD3517500E5D6B0 /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CAE2961CD3517500E5D6B0 /* FirstTableViewCell.m */; };
 		D3CAE29A1CD35BB200E5D6B0 /* FNReadListSglImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE2991CD35BB200E5D6B0 /* FNReadListSglImgCell.xib */; };
 		D3CAE29C1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE29B1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib */; };
@@ -128,8 +123,6 @@
 		A97CE7A91CC4922D006482E5 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		A97CE7BC1CC500D7006482E5 /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
 		A97CE7BD1CC500D7006482E5 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
-		A99A7B951CE032DA00FC9783 /* publishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = publishViewController.h; sourceTree = "<group>"; };
-		A99A7B961CE032DA00FC9783 /* publishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = publishViewController.m; sourceTree = "<group>"; };
 		A9A729F91CCC5C7E00D2DAE7 /* UserFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedBackViewController.h; sourceTree = "<group>"; };
 		A9A729FA1CCC5C7E00D2DAE7 /* UserFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedBackViewController.m; sourceTree = "<group>"; };
 		A9A729FB1CCC5C7E00D2DAE7 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
@@ -216,10 +209,6 @@
 		D3B76A961CDF2ADC00974046 /* SixTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SixTableViewCell.m; sourceTree = "<group>"; };
 		D3B76A981CDF2AEA00974046 /* SevenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenTableViewCell.h; sourceTree = "<group>"; };
 		D3B76A991CDF2AEA00974046 /* SevenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenTableViewCell.m; sourceTree = "<group>"; };
-		D3B76AA31CDF374D00974046 /* FourVCXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourVCXib.xib; sourceTree = "<group>"; };
-		D3B76AA51CDF3BED00974046 /* FiveVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveVCCell.xib; sourceTree = "<group>"; };
-		D3B76AA71CDF421C00974046 /* SixVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SixVCCell.xib; sourceTree = "<group>"; };
-		D3B76AA91CDF44CD00974046 /* SevenVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SevenVCCell.xib; sourceTree = "<group>"; };
 		D3CAE2951CD3517500E5D6B0 /* FirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
 		D3CAE2961CD3517500E5D6B0 /* FirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
 		D3CAE2991CD35BB200E5D6B0 /* FNReadListSglImgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNReadListSglImgCell.xib; sourceTree = "<group>"; };
@@ -472,8 +461,6 @@
 				D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */,
 				B37D574A1CDC3779005C1392 /* CityViewController.h */,
 				B37D574B1CDC3779005C1392 /* CityViewController.m */,
-				A99A7B951CE032DA00FC9783 /* publishViewController.h */,
-				A99A7B961CE032DA00FC9783 /* publishViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -551,10 +538,6 @@
 				D3CAE29B1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib */,
 				D3CAE2A11CD35C0300E5D6B0 /* FNNewsThrImgCell.xib */,
 				D3CAE29D1CD35BCA00E5D6B0 /* FNAVListCell.xib */,
-				D3B76AA31CDF374D00974046 /* FourVCXib.xib */,
-				D3B76AA51CDF3BED00974046 /* FiveVCCell.xib */,
-				D3B76AA71CDF421C00974046 /* SixVCCell.xib */,
-				D3B76AA91CDF44CD00974046 /* SevenVCCell.xib */,
 			);
 			name = XIB;
 			sourceTree = "<group>";
@@ -667,7 +650,6 @@
 			files = (
 				A97CE7AB1CC4922D006482E5 /* 10.jpg in Resources */,
 				D3CAE2A21CD35C0300E5D6B0 /* FNNewsThrImgCell.xib in Resources */,
-				D3B76AA61CDF3BED00974046 /* FiveVCCell.xib in Resources */,
 				D388FDCD1CC20F530057F6DB /* LaunchScreen.storyboard in Resources */,
 				D3CAE29E1CD35BCA00E5D6B0 /* FNAVListCell.xib in Resources */,
 				A9A72A061CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png in Resources */,
@@ -680,12 +662,9 @@
 				D3CAE2A01CD35BF600E5D6B0 /* FNNewsSglImgCell.xib in Resources */,
 				B37D574E1CDC3794005C1392 /* citydict.plist in Resources */,
 				D3CAE29C1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib in Resources */,
-				D3B76AAA1CDF44CD00974046 /* SevenVCCell.xib in Resources */,
 				A95BD4EA1CC9F6EE004CFA00 /* invisible_icon@2x.png in Resources */,
 				A97CE7AA1CC4922D006482E5 /* 11.jpg in Resources */,
-				D3B76AA41CDF374D00974046 /* FourVCXib.xib in Resources */,
 				A97CE7AD1CC4922D006482E5 /* 13.jpg in Resources */,
-				D3B76AA81CDF421C00974046 /* SixVCCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +739,6 @@
 			files = (
 				D3725BBA1CC5038600EB3347 /* UIView+Extension.m in Sources */,
 				B37043011CC35A17005E63A2 /* LeftViewController.m in Sources */,
-				A99A7B971CE032DA00FC9783 /* publishViewController.m in Sources */,
 				B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */,
 				A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,

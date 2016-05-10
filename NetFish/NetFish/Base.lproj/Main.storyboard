@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -388,7 +388,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RLc-mx-HWs" kind="show" id="w6d-at-B5B"/>
+                                    <action selector="collectionAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="ifH-fP-m3m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-Mh-eBv">
@@ -428,7 +428,7 @@
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QBu-TT-52b" kind="show" id="cqu-IK-cLw"/>
+                                    <action selector="opinionAction:forEvent:" destination="m9p-wf-Z2o" eventType="touchUpInside" id="Iee-CY-oyO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81O-zd-58a">
@@ -481,9 +481,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="collectionLbl" destination="sdy-0l-mLt" id="Tag-XE-S1i"/>
                         <outlet property="eixtBtn" destination="0wt-AB-ddp" id="pXN-Wv-e1t"/>
                         <outlet property="imageBtn" destination="9r2-Mh-eBv" id="Ss0-9x-nz8"/>
                         <outlet property="loginLbl" destination="FFI-PP-kPf" id="Dky-la-9A8"/>
+                        <outlet property="opinionLbl" destination="SCw-t3-I6R" id="nif-St-23u"/>
                         <outlet property="username" destination="81O-zd-58a" id="mbT-Ye-f16"/>
                     </connections>
                 </viewController>
@@ -565,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6I-Wg-LDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3274" y="1518"/>
+            <point key="canvasLocation" x="3024" y="1560"/>
         </scene>
         <!--评论-->
         <scene sceneID="LEj-2E-8az">
@@ -641,76 +643,12 @@
                             <outlet property="delegate" destination="bZv-OL-jhy" id="nuJ-hG-0HF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="评论" id="5YE-Dn-OMF">
-                        <barButtonItem key="leftBarButtonItem" title="返回" id="XeM-UQ-kjF"/>
-                        <barButtonItem key="rightBarButtonItem" title="发表评论" id="69O-pw-vUg">
-                            <connections>
-                                <segue destination="LWz-si-tI5" kind="show" id="22N-yR-FvU"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="评论" id="5YE-Dn-OMF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFG-ls-CbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3744" y="2142"/>
-        </scene>
-        <!--评论-->
-        <scene sceneID="A9g-h1-zMG">
-            <objects>
-                <viewController id="LWz-si-tI5" customClass="publishViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0tQ-ku-gbl"/>
-                        <viewControllerLayoutGuide type="bottom" id="04N-Vh-NH1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bal-sF-NCF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3OV-H9-HPJ">
-                                <rect key="frame" x="10" y="69" width="300" height="131"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gl5-NK-eku">
-                                <rect key="frame" x="15" y="77" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3OV-H9-HPJ" secondAttribute="trailing" constant="10" id="ImL-WV-vsU"/>
-                            <constraint firstItem="Gl5-NK-eku" firstAttribute="leading" secondItem="bal-sF-NCF" secondAttribute="leading" constant="15" id="bbZ-l5-RSo"/>
-                            <constraint firstItem="3OV-H9-HPJ" firstAttribute="leading" secondItem="bal-sF-NCF" secondAttribute="leading" constant="10" id="dBK-vb-ero"/>
-                            <constraint firstItem="Gl5-NK-eku" firstAttribute="top" secondItem="0tQ-ku-gbl" secondAttribute="bottom" constant="13" id="dQG-6C-hab"/>
-                            <constraint firstItem="04N-Vh-NH1" firstAttribute="top" secondItem="3OV-H9-HPJ" secondAttribute="bottom" constant="280" id="jMG-zA-B0s"/>
-                            <constraint firstItem="3OV-H9-HPJ" firstAttribute="top" secondItem="0tQ-ku-gbl" secondAttribute="bottom" constant="5" id="tpP-7L-Qvx"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="评论" id="ePd-LU-3qp">
-                        <barButtonItem key="leftBarButtonItem" title="取消" id="3t1-7y-FJs">
-                            <connections>
-                                <action selector="cancelAction:" destination="LWz-si-tI5" id="KvM-dG-8M4"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="发表" id="Jds-HH-TZc">
-                            <connections>
-                                <action selector="publishAction:" destination="LWz-si-tI5" id="R7Z-lc-xet"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="label" destination="Gl5-NK-eku" id="aM3-TO-KZe"/>
-                        <outlet property="textView" destination="3OV-H9-HPJ" id="VY4-ma-K8o"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uix-Qd-23c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4086" y="2137"/>
+            <point key="canvasLocation" x="4488" y="1644"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="qRe-ct-54j">
@@ -730,7 +668,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw7-79-GHu">
                                         <rect key="frame" x="5" y="0.0" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-bt-H9k">
@@ -1039,7 +977,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WI-fE-4Ih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3359" y="2142"/>
+            <point key="canvasLocation" x="2830" y="1736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a7T-wE-5ih">
@@ -1064,7 +1002,7 @@
         <!--Navigation Controller-->
         <scene sceneID="tlW-7n-5dG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RLc-mx-HWs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Detail" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RLc-mx-HWs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="YcR-Ea-73E"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

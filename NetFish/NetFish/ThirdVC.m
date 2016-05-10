@@ -13,9 +13,9 @@
 @interface ThirdVC ()<UITableViewDataSource,UITableViewDelegate>{
     UINib *nib;
 }
-
-@property (strong,nonatomic) UITableView *tableviewMily;
 @property(strong,nonatomic)NSMutableArray *objectForShowMily;
+@property (strong,nonatomic) UITableView *tableviewMily;
+
 @property (strong,nonatomic) UIImageView *IMW3;
 @end
 
@@ -28,8 +28,8 @@
     //给SecondVC添加tableview
     self.view.backgroundColor = [UIColor redColor];
     self.tableviewMily = [UITableView new];
-//    self.tableviewMily.frame = self.view.bounds;
-    self.tableviewMily = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
+    self.tableviewMily.frame = self.view.bounds;
+    self.tableviewMily.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64);
     CGSize contentSize = self.tableviewMily.contentSize;
     [self.tableviewMily setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewMily.backgroundColor = [UIColor whiteColor];
@@ -43,7 +43,7 @@
     self.IMW3 = [UIImageView new];
     self.IMW3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 200)];
     _IMW3.backgroundColor =[UIColor redColor];
-    _IMW3.image = [UIImage imageNamed:@"Image88"];
+    _IMW3.image = [UIImage imageNamed:@"Image66"];
     [_tableviewMily addSubview:_IMW3];
     //将图片视图塞进headerview
     _tableviewMily.tableHeaderView = self.IMW3 ;

@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SevenTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *SevenVCJokesTitle;
-@property (weak, nonatomic) IBOutlet UIImageView *SevenVCJokesImageView;
 
 @end
