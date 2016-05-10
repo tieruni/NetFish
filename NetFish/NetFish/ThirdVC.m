@@ -7,7 +7,6 @@
 //
 
 #import "ThirdVC.h"
-#import <UIImageView+WebCache.h>
 #import "ThirdTableViewCell.h"
 #import "DetailViewController.h"
 @interface ThirdVC ()<UITableViewDataSource,UITableViewDelegate>{

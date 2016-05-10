@@ -7,7 +7,6 @@
 //
 
 #import "FiveVC.h"
-#import <UIImageView+WebCache.h>
 #import "DetailViewController.h"
 #import "FiveTableViewCell.h"
 @interface FiveVC ()<UITableViewDataSource,UITableViewDelegate>{

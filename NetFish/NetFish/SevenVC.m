@@ -7,7 +7,6 @@
 //
 
 #import "SevenVC.h"
-#import <UIImageView+WebCache.h>
 #import "DetailViewController.h"
 #import "SevenTableViewCell.h"
 @interface SevenVC ()<UITableViewDataSource,UITableViewDelegate>{

@@ -7,7 +7,6 @@
 //
 
 #import "SixVC.h"
-#import <UIImageView+WebCache.h>
 #import "DetailViewController.h"
 #import "SixTableViewCell.h"
 @interface SixVC ()<UITableViewDelegate,UITableViewDataSource>{
