@@ -16,7 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *eixtBtn;
 @property (weak, nonatomic) IBOutlet UIButton *imageBtn;
 
+- (IBAction)collectionAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
+- (IBAction)opinionAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
 
 

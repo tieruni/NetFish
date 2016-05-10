@@ -88,6 +88,7 @@
     NSLog(@"currentUser = %@", currentUser);
     if (currentUser) {
         UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Mine"];
+        [mineVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:mineVC animated:YES completion:nil];
         
         
@@ -137,11 +138,26 @@
     
 }
 
-- (IBAction)collectonAction:(UIButton *)sender forEvent:(UIEvent *)event {
+
+
+
+
+
+- (IBAction)collectionAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Detail"];
+        [mineVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+        [self presentViewController:mineVC animated:YES completion:nil];
+    }else{
+        [Utilities popUpAlertViewWithMsg:@"请先登录" andTitle:nil onView:self];
+    }
+    
 }
 
-
-
-
-
+- (IBAction)opinionAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"help"];
+    [mineVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:mineVC animated:YES completion:nil];
+}
 @end
