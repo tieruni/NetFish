@@ -33,8 +33,8 @@
     NSMutableArray *paths = [NSMutableArray new];
     [paths addObject:[[NSBundle mainBundle] pathForResource:@"10" ofType:@"jpg"]];
     [paths addObject:[[NSBundle mainBundle] pathForResource:@"11" ofType:@"jpg"]];
-    [paths addObject:[[NSBundle mainBundle] pathForResource:@"12" ofType:@"jpg"]];
-    [paths addObject:[[NSBundle mainBundle] pathForResource:@"13" ofType:@"jpg"]];
+//    [paths addObject:[[NSBundle mainBundle] pathForResource:@"12" ofType:@"jpg"]];
+//    [paths addObject:[[NSBundle mainBundle] pathForResource:@"13" ofType:@"jpg"]];
     [[KSGuideManager shared] showGuideViewWithImages:paths];
     
     //---------->>>>>>>>>>>>>>>>>>>
