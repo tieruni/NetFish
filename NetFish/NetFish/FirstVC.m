@@ -10,8 +10,7 @@
 #import "WJAdvertCircle.h"
 #import "FirstTableViewCell.h"
 #import "DetailViewController.h"
-#import "UIScrollView+WHC_PullRefresh.h"
-#import "UIView+WHC_ViewProperty.h"
+
 #define kCellCount            (3)       //cell默认个数
 @interface FirstVC ()<WJAdvertClickDelegate,UITableViewDelegate,UITableViewDataSource,WHC_PullRefreshDelegate>{
     UINib *nib;
@@ -31,14 +30,21 @@ static BOOL nibsRegistered;
     _objectForShow = [NSMutableArray new];
     [self requestData];
     [self initData];
-    [_tableview setWHCRefreshStyle:_refreshStyle delegate:self];
-    nibsRegistered = NO;
+    
+    
     NSLog(@"初始化：%d",nibsRegistered);
     
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
+    nibsRegistered = NO;
     
+    UIView *refrashView = [UIView new];
+    refrashView.backgroundColor = [UIColor lightGrayColor];
+    _tableview.tableFooterView = refrashView;
+    [_tableview setWHCRefreshStyle:_refreshStyle delegate:self];
+    
+
     
     //------------>>>>>>>>>
     CGSize contentSize = self.tableview.contentSize;
@@ -71,15 +77,30 @@ static BOOL nibsRegistered;
 - (void)initData{
     _count = kCellCount;
 }
-- (void)WHCDownPullRequest{
-    NSLog(@"上拉刷新");
-    double delayInSeconds = 3.0;
-    _count+= 3;
+#pragma mark - WHC_PullRefreshDelegate
+
+- (void)WHCUpPullRequest{
+    NSLog(@"开始加载更多");
+//    _count+= 3;
+    double delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [_tableview reloadData];
         [_tableview WHCDidCompletedWithRefreshIsDownPull:YES];
     });
+}
+- (void)WHCDownPullRequest{
+    NSLog(@"上拉刷新");
+    double delayInSeconds = 3.0;
+//    _count+= 3;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableview reloadData];
+        [_tableview WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
 }
 - (void)showLaunchAdvert{
     // 创建adview
@@ -171,11 +192,11 @@ static BOOL nibsRegistered;
     
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    return 10;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  _objectForShow.count - 2 * _count;
+    return  _objectForShow.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

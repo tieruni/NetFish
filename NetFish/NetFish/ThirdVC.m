@@ -9,10 +9,10 @@
 #import "ThirdVC.h"
 #import "ThirdTableViewCell.h"
 #import "DetailViewController.h"
-@interface ThirdVC ()<UITableViewDataSource,UITableViewDelegate>{
+@interface ThirdVC ()<UITableViewDataSource,UITableViewDelegate,WHC_PullRefreshDelegate>{
     UINib *nib;
 }
-
+@property (nonatomic , assign)WHCPullRefreshStyle refreshStyle;
 @property (strong,nonatomic) UITableView *tableviewMily;
 @property(strong,nonatomic)NSMutableArray *objectForShowMily;
 @property (strong,nonatomic) UIImageView *IMW3;
@@ -26,9 +26,15 @@
     // Do any additional setup after loading the view.
     //给SecondVC添加tableview
     self.view.backgroundColor = [UIColor redColor];
-    self.tableviewMily = [UITableView new];
-    self.tableviewMily.frame = self.view.bounds;
-    self.tableviewMily.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64);
+    self.tableviewMily = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
+    
+    
+    UIView *refrashView = [UIView new];
+    refrashView.backgroundColor = [UIColor lightGrayColor];
+    _tableviewMily.tableFooterView = refrashView;
+    [_tableviewMily setWHCRefreshStyle:_refreshStyle delegate:self];
+    
+    
     CGSize contentSize = self.tableviewMily.contentSize;
     [self.tableviewMily setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewMily.backgroundColor = [UIColor whiteColor];
@@ -46,6 +52,31 @@
     [_tableviewMily addSubview:_IMW3];
     //将图片视图塞进headerview
     _tableviewMily.tableHeaderView = self.IMW3 ;
+}
+#pragma mark - WHC_PullRefreshDelegate
+
+- (void)WHCUpPullRequest{
+    NSLog(@"开始加载更多");
+    //    _count+= 3;
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableviewMily reloadData];
+        [_tableviewMily WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+- (void)WHCDownPullRequest{
+    NSLog(@"上拉刷新");
+    double delayInSeconds = 3.0;
+    //    _count+= 3;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableviewMily reloadData];
+        [_tableviewMily WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
 }
 
 - (void)didReceiveMemoryWarning {

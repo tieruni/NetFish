@@ -13,7 +13,8 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import<Parse/Parse.h>
 #import <UIImageView+WebCache.h>
-
+#import "UIScrollView+WHC_PullRefresh.h"
+#import "UITableView+Wave.h"
 #import"Utilities.h"
 #import"StorageMgr.h"
 #import "Constants.h"
