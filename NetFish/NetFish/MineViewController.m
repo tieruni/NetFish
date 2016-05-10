@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [ [NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textChange)name:UITextFieldTextDidChangeNotification object:_cityTF];
     
     _cityTF.delegate = self;
     // Do any additional setup after loading the view.
@@ -37,6 +38,7 @@
     [self reloadInputViews];
     
 }
+
 -(void)uiConfiguration{
 
     PFUser *currentuser = [PFUser currentUser];
@@ -246,9 +248,17 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-    CityViewController *CityVc = [Utilities getStoryboardInstance:@"Main" byIdentity:@"CityVc"];
-    [self presentViewController:CityVc animated:YES completion:nil];
+    if (textField == _cityTF) {
+        CityViewController *CityVc = [Utilities getStoryboardInstance:@"Main" byIdentity:@"CityVc"];
+        [self presentViewController:CityVc animated:YES completion:nil];
+    }else{
+        
+    }
+    
     
 }
+
+
+
 
 @end
