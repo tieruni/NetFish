@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SixTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *SixVCLifeImageView;
+@property (weak, nonatomic) IBOutlet UILabel *SixVCLifeTitle;
+@property (weak, nonatomic) IBOutlet UILabel *SixVCLifeTxtLab;
 
 @end

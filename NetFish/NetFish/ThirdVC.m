@@ -13,9 +13,9 @@
 @interface ThirdVC ()<UITableViewDataSource,UITableViewDelegate>{
     UINib *nib;
 }
-@property(strong,nonatomic)NSMutableArray *objectForShowMily;
-@property (strong,nonatomic) UITableView *tableviewMily;
 
+@property (strong,nonatomic) UITableView *tableviewMily;
+@property(strong,nonatomic)NSMutableArray *objectForShowMily;
 @property (strong,nonatomic) UIImageView *IMW3;
 @end
 
@@ -43,7 +43,7 @@
     self.IMW3 = [UIImageView new];
     self.IMW3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, 200)];
     _IMW3.backgroundColor =[UIColor redColor];
-    _IMW3.image = [UIImage imageNamed:@"Image66"];
+    _IMW3.image = [UIImage imageNamed:@"Image88"];
     [_tableviewMily addSubview:_IMW3];
     //将图片视图塞进headerview
     _tableviewMily.tableHeaderView = self.IMW3 ;
