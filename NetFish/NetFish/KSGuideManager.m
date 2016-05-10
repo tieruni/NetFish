@@ -43,20 +43,20 @@ static NSString *identifier = @"Cell";
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
     button.hidden = YES;
-    [button setFrame:CGRectMake(0, 0, 200, 44)];
-    [button setTitle:@"Next" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setFrame:CGRectMake(0, 0, 200, 40)];
+    [button setTitle:@"---->>>>Next<<<<----" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [button.layer setCornerRadius:5];
-    [button.layer setBorderColor:[UIColor grayColor].CGColor];
-    [button.layer setBorderWidth:1.0f];
-    [button setBackgroundColor:[UIColor whiteColor]];
+    [button.layer setBorderColor:[UIColor clearColor].CGColor];
+    //[button.layer setBorderWidth:1.0f];
+    [button setBackgroundColor:[UIColor clearColor]];
     
     self.button = button;
     
     [self.contentView addSubview:self.imageView];
     [self.contentView addSubview:self.button];
     
-    [self.button setCenter:CGPointMake(kScreenBounds.size.width / 2, kScreenBounds.size.height - 100)];
+    [self.button setCenter:CGPointMake(kScreenBounds.size.width / 2, kScreenBounds.size.height - 30)];
 }
 
 @end
