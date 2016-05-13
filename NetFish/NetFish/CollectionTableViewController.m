@@ -8,12 +8,11 @@
 
 #import "CollectionTableViewController.h"
 #import "UITableView+Wave.h"
+#import "SWTableViewCell.h"
 #import "UIScrollView+WHC_PullRefresh.h"
-@interface CollectionTableViewController ()<WHC_PullRefreshDelegate>{
-    NSInteger  _count;
-}
+@interface CollectionTableViewController ()<SWTableViewCellDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *whcTV;
-@property (nonatomic , assign)WHCPullRefreshStyle refreshStyle;
+@property (strong,nonatomic) NSMutableArray *objectsForShow;
 @end
 
 @implementation CollectionTableViewController
@@ -26,9 +25,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _whcTV.tableFooterView = [[UIView alloc]init];
-    
-    [_whcTV setWHCRefreshStyle:_refreshStyle delegate:self];
+    //    存放显示在单元格上的数据
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@"张三",@"张四",@"张五",@"李三",@"李四",@"李五",@"李六",@"王三",@"王四",@"王五",@"王六",@"王七",@"王八",@"王九",@"王十", nil];
+    self.objectsForShow = array;
     
     [self.tableView reloadDataAnimateWithWave:RightToLeftWaveAnimation];
 }
@@ -38,50 +37,61 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - WHC_PullRefreshDelegate
-
-- (void)WHCUpPullRequest{
-    NSLog(@"开始加载更多");
-    
-    double delayInSeconds = 2.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [_whcTV reloadData];
-        [_whcTV WHCDidCompletedWithRefreshIsDownPull:NO];
-    });
-}
-
-- (void)WHCDownPullRequest{
-    NSLog(@"上拉刷新");
-    double delayInSeconds = 3.0;
-    
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [_whcTV reloadData];
-        [_whcTV WHCDidCompletedWithRefreshIsDownPull:YES];
-    });
-}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 10;
+    
+    return _objectsForShow.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"****                                     %ld", (long)indexPath.row];
+    
+    static NSString *cellIdentifier = @"Cell";
+    
+    SWTableViewCell *cell = (SWTableViewCell *)[_whcTV dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    
+    cell.delegate = self;
+    
+    //    获取当前行信息值
+    NSUInteger row = [indexPath row];
+    //    填充行的详细内容
+    cell.detailTextLabel.text = @"详细内容";
+    //    把数组中的值赋给单元格显示出来
+    cell.textLabel.text=[self.objectsForShow objectAtIndex:row];
+    
     return cell;
+    
 }
 
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle==UITableViewCellEditingStyleDelete) {
+        //        获取选中删除行索引值
+        NSInteger row = [indexPath row];
+        //        通过获取的索引值删除数组中的值
+        [self.objectsForShow removeObjectAtIndex:row];
+        //        删除单元格的某一行时，在用动画效果实现删除过程
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    //按钮取消选中
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
