@@ -10,9 +10,10 @@
 #import "DetailViewController.h"
 #import "FourTableViewCell.h"
 
-@interface FourVC ()<UITableViewDelegate,UITableViewDataSource>{
+@interface FourVC ()<UITableViewDelegate,UITableViewDataSource,WHC_PullRefreshDelegate>{
     UINib *nib;
 }
+@property (nonatomic , assign)WHCPullRefreshStyle refreshStyle;
 @property(strong,nonatomic)NSMutableArray *objectForShowTechnology;
 @property (strong,nonatomic) UITableView *tableviewTechnology;
 @property (strong,nonatomic) UIImageView *IMW4;
@@ -26,9 +27,15 @@
     [self requestTechnologyData];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
-    self.tableviewTechnology = [UITableView new];
-    self.tableviewTechnology.frame = self.view.bounds;
-    self.tableviewTechnology.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64);
+    self.tableviewTechnology = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
+    
+    
+    UIView *refrashView = [UIView new];
+    refrashView.backgroundColor = [UIColor lightGrayColor];
+    _tableviewTechnology.tableFooterView = refrashView;
+    [_tableviewTechnology setWHCRefreshStyle:_refreshStyle delegate:self];
+    
+
     CGSize contentSize = self.tableviewTechnology.contentSize;
     [self.tableviewTechnology setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewTechnology.backgroundColor = [UIColor greenColor];
@@ -50,6 +57,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - WHC_PullRefreshDelegate
+
+- (void)WHCUpPullRequest{
+    NSLog(@"开始加载更多");
+    //    _count+= 3;
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableviewTechnology reloadData];
+        [_tableviewTechnology WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+- (void)WHCDownPullRequest{
+    NSLog(@"上拉刷新");
+    double delayInSeconds = 3.0;
+    //    _count+= 3;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableviewTechnology reloadData];
+        [_tableviewTechnology WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
+}
+
 -(void)requestTechnologyData{
     [_objectForShowTechnology removeAllObjects];
     

@@ -9,9 +9,10 @@
 #import "SecondVC.h"
 #import "SecondTableViewCell.h"
 #import "DetailViewController.h"
-@interface SecondVC ()<UITableViewDataSource,UITableViewDelegate>{
+@interface SecondVC ()<UITableViewDataSource,UITableViewDelegate,WHC_PullRefreshDelegate>{
     UINib *nib;
 }
+@property (nonatomic , assign)WHCPullRefreshStyle refreshStyle;
 @property(strong,nonatomic)NSMutableArray *objectForShowFunny;
 @property (strong,nonatomic) UITableView *tableviewFunny;
 
@@ -28,9 +29,14 @@
     
     //给SecondVC添加tableview
     self.view.backgroundColor = [UIColor whiteColor];
-    self.tableviewFunny = [UITableView new];
-    self.tableviewFunny.frame = self.view.bounds;
-    self.tableviewFunny.frame = CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64);
+    self.tableviewFunny = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
+    
+    
+    UIView *refrashView = [UIView new];
+    refrashView.backgroundColor = [UIColor lightGrayColor];
+    _tableviewFunny.tableFooterView = refrashView;
+    [_tableviewFunny setWHCRefreshStyle:_refreshStyle delegate:self];
+    
     CGSize contentSize = self.tableviewFunny.contentSize;
     [self.tableviewFunny setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
     self.tableviewFunny.backgroundColor = [UIColor clearColor];
@@ -48,6 +54,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - WHC_PullRefreshDelegate
+
+- (void)WHCUpPullRequest{
+    NSLog(@"开始加载更多");
+//    _count+= 3;
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableviewFunny reloadData];
+        [_tableviewFunny WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+- (void)WHCDownPullRequest{
+    NSLog(@"上拉刷新");
+    double delayInSeconds = 3.0;
+//    _count+= 3;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_tableviewFunny reloadData];
+        [_tableviewFunny WHCDidCompletedWithRefreshIsDownPull:YES];
+    });
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
 }
 -(void)requestFunnyData{
     [_objectForShowFunny removeAllObjects];
