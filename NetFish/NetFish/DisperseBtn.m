@@ -57,7 +57,7 @@
     [self addSubview:imgView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
-    tap.numberOfTapsRequired = 2;
+    tap.numberOfTapsRequired = 1;
     [imgView addGestureRecognizer:tap];
 }
 
@@ -138,11 +138,12 @@
         return @{@"start":[NSNumber numberWithFloat:startAngle],@"end":[NSNumber numberWithFloat:endAngle],@"radius":[NSNumber numberWithFloat:rad]};
     }
 }
-
+//点击屏幕范围
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     CGPoint p = [[touches anyObject]locationInView:nil];
     _isOn = CGRectContainsPoint(self.frame, p);
 
+    
 }
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

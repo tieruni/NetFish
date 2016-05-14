@@ -12,7 +12,7 @@
 
 - (IBAction)backAction:(UIBarButtonItem *)sender;
 
-- (IBAction)pinglunAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
 @property (weak, nonatomic) IBOutlet UILabel *DetailTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *DetailImageView;
 @property (weak, nonatomic) IBOutlet UITextView *DetailTextView;

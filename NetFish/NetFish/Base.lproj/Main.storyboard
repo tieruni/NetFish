@@ -830,22 +830,13 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-MP-3Sc">
-                                <rect key="frame" x="270" y="530" width="30" height="30"/>
-                                <state key="normal" title="评论"/>
-                                <connections>
-                                    <action selector="pinglunAction:forEvent:" destination="Ap5-j7-zLT" eventType="touchUpInside" id="wrs-0F-uSz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="p5p-kF-J0i" firstAttribute="leading" secondItem="AK4-WL-EFt" secondAttribute="leading" id="6e4-c6-5i7"/>
                             <constraint firstItem="ktF-6P-ucj" firstAttribute="top" secondItem="p5p-kF-J0i" secondAttribute="bottom" constant="40" id="IUW-5G-bfb"/>
-                            <constraint firstAttribute="trailing" secondItem="wIL-MP-3Sc" secondAttribute="trailing" constant="20" id="UsE-5q-2ae"/>
                             <constraint firstAttribute="trailing" secondItem="p5p-kF-J0i" secondAttribute="trailing" id="XTN-Ge-jeT"/>
                             <constraint firstItem="p5p-kF-J0i" firstAttribute="top" secondItem="dDP-op-tuh" secondAttribute="bottom" constant="-20" id="r8k-AB-BfX"/>
-                            <constraint firstItem="wIL-MP-3Sc" firstAttribute="top" secondItem="p5p-kF-J0i" secondAttribute="bottom" constant="2" id="wXu-0j-dcQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ty0-Om-hQb">

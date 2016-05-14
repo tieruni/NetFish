@@ -25,18 +25,32 @@
     DisperseBtn *disView = [[DisperseBtn alloc]init];
     disView.frame = CGRectMake(UI_SCREEN_W *4/5, UI_SCREEN_H *7/8, 50, 50);
     //设置适应的边界
-    disView.borderRect = self.view.frame;
+    CGRect frame = CGRectMake(0, 64, UI_SCREEN_W, UI_SCREEN_H-64);
+    disView.borderRect = frame;
     //设置两个状态对应的图片
     disView.closeImage = [UIImage imageNamed:@"icon2"];
     disView.openImage = [UIImage imageNamed:@"icon3"];
     [self.view addSubview:disView];
     
     _disView = disView;
+    //最多9个弹出按钮
     [self setDisViewButtonsNum:3];
     
 }
+-(void)showDetail{
+    
+    NSLog(@"Detailnew = %@",_Detailnew);
+    NSString *title = _Detailnew[@"title1"];
+    _DetailTitle.text = title;
+    NSString *newTxt = _Detailnew[@"news1"];
+    _DetailTextView.text = newTxt;
+    PFFile *photofile = _Detailnew[@"photo1"];
+    NSString *photoUrlStr = photofile.url;
+    NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
+    [_DetailImageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
+}
 
-
+//1
 - (void)setDisViewButtonsNum:(int)num{
     
     [_disView recoverBotton];
@@ -56,7 +70,7 @@
     }
     _disView.btns = [marr copy];
 }
-
+//2
 -(void)buttonTagget:(UIButton *)sender{
     
     if (sender.tag == 0) {
@@ -74,30 +88,40 @@
             PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
             collection[@"newsphoto"] = photoFile;
             
+            //保存收藏数据
+            UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+            [collection saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                [aiv stopAnimating];
+            
+                if (succeeded) {
+                    [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }else{
+                    [Utilities popUpAlertViewWithMsg:@"网络繁忙，请稍后再试" andTitle:nil onView:self];
+                }
+
+            }];
+            
+        }else{
+            [Utilities popUpAlertViewWithMsg:@"请先登录" andTitle:nil onView:self];
         }
         
     }
     if (sender.tag == 1) {
         NSLog(@"111");
+        UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"PINLUN"];
+        [self presentViewController:pinlunVC animated:YES completion:nil];
+
     }
     if (sender.tag == 2) {
         NSLog(@"222");
+        UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
+        [self presentViewController:pinlunVC animated:YES completion:nil];
+
     }
 }
 
 
--(void)showDetail{
-    
-    NSLog(@"Detailnew = %@",_Detailnew);
-    NSString *title = _Detailnew[@"title1"];
-    _DetailTitle.text = title;
-    NSString *newTxt = _Detailnew[@"news1"];
-    _DetailTextView.text = newTxt;
-    PFFile *photofile = _Detailnew[@"photo1"];
-    NSString *photoUrlStr = photofile.url;
-    NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
-    [_DetailImageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -118,9 +142,5 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 //评论跳转
-- (IBAction)pinglunAction:(UIButton *)sender forEvent:(UIEvent *)event {
-    UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"PINLUN"];
-    [self presentViewController:pinlunVC animated:YES completion:nil];
 
-}
 @end
