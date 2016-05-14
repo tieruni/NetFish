@@ -7,7 +7,6 @@
 //
 
 #import "SixVC.h"
-#import "DetailViewController.h"
 #import "SixTableViewCell.h"
 @interface SixVC ()<UITableViewDelegate,UITableViewDataSource,WHC_PullRefreshDelegate>{
     UINib *nib;
@@ -163,16 +162,17 @@
     
     
     //将需要传递给下一页的数据放入下一页准备好接数据的容器中
-    NewDetailViewController *newdetailViewController = [Utilities getStoryboardInstance:@"Main" byIdentity:@"NewsDetail"];
+    DetailViewController *detailViewController = [Utilities getStoryboardInstance:@"Main" byIdentity:@"NewsDetail"];
     
     
-    newdetailViewController.Detailnew = newDetail;
-    NSLog(@"------>>>detailViewController.Detailnew = %@",newdetailViewController.Detailnew);
+    detailViewController.Detailnew = newDetail;
+    NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
     
     //获得将要跳转到的页面的实例
-    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:newdetailViewController];
+    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:detailViewController];
     
-    [self presentViewController:mineVC animated:YES completion:nil];}
+    [self presentViewController:mineVC animated:YES completion:nil];
+}
 
 /*
 #pragma mark - Navigation

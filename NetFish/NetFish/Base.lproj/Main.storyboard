@@ -759,7 +759,7 @@
         <!--Detail View Controller-->
         <scene sceneID="qRe-ct-54j">
             <objects>
-                <viewController id="Ap5-j7-zLT" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ap5-j7-zLT" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dDP-op-tuh"/>
                         <viewControllerLayoutGuide type="bottom" id="ktF-6P-ucj"/>
@@ -856,10 +856,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="DetailImageView" destination="9RE-bt-H9k" id="sRK-e1-9jv"/>
+                        <outlet property="DetailTextView" destination="N6a-SB-FRm" id="9Wo-Yc-IoL"/>
+                        <outlet property="DetailTitle" destination="xw7-79-GHu" id="wqo-J6-CfR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6z-2k-vDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="1892"/>
+            <point key="canvasLocation" x="1246" y="1168"/>
         </scene>
         <!--Mine View Controller-->
         <scene sceneID="Qep-TU-vVG">
@@ -1157,109 +1162,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmD-MP-Cjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2197" y="1168"/>
-        </scene>
-        <!--New Detail View Controller-->
-        <scene sceneID="oHH-Ps-c07">
-            <objects>
-                <viewController storyboardIdentifier="NewsDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="biz-Ca-iAf" customClass="NewDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ays-2p-JAf"/>
-                        <viewControllerLayoutGuide type="bottom" id="fR2-VE-c90"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ny0-D9-dNJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZzJ-ef-1Yz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新闻标题" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNY-ei-VXo">
-                                        <rect key="frame" x="5" y="20" width="307" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Be-Bu-KM4">
-                                        <rect key="frame" x="15" y="51" width="289" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="289" id="DvV-TM-bhG"/>
-                                            <constraint firstAttribute="height" constant="128" id="c9H-1d-koF"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ctf-AQ-id8">
-                                        <rect key="frame" x="8" y="190" width="304" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="D6f-y0-S6V"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="so8-am-cGX">
-                                        <rect key="frame" x="8" y="184" width="303" height="1"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="0.5" id="Wjw-ti-lbI"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ctf-AQ-id8" firstAttribute="top" secondItem="0Be-Bu-KM4" secondAttribute="bottom" constant="5" id="9iY-XE-DMD"/>
-                                    <constraint firstItem="VNY-ei-VXo" firstAttribute="top" secondItem="ZzJ-ef-1Yz" secondAttribute="top" constant="20" id="ES1-Mb-ntq"/>
-                                    <constraint firstAttribute="trailing" secondItem="ctf-AQ-id8" secondAttribute="trailing" constant="8" id="God-mr-Tca"/>
-                                    <constraint firstItem="0Be-Bu-KM4" firstAttribute="top" secondItem="VNY-ei-VXo" secondAttribute="bottom" constant="10" id="HjR-IF-lUV"/>
-                                    <constraint firstItem="ctf-AQ-id8" firstAttribute="leading" secondItem="ZzJ-ef-1Yz" secondAttribute="leading" constant="8" id="LXg-Ba-tqG"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Be-Bu-KM4" secondAttribute="trailing" constant="16" id="Taz-aj-aHh"/>
-                                    <constraint firstItem="VNY-ei-VXo" firstAttribute="leading" secondItem="ZzJ-ef-1Yz" secondAttribute="leading" constant="5" id="V5A-tZ-IKg"/>
-                                    <constraint firstItem="ctf-AQ-id8" firstAttribute="top" secondItem="so8-am-cGX" secondAttribute="bottom" constant="5" id="W03-LH-bV8"/>
-                                    <constraint firstAttribute="bottom" secondItem="ctf-AQ-id8" secondAttribute="bottom" constant="190" id="aR2-Fe-fgh"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Be-Bu-KM4" secondAttribute="trailing" constant="15" id="ek9-MM-X7c"/>
-                                    <constraint firstAttribute="trailing" secondItem="VNY-ei-VXo" secondAttribute="trailing" constant="8" id="eqN-m7-BJb"/>
-                                    <constraint firstItem="so8-am-cGX" firstAttribute="top" secondItem="0Be-Bu-KM4" secondAttribute="bottom" constant="5" id="fIa-qF-wZe"/>
-                                    <constraint firstItem="0Be-Bu-KM4" firstAttribute="leading" secondItem="ZzJ-ef-1Yz" secondAttribute="leading" constant="15" id="p5l-1K-BIN"/>
-                                    <constraint firstItem="so8-am-cGX" firstAttribute="leading" secondItem="ZzJ-ef-1Yz" secondAttribute="leading" constant="8" id="pdL-9j-mgR"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Be-Bu-KM4" secondAttribute="trailing" constant="16" id="qej-XT-IcC"/>
-                                    <constraint firstAttribute="trailing" secondItem="ctf-AQ-id8" secondAttribute="trailing" constant="9" id="sEM-cC-9hO"/>
-                                    <constraint firstAttribute="trailing" secondItem="so8-am-cGX" secondAttribute="trailing" constant="9" id="u9B-GL-FPp"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="qej-XT-IcC"/>
-                                        <exclude reference="ek9-MM-X7c"/>
-                                        <exclude reference="9iY-XE-DMD"/>
-                                        <exclude reference="sEM-cC-9hO"/>
-                                    </mask>
-                                </variation>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6S-0P-09u">
-                                <rect key="frame" x="270" y="530" width="30" height="30"/>
-                                <state key="normal" title="评论"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fR2-VE-c90" firstAttribute="top" secondItem="ZzJ-ef-1Yz" secondAttribute="bottom" constant="40" id="1Qt-hR-0Ck"/>
-                            <constraint firstAttribute="trailing" secondItem="ZzJ-ef-1Yz" secondAttribute="trailing" id="NWa-Vb-Oxw"/>
-                            <constraint firstItem="ZzJ-ef-1Yz" firstAttribute="top" secondItem="ays-2p-JAf" secondAttribute="bottom" constant="-20" id="Rhq-Oz-arz"/>
-                            <constraint firstAttribute="trailing" secondItem="w6S-0P-09u" secondAttribute="trailing" constant="20" id="XIX-1X-xeH"/>
-                            <constraint firstItem="w6S-0P-09u" firstAttribute="top" secondItem="ZzJ-ef-1Yz" secondAttribute="bottom" constant="2" id="qYC-3y-bco"/>
-                            <constraint firstItem="ZzJ-ef-1Yz" firstAttribute="leading" secondItem="Ny0-D9-dNJ" secondAttribute="leading" id="rdq-fC-NIV"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="FmW-uG-sff">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="YJC-Jp-0B4"/>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="NewDetailImageView" destination="0Be-Bu-KM4" id="NuK-Xy-R2B"/>
-                        <outlet property="NewDetailTextView" destination="ctf-AQ-id8" id="suv-ls-waL"/>
-                        <outlet property="NewDetailTitle" destination="VNY-ei-VXo" id="7fR-np-tqg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IcO-2s-swJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1152" y="1161"/>
         </scene>
     </scenes>
     <resources>

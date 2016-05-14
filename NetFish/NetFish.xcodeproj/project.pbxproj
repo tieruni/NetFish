@@ -44,7 +44,6 @@
 		D3725BBD1CC5045500EB3347 /* FirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3725BBC1CC5045500EB3347 /* FirstVC.m */; };
 		D37B3E0E1CCF4335002626C5 /* FunnyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */; };
 		D37B3E111CCF4764002626C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D37B3E0F1CCF4764002626C5 /* Main.storyboard */; };
-		D388AEE31CE7006E00F351BE /* NewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D388AEE21CE7006E00F351BE /* NewDetailViewController.m */; };
 		D388FDBC1CC20F530057F6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBB1CC20F530057F6DB /* main.m */; };
 		D388FDBF1CC20F530057F6DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDBE1CC20F530057F6DB /* AppDelegate.m */; };
 		D388FDC21CC20F530057F6DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D388FDC11CC20F530057F6DB /* ViewController.m */; };
@@ -173,8 +172,6 @@
 		D37B3E0C1CCF4335002626C5 /* FunnyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyTableViewController.h; sourceTree = "<group>"; };
 		D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyTableViewController.m; sourceTree = "<group>"; };
 		D37B3E101CCF4764002626C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D388AEE11CE7006E00F351BE /* NewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDetailViewController.h; sourceTree = "<group>"; };
-		D388AEE21CE7006E00F351BE /* NewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDetailViewController.m; sourceTree = "<group>"; };
 		D388FDB71CC20F530057F6DB /* NetFish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D388FDBB1CC20F530057F6DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D388FDBD1CC20F530057F6DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -476,8 +473,6 @@
 				B37D574B1CDC3779005C1392 /* CityViewController.m */,
 				A9EB09041CE6BF780099CB5E /* publishViewController.h */,
 				A9EB09051CE6BF780099CB5E /* publishViewController.m */,
-				D388AEE11CE7006E00F351BE /* NewDetailViewController.h */,
-				D388AEE21CE7006E00F351BE /* NewDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -776,7 +771,6 @@
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
 				73307FD41CE6D0290021653D /* CollectionTableViewCell.m in Sources */,
 				D3725BB91CC5038600EB3347 /* SlideHeadView.m in Sources */,
-				D388AEE31CE7006E00F351BE /* NewDetailViewController.m in Sources */,
 				D3F988211CDDC82D00DE00D7 /* FourVC.m in Sources */,
 				D37B3E0E1CCF4335002626C5 /* FunnyTableViewController.m in Sources */,
 				737F35EB1CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.m in Sources */,
