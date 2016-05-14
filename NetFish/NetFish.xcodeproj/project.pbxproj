@@ -24,6 +24,7 @@
 		A9A72A061CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png in Resources */ = {isa = PBXBuildFile; fileRef = A9A72A011CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png */; };
 		A9E938741CE1F83800711437 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9E938731CE1F83800711437 /* 10.jpg */; };
 		A9E938761CE1F84C00711437 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9E938751CE1F84C00711437 /* 11.jpg */; };
+		A9EB09061CE6BF780099CB5E /* publishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9EB09051CE6BF780099CB5E /* publishViewController.m */; };
 		B37042FE1CC31ED0005E63A2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37042FD1CC31ED0005E63A2 /* HomeViewController.m */; };
 		B37043011CC35A17005E63A2 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043001CC35A17005E63A2 /* LeftViewController.m */; };
 		B37043071CC37801005E63A2 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37043061CC37801005E63A2 /* MineViewController.m */; };
@@ -132,6 +133,8 @@
 		A9A72A011CCC5C7E00D2DAE7 /* 2.4意见反馈_03(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2.4意见反馈_03(1).png"; sourceTree = "<group>"; };
 		A9E938731CE1F83800711437 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		A9E938751CE1F84C00711437 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		A9EB09041CE6BF780099CB5E /* publishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = publishViewController.h; sourceTree = "<group>"; };
+		A9EB09051CE6BF780099CB5E /* publishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = publishViewController.m; sourceTree = "<group>"; };
 		B0FF97612798B0A3094CE171 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B37042FC1CC31ED0005E63A2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B37042FD1CC31ED0005E63A2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 				D37B3E0D1CCF4335002626C5 /* FunnyTableViewController.m */,
 				B37D574A1CDC3779005C1392 /* CityViewController.h */,
 				B37D574B1CDC3779005C1392 /* CityViewController.m */,
+				A9EB09041CE6BF780099CB5E /* publishViewController.h */,
+				A9EB09051CE6BF780099CB5E /* publishViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -747,6 +752,7 @@
 			files = (
 				D3725BBA1CC5038600EB3347 /* UIView+Extension.m in Sources */,
 				B37043011CC35A17005E63A2 /* LeftViewController.m in Sources */,
+				A9EB09061CE6BF780099CB5E /* publishViewController.m in Sources */,
 				B3F485A81CC23B5D009B0F2B /* SignInViewController.m in Sources */,
 				A97CE7A41CC491D5006482E5 /* KSGuideManager.m in Sources */,
 				D388FDC21CC20F530057F6DB /* ViewController.m in Sources */,

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="635"/>
+            <point key="canvasLocation" x="363" y="410"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="R6a-6e-TV5">
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whv-XY-Lhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029" y="635"/>
+            <point key="canvasLocation" x="759" y="410"/>
         </scene>
         <!--网娱-->
         <scene sceneID="9rq-4I-1iw">
@@ -259,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9w-f2-gty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="1301"/>
+            <point key="canvasLocation" x="788" y="1161"/>
         </scene>
         <!--我的收藏-->
         <scene sceneID="Gb3-xX-ufG">
@@ -314,7 +314,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4Q-hJ-cEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3752" y="1144"/>
+            <point key="canvasLocation" x="2674" y="1168"/>
         </scene>
         <!--City View Controller-->
         <scene sceneID="Dyb-5F-zOg">
@@ -348,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hT-bz-B9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1669" y="593"/>
+            <point key="canvasLocation" x="1192" y="410"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="xBf-kk-yfu">
@@ -499,7 +499,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRh-tS-udP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2974" y="653"/>
+            <point key="canvasLocation" x="2110" y="466"/>
         </scene>
         <!--关于网娱与帮助-->
         <scene sceneID="0Af-tf-ocj">
@@ -575,12 +575,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6I-Wg-LDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3024" y="1560"/>
+            <point key="canvasLocation" x="759" y="1872"/>
         </scene>
         <!--评论-->
         <scene sceneID="LEj-2E-8az">
             <objects>
-                <tableViewController id="bZv-OL-jhy" customClass="CommentTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="C" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bZv-OL-jhy" customClass="CommentTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pab-qx-Yv0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -616,11 +616,19 @@
                                             <rect key="frame" x="5" y="56" width="310" height="30"/>
                                             <state key="normal" title="评论内容"/>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuo-f8-Zly">
+                                            <rect key="frame" x="46" y="36" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="qx4-eJ-Xlr" firstAttribute="centerX" secondItem="5Bt-ag-DGJ" secondAttribute="centerX" id="0Kk-Lw-ZVJ"/>
                                         <constraint firstItem="rRE-9q-itX" firstAttribute="top" secondItem="f3d-mK-Lty" secondAttribute="top" constant="5" id="DI5-NY-l1I"/>
                                         <constraint firstAttribute="trailing" secondItem="qx4-eJ-Xlr" secondAttribute="trailing" constant="5" id="FWN-v1-dei"/>
+                                        <constraint firstItem="cuo-f8-Zly" firstAttribute="leading" secondItem="Xw0-by-NMk" secondAttribute="trailing" constant="5" id="IqG-zh-RXG"/>
+                                        <constraint firstItem="cuo-f8-Zly" firstAttribute="top" secondItem="f3d-mK-Lty" secondAttribute="top" constant="36" id="NYG-Iy-ZpH"/>
                                         <constraint firstItem="Xw0-by-NMk" firstAttribute="leading" secondItem="f3d-mK-Lty" secondAttribute="leading" constant="5" id="Px0-aw-buL"/>
                                         <constraint firstItem="rRE-9q-itX" firstAttribute="leading" secondItem="Xw0-by-NMk" secondAttribute="trailing" constant="5" id="QZ2-4t-tV3"/>
                                         <constraint firstItem="qx4-eJ-Xlr" firstAttribute="top" secondItem="5Bt-ag-DGJ" secondAttribute="bottom" id="URU-aN-iud"/>
@@ -641,6 +649,7 @@
                                 <connections>
                                     <outlet property="goodtouchu" destination="5Bt-ag-DGJ" id="sVu-7P-Sc4"/>
                                     <outlet property="number" destination="qx4-eJ-Xlr" id="4g7-YC-U3r"/>
+                                    <outlet property="time" destination="cuo-f8-Zly" id="exz-JQ-dXM"/>
                                     <outlet property="userimage" destination="Xw0-by-NMk" id="POI-5O-uUD"/>
                                     <outlet property="username" destination="rRE-9q-itX" id="gTk-wk-65m"/>
                                 </connections>
@@ -651,12 +660,91 @@
                             <outlet property="delegate" destination="bZv-OL-jhy" id="nuJ-hG-0HF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="评论" id="5YE-Dn-OMF"/>
+                    <navigationItem key="navigationItem" title="评论" id="5YE-Dn-OMF">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="rTJ-oN-fxc">
+                            <connections>
+                                <action selector="backItem:" destination="bZv-OL-jhy" id="xfO-oW-TCM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="我要评论" id="WxD-W2-fqV">
+                            <connections>
+                                <action selector="pinglunItem:" destination="bZv-OL-jhy" id="bWy-rm-ENn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableview" destination="Pab-qx-Yv0" id="LIs-qa-RbC"/>
+                        <segue destination="yJc-94-U97" kind="show" id="SYb-Ec-dni"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFG-ls-CbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4488" y="1644"/>
+            <point key="canvasLocation" x="2220" y="1848"/>
+        </scene>
+        <!--评论-->
+        <scene sceneID="uIi-QX-Cg3">
+            <objects>
+                <viewController storyboardIdentifier="A" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yJc-94-U97" customClass="publishViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ch9-uh-l4d"/>
+                        <viewControllerLayoutGuide type="bottom" id="uEW-OC-PLh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jhe-NY-aQ3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hof-gX-OG8">
+                                <rect key="frame" x="10" y="200" width="300" height="1"/>
+                                <color key="backgroundColor" red="0.46200120309999998" green="0.70957558030000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pnF-yD-BbX"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vPo-fK-HfP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Q2B-0M-zJl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12b-tF-ggP">
+                                <rect key="frame" x="10" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vPo-fK-HfP" secondAttribute="trailing" id="0C6-Dp-sfK"/>
+                            <constraint firstItem="12b-tF-ggP" firstAttribute="top" secondItem="ch9-uh-l4d" secondAttribute="bottom" constant="8" id="F6L-gy-iBP"/>
+                            <constraint firstItem="vPo-fK-HfP" firstAttribute="top" secondItem="ch9-uh-l4d" secondAttribute="bottom" id="LO0-mb-44B"/>
+                            <constraint firstItem="vPo-fK-HfP" firstAttribute="leading" secondItem="Jhe-NY-aQ3" secondAttribute="leading" id="W9r-03-Kn1"/>
+                            <constraint firstItem="Hof-gX-OG8" firstAttribute="leading" secondItem="Jhe-NY-aQ3" secondAttribute="leading" constant="10" id="Wi1-Ws-FXE"/>
+                            <constraint firstAttribute="trailing" secondItem="Hof-gX-OG8" secondAttribute="trailing" constant="10" id="YAm-Tv-aor"/>
+                            <constraint firstItem="12b-tF-ggP" firstAttribute="leading" secondItem="Jhe-NY-aQ3" secondAttribute="leading" id="jlG-FE-NSD"/>
+                            <constraint firstItem="Hof-gX-OG8" firstAttribute="top" secondItem="vPo-fK-HfP" secondAttribute="bottom" constant="8" symbolic="YES" id="spF-D7-JM1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="评论" id="o8Y-tW-Pgs">
+                        <barButtonItem key="rightBarButtonItem" title="发表" id="AQc-1A-GGC">
+                            <connections>
+                                <action selector="fabiao:" destination="yJc-94-U97" id="psf-mh-dqe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="label" destination="12b-tF-ggP" id="dFW-1w-V2W"/>
+                        <outlet property="neirong" destination="vPo-fK-HfP" id="UiW-K4-OUq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sA-oP-eFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2595" y="1848"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="qRe-ct-54j">
@@ -715,14 +803,23 @@
                                     </mask>
                                 </variation>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-MP-3Sc">
+                                <rect key="frame" x="270" y="530" width="30" height="30"/>
+                                <state key="normal" title="评论"/>
+                                <connections>
+                                    <action selector="pinglunAction:forEvent:" destination="Ap5-j7-zLT" eventType="touchUpInside" id="wrs-0F-uSz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="p5p-kF-J0i" firstAttribute="leading" secondItem="AK4-WL-EFt" secondAttribute="leading" id="6e4-c6-5i7"/>
                             <constraint firstItem="ktF-6P-ucj" firstAttribute="top" secondItem="p5p-kF-J0i" secondAttribute="bottom" constant="40" id="IUW-5G-bfb"/>
+                            <constraint firstAttribute="trailing" secondItem="wIL-MP-3Sc" secondAttribute="trailing" constant="20" id="UsE-5q-2ae"/>
                             <constraint firstAttribute="trailing" secondItem="p5p-kF-J0i" secondAttribute="trailing" id="XTN-Ge-jeT"/>
                             <constraint firstItem="p5p-kF-J0i" firstAttribute="top" secondItem="dDP-op-tuh" secondAttribute="bottom" id="mZa-2E-ShO"/>
                             <constraint firstItem="p5p-kF-J0i" firstAttribute="top" secondItem="dDP-op-tuh" secondAttribute="bottom" id="r8k-AB-BfX"/>
+                            <constraint firstItem="wIL-MP-3Sc" firstAttribute="top" secondItem="p5p-kF-J0i" secondAttribute="bottom" constant="2" id="wXu-0j-dcQ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -746,7 +843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6z-2k-vDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714" y="1202"/>
+            <point key="canvasLocation" x="1682" y="1190"/>
         </scene>
         <!--Mine View Controller-->
         <scene sceneID="Qep-TU-vVG">
@@ -925,7 +1022,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2619" y="598"/>
+            <point key="canvasLocation" x="1663" y="466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lQT-xD-XpO">
@@ -964,7 +1061,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfv-hK-EVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311" y="2108"/>
+            <point key="canvasLocation" x="1183" y="1848"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="A2p-zd-NmK">
@@ -984,12 +1081,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4K-7v-NOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688" y="2108"/>
+            <point key="canvasLocation" x="1183" y="2476"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JOY-N5-GLT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6kl-BP-RLU" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PINLUN" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6kl-BP-RLU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9rL-yT-1s8">
@@ -1003,7 +1100,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6WI-fE-4Ih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="1736"/>
+            <point key="canvasLocation" x="1742" y="1856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a7T-wE-5ih">
@@ -1023,7 +1120,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MO6-Ga-wFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2680" y="1560"/>
+            <point key="canvasLocation" x="363" y="1884"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tlW-7n-5dG">
@@ -1043,7 +1140,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmD-MP-Cjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3359" y="1144"/>
+            <point key="canvasLocation" x="2197" y="1168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vK3-mo-MQg">
@@ -1062,7 +1159,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hP-l4-y5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="1202"/>
+            <point key="canvasLocation" x="1261" y="1190"/>
         </scene>
     </scenes>
     <resources>

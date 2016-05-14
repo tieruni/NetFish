@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CommentTableViewController : UITableViewController
+//@property (strong, nonatomic) PFObject *discuss;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
+- (IBAction)backItem:(UIBarButtonItem *)sender;
+- (IBAction)pinglunItem:(UIBarButtonItem *)sender;
 
 @end

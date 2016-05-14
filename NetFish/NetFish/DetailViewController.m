@@ -53,4 +53,10 @@
 - (IBAction)backAction:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+//评论跳转
+- (IBAction)pinglunAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"PINLUN"];
+    [self presentViewController:pinlunVC animated:YES completion:nil];
+
+}
 @end

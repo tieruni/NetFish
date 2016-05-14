@@ -8,15 +8,20 @@
 
 #import "CommentTableViewController.h"
 #import "CellTableViewCell.h"
+#import "UIImageView+WebCache.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "publishViewController.h"
 @interface CommentTableViewController ()
-
+@property(strong,nonatomic)NSMutableArray *objectsForShow;
 @end
 
 @implementation CommentTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _objectsForShow = [NSMutableArray new];
+    [self refreshData];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestData) name:@"RefreshComment" object:nil];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -28,6 +33,31 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//数据请求
+- (void)refreshData {
+        PFUser *currentUser = [PFUser currentUser];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"discussText = %@",currentUser ];
+        PFQuery *query = [PFQuery queryWithClassName:@"Discuss" predicate:predicate];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"userinfo"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        //        [_aiv stopAnimating];
+        UIRefreshControl *rc = (UIRefreshControl *)[_tableview viewWithTag:10001];
+        [rc endRefreshing];
+        if (!error) {
+            NSLog(@"objects = %@",objects);
+            [_objectsForShow removeAllObjects];
+            _objectsForShow = [NSMutableArray arrayWithArray:objects];
+            [_tableview reloadData];
+        }else{
+            
+            NSLog(@"Error: %@",error.userInfo);
+            [Utilities popUpAlertViewWithMsg:@"请保持网络连接畅通" andTitle:nil onView:self];
+        }
+    }];
+    
+    
+}
 
 #pragma mark - Table view data source
 
@@ -38,15 +68,27 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 1;
+    return _objectsForShow.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      CellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    PFObject *obj = _objectsForShow[indexPath.row];
+    PFUser *user = obj[@"userinfo"];
+//    NSString *name = user[@"nickname"];
+    NSString *discussText = obj[@"discussText"];
+    NSDate *date = obj.createdAt;
+    self.navigationItem.title = user[@"name"];
+    PFFile *photoFile = user[@"avatar"];
+    NSString *photoURLStr = photoFile.url;
+    NSURL *photoURL = [NSURL URLWithString:photoURLStr];
+    [cell.userimage sd_setImageWithURL:photoURL placeholderImage:[UIImage imageNamed:@"Default"]];
+    NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    cell.time.text = dateString;
+    cell.commentLbl.text = discussText;
     return cell;
 }
 
@@ -95,4 +137,14 @@
 }
 */
 
+- (IBAction)backItem:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+- (IBAction)pinglunItem:(UIBarButtonItem *)sender {
+    UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"A"];
+    [self.navigationController pushViewController:pinlunVC animated:YES];
+    
+}
 @end

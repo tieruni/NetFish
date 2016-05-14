@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *commentLbl;
 @property (weak, nonatomic) IBOutlet UIButton *goodtouchu;
 @property (weak, nonatomic) IBOutlet UILabel *number;
+@property (weak, nonatomic) IBOutlet UILabel *time;
 
 @end
