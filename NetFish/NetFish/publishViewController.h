@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextView *neirong;
 - (IBAction)fabiao:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *wordCountLabel;
 
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f47-h8-AZr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--登录-->
@@ -721,9 +721,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12b-tF-ggP">
-                                <rect key="frame" x="0.0" y="72" width="42" height="21"/>
+                                <rect key="frame" x="3" y="72" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEy-dQ-FQx">
+                                <rect key="frame" x="278" y="175" width="37" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.76092244740000003" green="1" blue="0.97426878589999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -731,11 +737,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vPo-fK-HfP" secondAttribute="trailing" id="0C6-Dp-sfK"/>
                             <constraint firstItem="12b-tF-ggP" firstAttribute="top" secondItem="ch9-uh-l4d" secondAttribute="bottom" constant="8" id="F6L-gy-iBP"/>
+                            <constraint firstAttribute="trailing" secondItem="NEy-dQ-FQx" secondAttribute="trailing" constant="5" id="Gba-x3-9gX"/>
                             <constraint firstItem="vPo-fK-HfP" firstAttribute="top" secondItem="ch9-uh-l4d" secondAttribute="bottom" id="LO0-mb-44B"/>
                             <constraint firstItem="vPo-fK-HfP" firstAttribute="leading" secondItem="Jhe-NY-aQ3" secondAttribute="leading" id="W9r-03-Kn1"/>
                             <constraint firstItem="Hof-gX-OG8" firstAttribute="leading" secondItem="Jhe-NY-aQ3" secondAttribute="leading" constant="10" id="Wi1-Ws-FXE"/>
                             <constraint firstAttribute="trailing" secondItem="Hof-gX-OG8" secondAttribute="trailing" constant="10" id="YAm-Tv-aor"/>
-                            <constraint firstItem="12b-tF-ggP" firstAttribute="leading" secondItem="Jhe-NY-aQ3" secondAttribute="leading" id="jlG-FE-NSD"/>
+                            <constraint firstItem="Hof-gX-OG8" firstAttribute="top" secondItem="NEy-dQ-FQx" secondAttribute="bottom" constant="8" id="YMp-my-sqt"/>
+                            <constraint firstItem="12b-tF-ggP" firstAttribute="leading" secondItem="Jhe-NY-aQ3" secondAttribute="leading" constant="3" id="jlG-FE-NSD"/>
                             <constraint firstItem="Hof-gX-OG8" firstAttribute="top" secondItem="vPo-fK-HfP" secondAttribute="bottom" constant="8" symbolic="YES" id="spF-D7-JM1"/>
                         </constraints>
                     </view>
@@ -750,6 +758,7 @@
                     <connections>
                         <outlet property="label" destination="12b-tF-ggP" id="dFW-1w-V2W"/>
                         <outlet property="neirong" destination="vPo-fK-HfP" id="UiW-K4-OUq"/>
+                        <outlet property="wordCountLabel" destination="NEy-dQ-FQx" id="5q2-E7-nL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sA-oP-eFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
