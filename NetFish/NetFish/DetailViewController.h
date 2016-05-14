@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *DetailTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *DetailImageView;
 @property (weak, nonatomic) IBOutlet UITextView *DetailTextView;
+@property (strong,nonatomic)NSNumber *num;
 @property (strong,nonatomic)PFObject *Detailnew;
 @end

@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import <UIImageView+WebCache.h>
 #import "DisperseBtn.h"
+#import "HomeViewController.h"
 @interface DetailViewController ()
 @property (weak, nonatomic) DisperseBtn *disView;
 @end
@@ -17,9 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //设置导航栏属性
+    self.navigationController.title = @"新闻详情";
+    self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     
-    [self showDetail];
+    
+    NSString *str = _num.description;
+    //显示详情信息
+    if ([str isEqualToString:@"1"]) {
+        NSLog(@"str = %@",str);
+        [self showDetail1];
+    }
+    if ([str isEqualToString:@"2"]) {
+        NSLog(@"str = %@",str);
+        [self showDetail1];
+    }
     
     //实例化对象
     DisperseBtn *disView = [[DisperseBtn alloc]init];
@@ -37,7 +51,7 @@
     [self setDisViewButtonsNum:3];
     
 }
--(void)showDetail{
+-(void)showDetail1{
     
     NSLog(@"Detailnew = %@",_Detailnew);
     NSString *title = _Detailnew[@"title1"];
@@ -49,7 +63,18 @@
     NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
     [_DetailImageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
 }
-
+-(void)showDetail2{
+    
+    NSLog(@"Detailnew = %@",_Detailnew);
+    NSString *title = _Detailnew[@"title2"];
+    _DetailTitle.text = title;
+    NSString *newTxt = _Detailnew[@"news2"];
+    _DetailTextView.text = newTxt;
+    PFFile *photofile = _Detailnew[@"photo2"];
+    NSString *photoUrlStr = photofile.url;
+    NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
+    [_DetailImageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
+}
 //1
 - (void)setDisViewButtonsNum:(int)num{
     
@@ -76,6 +101,7 @@
     if (sender.tag == 0) {
         NSLog(@"000");
         PFUser *currentUser = [PFUser currentUser];
+//        PFObject *userID = currentUser[@"objectId"];
         NSLog(@"currentUser = %@", currentUser);
         if (currentUser) {
             PFObject *collection = [PFObject objectWithClassName:@"Collection"];
@@ -87,7 +113,7 @@
             //将上述数据流转换成parse的PFFile对象（PFFile对象是一个文件对象，这里除了要设置文件内容这个数据流以外，还要给文件起一个文件名，文件名可以是任何名字）
             PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
             collection[@"newsphoto"] = photoFile;
-            
+//            collection[@"collectioninfouser"] = userID;
             //保存收藏数据
             UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
             [collection saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
@@ -115,8 +141,7 @@
     }
     if (sender.tag == 2) {
         NSLog(@"222");
-        UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
-        [self presentViewController:pinlunVC animated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
 
     }
 }

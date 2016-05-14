@@ -251,6 +251,7 @@ static BOOL nibsRegistered;
 
     
     detailViewController.Detailnew = newDetail;
+    detailViewController.num = @1;
     NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
     
     //获得将要跳转到的页面的实例

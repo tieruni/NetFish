@@ -33,7 +33,7 @@
     
     
     UIView *refrashView = [UIView new];
-    refrashView.backgroundColor = [UIColor lightGrayColor];
+    refrashView.backgroundColor = [UIColor whiteColor];
     _tableviewFunny.tableFooterView = refrashView;
     [_tableviewFunny setWHCRefreshStyle:_refreshStyle delegate:self];
     
@@ -164,6 +164,7 @@
     
     
     detailViewController.Detailnew = newDetail;
+    detailViewController.num = @2;
     NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
     
     //获得将要跳转到的页面的实例

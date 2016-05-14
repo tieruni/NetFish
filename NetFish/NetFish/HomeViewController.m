@@ -57,6 +57,8 @@
     NSArray *titleArr = @[@"热门推荐",@"娱乐",@"军事",@"科技",@"星座",@"生活",@"搞笑"];
     slideVC.titlesArr = titleArr;
     
+    
+    
     //
     [slideVC addChildViewController:VC1 title:titleArr[0]];
     [slideVC addChildViewController:VC2 title:titleArr[1]];
