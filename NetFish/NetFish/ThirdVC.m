@@ -25,7 +25,7 @@
     [self requestMilyData];
     // Do any additional setup after loading the view.
     //给SecondVC添加tableview
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableviewMily = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
     
     

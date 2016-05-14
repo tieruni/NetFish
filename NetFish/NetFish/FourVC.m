@@ -26,7 +26,7 @@
     [super viewDidLoad];
     [self requestTechnologyData];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableviewTechnology = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
     
     
@@ -38,7 +38,7 @@
 
     CGSize contentSize = self.tableviewTechnology.contentSize;
     [self.tableviewTechnology setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
-    self.tableviewTechnology.backgroundColor = [UIColor greenColor];
+    self.tableviewTechnology.backgroundColor = [UIColor whiteColor];
     self.tableviewTechnology.delegate = self;
     self.tableviewTechnology.dataSource = self;
     [self.view addSubview:_tableviewTechnology];

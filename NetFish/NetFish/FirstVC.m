@@ -90,7 +90,7 @@ static BOOL nibsRegistered;
     });
 }
 - (void)WHCDownPullRequest{
-    NSLog(@"上拉刷新");
+    NSLog(@"下拉刷新");
     double delayInSeconds = 3.0;
 //    _count+= 3;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -237,22 +237,25 @@ static BOOL nibsRegistered;
     return [[self tableView:tableView cellForRowAtIndexPath:indexPath] frame].size.height;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    //取消选中
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 //    //获得用户当前所选中的细胞的行数
 //    NSIndexPath *indexPath = _tableview.indexPathForSelectedRow;
     //根据上述行数获取该行所对应的数据
     PFObject *newDetail = _objectForShow [indexPath.row];
-    //获得将要跳转到的页面的实例
-    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"DetailNav"];
+    
     //将需要传递给下一页的数据放入下一页准备好接数据的容器中
+    DetailViewController *detailViewController =[DetailViewController new];
     
     
-    DetailViewController *detailViewController =[[DetailViewController alloc]initWithNibName:@"UINavigationController" bundle:nil];
     detailViewController.Detailnew = newDetail;
     NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
     
+    //获得将要跳转到的页面的实例
+    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:detailViewController];
     
     [self.navigationController presentViewController:mineVC animated:YES completion:nil];
+    
     return;
 }
 

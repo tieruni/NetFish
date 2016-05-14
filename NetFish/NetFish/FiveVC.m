@@ -25,18 +25,18 @@
     [super viewDidLoad];
     [self requestConstellationData];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableviewConstellation = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
     
     
     UIView *refrashView = [UIView new];
-    refrashView.backgroundColor = [UIColor lightGrayColor];
+//    refrashView.backgroundColor = [UIColor lightGrayColor];
     _tableviewConstellation.tableFooterView = refrashView;
     [_tableviewConstellation setWHCRefreshStyle:_refreshStyle delegate:self];
     
     CGSize contentSize = self.tableviewConstellation.contentSize;
     [self.tableviewConstellation setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
-    self.tableviewConstellation.backgroundColor = [UIColor grayColor];
+    self.tableviewConstellation.backgroundColor = [UIColor whiteColor];
     self.tableviewConstellation.delegate = self;
     self.tableviewConstellation.dataSource = self;
     [self.view addSubview:_tableviewConstellation];

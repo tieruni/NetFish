@@ -25,7 +25,7 @@
     [super viewDidLoad];
     [self requestLifeData];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableviewLife = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, UI_SCREEN_W, UI_SCREEN_H - 40 - 64)];
     
     
@@ -36,7 +36,7 @@
     
     CGSize contentSize = self.tableviewLife.contentSize;
     [self.tableviewLife setContentSize:CGSizeMake(contentSize.width, contentSize.height - 40 - 64)];
-    self.tableviewLife.backgroundColor = [UIColor greenColor];
+    self.tableviewLife.backgroundColor = [UIColor whiteColor];
     self.tableviewLife.delegate = self;
     self.tableviewLife.dataSource = self;
     [self.view addSubview:_tableviewLife];
