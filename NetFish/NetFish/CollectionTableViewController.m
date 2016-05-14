@@ -34,9 +34,9 @@
 
 - (void)requestData{
     [_objectsForShow removeAllObjects];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Collection"];
-    
+    PFUser *currentUser = [PFUser currentUser];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"collectioninfouser = %@",currentUser];
+    PFQuery *query = [PFQuery queryWithClassName:@"Collection" predicate:predicate];
     //在根视图上创建一朵菊花，并转动
     UIActivityIndicatorView *avi = [Utilities getCoverOnView:self.view];
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
@@ -79,11 +79,17 @@
     CollectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     PFObject *obj = _objectsForShow[indexPath.row];
     NSString *name = obj[@"newstitle"];
+    PFFile *photoFile = obj[@"newsphoto"];
     cell.CollectionLabel.text = name;
-    cell.CollectionImageView = obj[@"newsphoto"];
     
-    
-    
+    [photoFile getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:data];
+            cell.CollectionImageView.image = image;
+        }else {
+            NSLog(@"%@",error.userInfo);
+        }
+    }];
     return cell;
     
 }
@@ -98,6 +104,21 @@
         [self.objectsForShow removeObjectAtIndex:row];
         //        删除单元格的某一行时，在用动画效果实现删除过程
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView reloadData];
+        PFObject *obj = _objectsForShow[indexPath.row];
+        //保存收藏数据
+        UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
+        [obj saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            [aiv stopAnimating];
+            
+            if (succeeded) {
+                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }else{
+                [Utilities popUpAlertViewWithMsg:@"网络繁忙，请稍后再试" andTitle:nil onView:self];
+            }
+            
+        }];
     }
     
 }
