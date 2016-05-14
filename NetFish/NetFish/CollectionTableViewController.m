@@ -28,7 +28,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //    存放显示在单元格上的数据
-    
+    [self requestData];
     [self.tableView reloadDataAnimateWithWave:RightToLeftWaveAnimation];
 }
 
@@ -77,7 +77,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CollectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
+    PFObject *obj = _objectsForShow[indexPath.row];
+    NSString *name = obj[@"newstitle"];
+    cell.CollectionLabel.text = name;
+    cell.CollectionImageView = obj[@"newsphoto"];
     
     
     
