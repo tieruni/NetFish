@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E20901CC4FE5800D0F394 /* DisperseBtn.m */; };
+		73307FD41CE6D0290021653D /* CollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73307FD31CE6D0290021653D /* CollectionTableViewCell.m */; };
 		737F35EB1CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F35E81CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.m */; };
 		737F35EC1CCC593600E7EFEB /* UIView+WHC_ViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F35EA1CCC593600E7EFEB /* UIView+WHC_ViewProperty.m */; };
 		737F35F01CCC595A00E7EFEB /* UITableView+Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F35EF1CCC595A00E7EFEB /* UITableView+Wave.m */; };
@@ -107,6 +108,8 @@
 		3DB42BFFA8F84097DBBBC0C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		730E208F1CC4FE5800D0F394 /* DisperseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisperseBtn.h; sourceTree = "<group>"; };
 		730E20901CC4FE5800D0F394 /* DisperseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisperseBtn.m; sourceTree = "<group>"; };
+		73307FD21CE6D0290021653D /* CollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionTableViewCell.h; sourceTree = "<group>"; };
+		73307FD31CE6D0290021653D /* CollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTableViewCell.m; sourceTree = "<group>"; };
 		737F35E71CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+WHC_PullRefresh.h"; sourceTree = "<group>"; };
 		737F35E81CCC593600E7EFEB /* UIScrollView+WHC_PullRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+WHC_PullRefresh.m"; sourceTree = "<group>"; };
 		737F35E91CCC593600E7EFEB /* UIView+WHC_ViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WHC_ViewProperty.h"; sourceTree = "<group>"; };
@@ -454,6 +457,8 @@
 				B37043061CC37801005E63A2 /* MineViewController.m */,
 				B37043081CC3791B005E63A2 /* CollectionTableViewController.h */,
 				B37043091CC3791B005E63A2 /* CollectionTableViewController.m */,
+				73307FD21CE6D0290021653D /* CollectionTableViewCell.h */,
+				73307FD31CE6D0290021653D /* CollectionTableViewCell.m */,
 				B370430B1CC39BC6005E63A2 /* DetailViewController.h */,
 				B370430C1CC39BC6005E63A2 /* DetailViewController.m */,
 				B38BD77C1CC47A5F00A11AF8 /* CommentTableViewController.h */,
@@ -764,6 +769,7 @@
 				A9A72A021CCC5C7E00D2DAE7 /* UserFeedBackViewController.m in Sources */,
 				730E20911CC4FE5800D0F394 /* DisperseBtn.m in Sources */,
 				D388FDC81CC20F530057F6DB /* NetFish.xcdatamodeld in Sources */,
+				73307FD41CE6D0290021653D /* CollectionTableViewCell.m in Sources */,
 				D3725BB91CC5038600EB3347 /* SlideHeadView.m in Sources */,
 				D3F988211CDDC82D00DE00D7 /* FourVC.m in Sources */,
 				D37B3E0E1CCF4335002626C5 /* FunnyTableViewController.m in Sources */,

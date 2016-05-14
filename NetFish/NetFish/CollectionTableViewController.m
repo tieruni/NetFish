@@ -10,7 +10,8 @@
 #import "UITableView+Wave.h"
 #import "SWTableViewCell.h"
 #import "UIScrollView+WHC_PullRefresh.h"
-@interface CollectionTableViewController ()<SWTableViewCellDelegate>
+#import "CollectionTableViewCell.h"
+@interface CollectionTableViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *whcTV;
 @property (strong,nonatomic) NSMutableArray *objectsForShow;
 @end
@@ -19,17 +20,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _objectsForShow = [NSMutableArray new];
+    _whcTV.tableFooterView = [[UIView alloc]init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //    存放显示在单元格上的数据
-    NSMutableArray *array = [NSMutableArray arrayWithObjects:@"张三",@"张四",@"张五",@"李三",@"李四",@"李五",@"李六",@"王三",@"王四",@"王五",@"王六",@"王七",@"王八",@"王九",@"王十", nil];
-    self.objectsForShow = array;
     
     [self.tableView reloadDataAnimateWithWave:RightToLeftWaveAnimation];
+}
+
+- (void)requestData{
+    [_objectsForShow removeAllObjects];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Collection"];
+    
+    //在根视图上创建一朵菊花，并转动
+    UIActivityIndicatorView *avi = [Utilities getCoverOnView:self.view];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        //先停止菊花动画
+        [avi stopAnimating];
+        //停止刷新器
+        UIRefreshControl *rc = (UIRefreshControl *)[_whcTV viewWithTag:10001];
+        [rc endRefreshing];
+        if (!error) {
+            NSLog(@"objects = %@",objects);
+            _objectsForShow = [NSMutableArray arrayWithArray:objects];
+            [_whcTV reloadData];
+        }else{
+            NSLog(@"Error: %@",error.userInfo);
+            [Utilities popUpAlertViewWithMsg:@"请保持网络连接畅通" andTitle:nil onView:self];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,21 +76,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    CollectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    static NSString *cellIdentifier = @"Cell";
     
-    SWTableViewCell *cell = (SWTableViewCell *)[_whcTV dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    cell = [[SWTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-    
-    cell.delegate = self;
-    
-    //    获取当前行信息值
-    NSUInteger row = [indexPath row];
-    //    填充行的详细内容
-    cell.detailTextLabel.text = @"详细内容";
-    //    把数组中的值赋给单元格显示出来
-    cell.textLabel.text=[self.objectsForShow objectAtIndex:row];
     
     return cell;
     
