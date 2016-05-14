@@ -101,7 +101,7 @@
     if (sender.tag == 0) {
         NSLog(@"000");
         PFUser *currentUser = [PFUser currentUser];
-//        PFObject *userID = currentUser[@"objectId"];
+
         NSLog(@"currentUser = %@", currentUser);
         if (currentUser) {
             PFObject *collection = [PFObject objectWithClassName:@"Collection"];
@@ -113,7 +113,7 @@
             //将上述数据流转换成parse的PFFile对象（PFFile对象是一个文件对象，这里除了要设置文件内容这个数据流以外，还要给文件起一个文件名，文件名可以是任何名字）
             PFFile *photoFile = [PFFile fileWithName:@"photo.png" data:photoData];
             collection[@"newsphoto"] = photoFile;
-//            collection[@"collectioninfouser"] = userID;
+            collection[@"collectioninfouser"] = currentUser;
             //保存收藏数据
             UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
             [collection saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
