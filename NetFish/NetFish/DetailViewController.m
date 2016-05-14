@@ -18,25 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self showDetail];
+    
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
--(void)showDetail{
-    
-    NSLog(@"Detailnew = %@",_Detailnew);
-    NSString *title = _Detailnew[@"title1"];
-    _DetailTitle.text = title;
-    NSString *newTxt = _Detailnew[@"news1"];
-    _DetailTextView.text = newTxt;
-    PFFile *photofile = _Detailnew[@"photo1"];
-    NSString *photoUrlStr = photofile.url;
-    NSURL *photoUrl = [NSURL URLWithString:photoUrlStr];
-    [_DetailImageView sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"Image77"]] ;
 }
 /*
 #pragma mark - Navigation

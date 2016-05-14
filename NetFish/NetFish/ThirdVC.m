@@ -159,19 +159,19 @@
     //    NSIndexPath *indexPath = _tableview.indexPathForSelectedRow;
     //根据上述行数获取该行所对应的数据
     PFObject *newDetail = _objectForShowMily [indexPath.row];
-    //获得将要跳转到的页面的实例
-    UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"DetailNav"];
+    
+    
     //将需要传递给下一页的数据放入下一页准备好接数据的容器中
+    NewDetailViewController *newdetailViewController = [Utilities getStoryboardInstance:@"Main" byIdentity:@"NewsDetail"];
     
     
-    DetailViewController *detailViewController =[[DetailViewController alloc]initWithNibName:@"UINavigationController" bundle:nil];
-    detailViewController.Detailnew = newDetail;
-    NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
+    newdetailViewController.Detailnew = newDetail;
+    NSLog(@"------>>>detailViewController.Detailnew = %@",newdetailViewController.Detailnew);
     
+    //获得将要跳转到的页面的实例
+    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:newdetailViewController];
     
-    [self.navigationController presentViewController:mineVC animated:YES completion:nil];
-    return;
-}
+    [self presentViewController:mineVC animated:YES completion:nil];}
 
 /*
 #pragma mark - Navigation

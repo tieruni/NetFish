@@ -19,4 +19,5 @@
 #import"StorageMgr.h"
 #import "Constants.h"
 #import <POP.h>
+#import "NewDetailViewController.h"
 #endif /* PrefixHeader_pch */

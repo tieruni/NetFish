@@ -9,7 +9,7 @@
 #import "FirstVC.h"
 #import "WJAdvertCircle.h"
 #import "FirstTableViewCell.h"
-#import "DetailViewController.h"
+
 
 #define kCellCount            (3)       //cell默认个数
 @interface FirstVC ()<WJAdvertClickDelegate,UITableViewDelegate,UITableViewDataSource,WHC_PullRefreshDelegate>{
@@ -245,18 +245,17 @@ static BOOL nibsRegistered;
     PFObject *newDetail = _objectForShow [indexPath.row];
     
     //将需要传递给下一页的数据放入下一页准备好接数据的容器中
-    DetailViewController *detailViewController =[DetailViewController new];
+    NewDetailViewController *newdetailViewController = [Utilities getStoryboardInstance:@"Main" byIdentity:@"NewsDetail"];
     
     
-    detailViewController.Detailnew = newDetail;
-    NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
+    newdetailViewController.Detailnew = newDetail;
+    NSLog(@"------>>>detailViewController.Detailnew = %@",newdetailViewController.Detailnew);
     
     //获得将要跳转到的页面的实例
-    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:newdetailViewController];
     
-    [self.navigationController presentViewController:mineVC animated:YES completion:nil];
+    [self presentViewController:mineVC animated:YES completion:nil];
     
-    return;
 }
 
 #pragma mark - Navigation

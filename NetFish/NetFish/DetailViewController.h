@@ -11,9 +11,7 @@
 @interface DetailViewController : UIViewController
 
 - (IBAction)backAction:(UIBarButtonItem *)sender;
-@property (weak, nonatomic) IBOutlet UILabel *DetailTitle;
-@property (weak, nonatomic) IBOutlet UIImageView *DetailImageView;
-@property (weak, nonatomic) IBOutlet UITextView *DetailTextView;
+
 - (IBAction)pinglunAction:(UIButton *)sender forEvent:(UIEvent *)event;
-@property (strong,nonatomic)PFObject *Detailnew;
+
 @end
