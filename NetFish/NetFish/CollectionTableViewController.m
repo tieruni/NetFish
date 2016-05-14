@@ -13,14 +13,14 @@
 #import "CollectionTableViewCell.h"
 @interface CollectionTableViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *whcTV;
-@property (strong,nonatomic) NSMutableArray *objectsForShow;
+@property (strong,nonatomic) NSMutableArray *objectForShow;
 @end
 
 @implementation CollectionTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _objectsForShow = [NSMutableArray new];
+    _objectForShow = [NSMutableArray new];
     _whcTV.tableFooterView = [[UIView alloc]init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -29,11 +29,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //    存放显示在单元格上的数据
     [self requestData];
-    [self.tableView reloadDataAnimateWithWave:RightToLeftWaveAnimation];
+    
 }
 
 - (void)requestData{
-    [_objectsForShow removeAllObjects];
+    [_objectForShow removeAllObjects];
     PFUser *currentUser = [PFUser currentUser];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"collectioninfouser = %@",currentUser];
     PFQuery *query = [PFQuery queryWithClassName:@"Collection" predicate:predicate];
@@ -42,12 +42,12 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         //先停止菊花动画
         [avi stopAnimating];
-        //停止刷新器
-        UIRefreshControl *rc = (UIRefreshControl *)[_whcTV viewWithTag:10001];
-        [rc endRefreshing];
+        
+        [self.tableView reloadDataAnimateWithWave:RightToLeftWaveAnimation];
+        
         if (!error) {
             NSLog(@"objects = %@",objects);
-            _objectsForShow = [NSMutableArray arrayWithArray:objects];
+            _objectForShow = [NSMutableArray arrayWithArray:objects];
             [_whcTV reloadData];
         }else{
             NSLog(@"Error: %@",error.userInfo);
@@ -55,6 +55,9 @@
         }
     }];
 }
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -71,13 +74,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return _objectsForShow.count;
+    return _objectForShow.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CollectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    PFObject *obj = _objectsForShow[indexPath.row];
+    PFObject *obj = _objectForShow[indexPath.row];
     NSString *name = obj[@"newstitle"];
     PFFile *photoFile = obj[@"newsphoto"];
     cell.CollectionLabel.text = name;
@@ -97,36 +100,55 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle==UITableViewCellEditingStyleDelete) {
+    if (editingStyle== (UITableViewCellEditingStyleDelete)) {
         //        获取选中删除行索引值
         NSInteger row = [indexPath row];
         //        通过获取的索引值删除数组中的值
-        [self.objectsForShow removeObjectAtIndex:row];
-        //        删除单元格的某一行时，在用动画效果实现删除过程
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.objectForShow removeObjectAtIndex:row];
+
         [tableView reloadData];
-        PFObject *obj = _objectsForShow[indexPath.row];
-        //保存收藏数据
+        PFObject *obj = _objectForShow[indexPath.row];
+        //删除收藏数据
         UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
-        [obj saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        [obj deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            
             [aiv stopAnimating];
             
             if (succeeded) {
-                [Utilities popUpAlertViewWithMsg:@"保存成功" andTitle:nil onView:self];
+                [Utilities popUpAlertViewWithMsg:@"删除成功" andTitle:nil onView:self];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }else{
                 [Utilities popUpAlertViewWithMsg:@"网络繁忙，请稍后再试" andTitle:nil onView:self];
             }
-            
+
         }];
+        
     }
     
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    //按钮取消选中
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    //取消选中
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //    //获得用户当前所选中的细胞的行数
+    //    NSIndexPath *indexPath = _tableview.indexPathForSelectedRow;
+    //根据上述行数获取该行所对应的数据
+    PFObject *newDetail = _objectForShow [indexPath.row];
+    //    NewDetailViewController *newdetailViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"NewsDetail"];
+    
+    
+    //将需要传递给下一页的数据放入下一页准备好接数据的容器中
+    DetailViewController *detailViewController = [Utilities getStoryboardInstance:@"Main" byIdentity:@"NewsDetail"];
+    
+    
+    detailViewController.Detailnew = newDetail;
+    NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
+    
+    //获得将要跳转到的页面的实例
+    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    
+    [self presentViewController:mineVC animated:YES completion:nil];
     
 }
 /*
