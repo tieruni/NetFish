@@ -23,6 +23,12 @@
     _label.text = @"我来说两句";
     _label.font =  [UIFont systemFontOfSize:15];
     _label.textColor = [UIColor lightGrayColor];
+    //___________________________
+   // _wordCountLabel.font = [UIFont systemFontOfSize:14.f];
+    //_wordCountLabel.textColor = [UIColor blueColor];
+    //self.wordCountLabel.text = @"0/120";
+    //self.wordCountLabel.backgroundColor = [UIColor whiteColor];
+    self.wordCountLabel.textAlignment = NSTextAlignmentRight;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +42,32 @@
     }else{
         [_label setHidden:YES];
     }
+    NSInteger wordCount = textView.text.length;
+    self.wordCountLabel.text = [NSString stringWithFormat:@"%ld/120",(long)wordCount];
+    [self wordLimit:textView];
 }
+
+#pragma mark textField的字数限制
+
+//在这个地方计算输入的字数
+//- (void)textViewDidChange:(UITextView *)textView
+//{
+//    
+//}
+#pragma mark 超过300字不能输入
+-(BOOL)wordLimit:(UITextView *)text{
+    if (text.text.length < 120) {
+        NSLog(@"%ld",text.text.length);
+        self.neirong.editable = YES;
+        
+    }
+    else{
+        self.neirong.editable = NO;
+        
+    }
+    return nil;
+}
+
 /*
 #pragma mark - Navigation
 
