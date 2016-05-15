@@ -78,7 +78,6 @@
 		D3CAE29C1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE29B1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib */; };
 		D3CAE29E1CD35BCA00E5D6B0 /* FNAVListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE29D1CD35BCA00E5D6B0 /* FNAVListCell.xib */; };
 		D3CAE2A01CD35BF600E5D6B0 /* FNNewsSglImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE29F1CD35BF600E5D6B0 /* FNNewsSglImgCell.xib */; };
-		D3CAE2A21CD35C0300E5D6B0 /* FNNewsThrImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3CAE2A11CD35C0300E5D6B0 /* FNNewsThrImgCell.xib */; };
 		D3F9881B1CDDC7FA00DE00D7 /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9881A1CDDC7FA00DE00D7 /* SecondVC.m */; };
 		D3F9881E1CDDC81300DE00D7 /* ThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F9881D1CDDC81300DE00D7 /* ThirdVC.m */; };
 		D3F988211CDDC82D00DE00D7 /* FourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F988201CDDC82D00DE00D7 /* FourVC.m */; };
@@ -225,7 +224,6 @@
 		D3CAE29B1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNReadListThreeImgCell.xib; sourceTree = "<group>"; };
 		D3CAE29D1CD35BCA00E5D6B0 /* FNAVListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNAVListCell.xib; sourceTree = "<group>"; };
 		D3CAE29F1CD35BF600E5D6B0 /* FNNewsSglImgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNNewsSglImgCell.xib; sourceTree = "<group>"; };
-		D3CAE2A11CD35C0300E5D6B0 /* FNNewsThrImgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FNNewsThrImgCell.xib; sourceTree = "<group>"; };
 		D3F988191CDDC7FA00DE00D7 /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
 		D3F9881A1CDDC7FA00DE00D7 /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
 		D3F9881C1CDDC81300DE00D7 /* ThirdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdVC.h; sourceTree = "<group>"; };
@@ -548,7 +546,6 @@
 				D3CAE29F1CD35BF600E5D6B0 /* FNNewsSglImgCell.xib */,
 				D3CAE2991CD35BB200E5D6B0 /* FNReadListSglImgCell.xib */,
 				D3CAE29B1CD35BBA00E5D6B0 /* FNReadListThreeImgCell.xib */,
-				D3CAE2A11CD35C0300E5D6B0 /* FNNewsThrImgCell.xib */,
 				D3CAE29D1CD35BCA00E5D6B0 /* FNAVListCell.xib */,
 				D3B76AA31CDF374D00974046 /* FourVCXib.xib */,
 				D3B76AA51CDF3BED00974046 /* FiveVCCell.xib */,
@@ -664,7 +661,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CAE2A21CD35C0300E5D6B0 /* FNNewsThrImgCell.xib in Resources */,
 				D3B76AA61CDF3BED00974046 /* FiveVCCell.xib in Resources */,
 				D388FDCD1CC20F530057F6DB /* LaunchScreen.storyboard in Resources */,
 				A9E938741CE1F83800711437 /* 10.jpg in Resources */,
@@ -949,7 +945,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NetFish/PrefixHeader.pch;
 				INFOPLIST_FILE = NetFish/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -969,7 +965,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NetFish/PrefixHeader.pch;
 				INFOPLIST_FILE = NetFish/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NF.NetFish;
 				PRODUCT_NAME = "$(TARGET_NAME)";

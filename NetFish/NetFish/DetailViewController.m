@@ -21,9 +21,25 @@
     
     //设置导航栏属性
     self.navigationItem.title = @"新闻详情";
-    self.navigationItem.leftBarButtonItem.tintColor = [UIColor redColor];
-    self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    //隐藏导航栏返回按钮
+//    self.navigationItem.hidesBackButton = YES;
+//    self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+    //自定义导航栏的返回按钮
+    
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+//    
+//    btn. frame=CGRectMake(15, 5, 38, 38);
+    
+    //[btn setValue:<#(nullable id)#> forKey:<#(nonnull NSString *)#>:[UIImage imageNamed:@返回.png] forState:UIControlStateNormal];
+//    
+//    [btn addTarget:selfaction:@selector(goBackAction)forControlEvents:UIControlEventTouchUpInside];
+    
+//    UIBarButtonItem*back=[[UIBarButtonItemalloc]initWithCustomView:btn];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+   
+   
     
     
     NSString *str = _num.description;
