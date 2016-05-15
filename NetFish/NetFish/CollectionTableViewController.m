@@ -103,15 +103,18 @@
     if (editingStyle== (UITableViewCellEditingStyleDelete)) {
         //        获取选中删除行索引值
         NSInteger row = [indexPath row];
+        PFObject *obj = _objectForShow[indexPath.row];
         //        通过获取的索引值删除数组中的值
         [self.objectForShow removeObjectAtIndex:row];
-
-        [tableView reloadData];
-        PFObject *obj = _objectForShow[indexPath.row];
+        //删除单元格的某一行时，在用动画效果实现删除过程
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        //让导航条失去交互能力
+        self.navigationController.view.userInteractionEnabled = NO;
         //删除收藏数据
         UIActivityIndicatorView *aiv = [Utilities getCoverOnView:self.view];
         [obj deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-            
+            //让导航条恢复交互能力
+            self.navigationController.view.userInteractionEnabled = YES;
             [aiv stopAnimating];
             
             if (succeeded) {
