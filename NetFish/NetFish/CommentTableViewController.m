@@ -13,7 +13,7 @@
 #import "publishViewController.h"
 #import "DisperseBtn.h"
 @interface CommentTableViewController ()
-@property (weak, nonatomic) DisperseBtn *disView;
+
 @property(strong,nonatomic)NSMutableArray *objectsForShow;
 @end
 
@@ -30,19 +30,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //实例化对象
-    DisperseBtn *disView = [[DisperseBtn alloc]init];
-    disView.frame = CGRectMake(UI_SCREEN_W *3/4, UI_SCREEN_H *4/5, 50, 50);
-    //设置适应的边界
-    CGRect frame = CGRectMake(0, 64, UI_SCREEN_W, UI_SCREEN_H-64);
-    disView.borderRect = frame;
-    //设置两个状态对应的图片
-    disView.closeImage = [UIImage imageNamed:@"icon2"];
-    disView.openImage = [UIImage imageNamed:@"icon3"];
-    [self.view addSubview:disView];
     
-    _disView = disView;
-    //最多9个弹出按钮
-    [self setDisViewButtonsNum:3];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,47 +62,6 @@
     
     
 }
-//1
-- (void)setDisViewButtonsNum:(int)num{
-    
-    [_disView recoverBotton];
-    
-    for (UIView *btn in _disView.btns) {
-        [btn removeFromSuperview];
-    }
-    
-    NSMutableArray *marr = [NSMutableArray array];
-    for (int i = 0; i< num; i++) {
-        UIButton *btn = [UIButton new];
-        NSString *name = [NSString stringWithFormat:@"SC%d",i];
-        [btn setBackgroundImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
-        [marr addObject:btn];
-        btn.tag = i;
-        [btn addTarget:self action:@selector(buttonTagget:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    _disView.btns = [marr copy];
-}
-//2
--(void)buttonTagget:(UIButton *)sender{
-    
-    if (sender.tag == 0) {
-        NSLog(@"000");
-        NSLog(@"我现在还是空的，可以添加相应的操作");
-        
-    }
-    if (sender.tag == 1) {
-        NSLog(@"111");
-        NSLog(@"我现在还是空的，可以添加相应的操作");
-        
-    }
-    if (sender.tag == 2) {
-        NSLog(@"222");
-        UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
-        [self presentViewController:pinlunVC animated:YES completion:nil];
-        
-    }
-}
-
 #pragma mark - Table view data source
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
