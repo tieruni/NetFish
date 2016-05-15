@@ -160,8 +160,7 @@
     }
     if (sender.tag == 2) {
         NSLog(@"222");
-        UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
-        [self presentViewController:mineVC animated:YES completion:nil];
+        
 
     }
 }
