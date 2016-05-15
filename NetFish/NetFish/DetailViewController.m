@@ -18,8 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     //设置导航栏属性
-    self.navigationController.title = @"新闻详情";
+    self.navigationItem.title = @"新闻详情";
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor redColor];
     self.navigationController.navigationBar.barTintColor = [UIColor brownColor];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     
@@ -162,10 +164,6 @@
 */
 
 
-
-- (IBAction)backAction:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 //评论跳转
 
 @end
