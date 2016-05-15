@@ -255,10 +255,11 @@ static BOOL nibsRegistered;
     NSLog(@"------>>>detailViewController.Detailnew = %@",detailViewController.Detailnew);
     
     //获得将要跳转到的页面的实例
-    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+//    UINavigationController *mineVC = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+//    
+//    [self presentViewController:mineVC animated:YES completion:nil];
     
-    [self presentViewController:mineVC animated:YES completion:nil];
-    
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 #pragma mark - Navigation
