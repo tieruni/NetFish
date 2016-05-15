@@ -254,7 +254,7 @@
    
         if (self.emailRight != 0 || self.phoneRight != 0) {
             
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"意见反馈" message:@"亲你的意见我们已经收到，我们会尽快处理" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"意见反馈" message:@"亲你的意见我们收到会尽快处理，是否确认提交？" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *album = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 _textField.text =@"";

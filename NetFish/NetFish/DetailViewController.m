@@ -10,6 +10,7 @@
 #import <UIImageView+WebCache.h>
 #import "DisperseBtn.h"
 #import "HomeViewController.h"
+#import "publishViewController.h"
 @interface DetailViewController ()
 @property (weak, nonatomic) DisperseBtn *disView;
 @end
@@ -153,18 +154,17 @@
     }
     if (sender.tag == 1) {
         NSLog(@"111");
-        UINavigationController *pinlunVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"PINLUN"];
-        [self presentViewController:pinlunVC animated:YES completion:nil];
+        publishViewController *puViewController = [Utilities getStoryboardInstance:@"Main" byIdentity:@"A"];
+        [self.navigationController pushViewController:puViewController animated:YES];
 
     }
     if (sender.tag == 2) {
         NSLog(@"222");
-        [self dismissViewControllerAnimated:YES completion:nil];
+        UINavigationController *mineVC = [Utilities getStoryboardInstance:@"Main" byIdentity:@"Home"];
+        [self presentViewController:mineVC animated:YES completion:nil];
 
     }
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
