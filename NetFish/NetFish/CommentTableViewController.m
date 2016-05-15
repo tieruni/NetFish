@@ -31,7 +31,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //实例化对象
     DisperseBtn *disView = [[DisperseBtn alloc]init];
-    disView.frame = CGRectMake(UI_SCREEN_W *4/5, UI_SCREEN_H *7/8, 50, 50);
+    disView.frame = CGRectMake(UI_SCREEN_W *3/4, UI_SCREEN_H *4/5, 50, 50);
     //设置适应的边界
     CGRect frame = CGRectMake(0, 64, UI_SCREEN_W, UI_SCREEN_H-64);
     disView.borderRect = frame;
